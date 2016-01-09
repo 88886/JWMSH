@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace JWMSH
 {
-    public partial class TTest : Form
+    public partial class WorkTrackDeliveryOrder : Form
     {
-        public TTest()
+        public WorkTrackDeliveryOrder()
         {
             InitializeComponent();
         }

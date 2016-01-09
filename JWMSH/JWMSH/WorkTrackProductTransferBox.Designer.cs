@@ -1,6 +1,6 @@
 ﻿namespace JWMSH
 {
-    partial class TTest
+    partial class WorkTrackProductTransferBox
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(131, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // TTest
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.button1);
-            this.Name = "TTest";
-            this.Text = "TTest";
-            this.ResumeLayout(false);
-
+            this.Text = "产成品拆箱";
+            this.Icon = Properties.Resources.scanicon;
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
     }
 }

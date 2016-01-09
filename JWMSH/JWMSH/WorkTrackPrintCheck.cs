@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace JWMSH
 {
-    public partial class Form1 : Form
+    public partial class WorkTrackPrintCheck : Form
     {
-        public Form1()
+        public WorkTrackPrintCheck()
         {
             InitializeComponent();
         }

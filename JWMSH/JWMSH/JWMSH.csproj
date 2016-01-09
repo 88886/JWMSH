@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -31,9 +31,174 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\scanicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>bin\Debug\dll_library\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.Charts.v12.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.Data.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.Office.v12.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.PivotGrid.v12.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.Printing.v12.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.Reports.v12.1.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.RichEdit.v12.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.Utils.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.1.UI, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.Utils.v12.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraBars.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraCharts.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraEditors.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraPivotGrid.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraPrinting.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraReports.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.1.Design, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraReports.v12.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraReports.v12.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraTreeList.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\DevExpress.XtraVerticalGrid.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Documents.Excel.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Documents.Excel.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Shared.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.Misc.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.SupportDialogs.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.SupportDialogs.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinChart.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinEditors.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinExplorerBar.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinExplorerBar.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinGrid.ExcelExport.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinGrid.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListView.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinListView.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinSchedule.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinStatusBar.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinStatusBar.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabbedMdi.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinTabbedMdi.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinTabControl.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinToolbars.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.UltraWinTree.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dll_library\Infragistics2.Win.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.LabelManager2">
+      <HintPath>bin\Debug\dll_library\Interop.LabelManager2.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI">
+      <HintPath>bin\Debug\dll_library\Microsoft.Data.ConnectionUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog">
+      <HintPath>bin\Debug\dll_library\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="SearchFilter">
+      <HintPath>bin\Debug\dll_library\SearchFilter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -41,22 +206,189 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UpjdControlBox">
+      <HintPath>bin\Debug\dll_library\UpjdControlBox.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AboutVersion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AboutVersion.Designer.cs">
+      <DependentUpon>AboutVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClass.cs" />
+    <Compile Include="BaseDs.cs">
+      <DependentUpon>BaseDs.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseDs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseModifyPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseModifyPwd.Designer.cs">
+      <DependentUpon>BaseModifyPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRoleFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseRoleFunction.Designer.cs">
+      <DependentUpon>BaseRoleFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseStructure.cs" />
+    <Compile Include="BaseUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseUser.Designer.cs">
+      <DependentUpon>BaseUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base_ColumnSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base_ColumnSetting.Designer.cs">
+      <DependentUpon>Base_ColumnSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLL\DataInventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataInventory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DLL\DllWmsMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DLL\DllWorkPrintLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PdaGetIntQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PdaGetIntQuantity.Designer.cs">
+      <DependentUpon>PdaGetIntQuantity.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TTest.cs">
+    <Compile Include="RptRmLabelPrint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TTest.Designer.cs">
-      <DependentUpon>TTest.cs</DependentUpon>
+    <Compile Include="RptRmLabelPrint.Designer.cs">
+      <DependentUpon>RptRmLabelPrint.cs</DependentUpon>
     </Compile>
+    <Compile Include="RptRmStoreDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptRmStoreDetail.Designer.cs">
+      <DependentUpon>RptRmStoreDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpjdControl\lblTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpjdControl\lblTitle.Designer.cs">
+      <DependentUpon>lblTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WmsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WmsFunction.cs" />
+    <Compile Include="WmsLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WmsLogin.Designer.cs">
+      <DependentUpon>WmsLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WmsMainChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WmsMainChild.Designer.cs">
+      <DependentUpon>WmsMainChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WmsRibbonMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WmsRibbonMain.Designer.cs">
+      <DependentUpon>WmsRibbonMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkRmLabelPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkRmLabelPrint.Designer.cs">
+      <DependentUpon>WorkRmLabelPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkRmPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkRmPurchaseOrder.Designer.cs">
+      <DependentUpon>WorkRmPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTrackBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTrackBom.Designer.cs">
+      <DependentUpon>WorkTrackBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTrackBomQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTrackBomQuery.Designer.cs">
+      <DependentUpon>WorkTrackBomQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTrackDeliveryOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTrackDeliveryOrder.Designer.cs">
+      <DependentUpon>WorkTrackDeliveryOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTrackPrintCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTrackPrintCheck.Designer.cs">
+      <DependentUpon>WorkTrackPrintCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTrackPrintTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTrackPrintTransfer.Designer.cs">
+      <DependentUpon>WorkTrackPrintTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTrackProductLabelPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTrackProductLabelPrint.Designer.cs">
+      <DependentUpon>WorkTrackProductLabelPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTrackProductTransferBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTrackProductTransferBox.Designer.cs">
+      <DependentUpon>WorkTrackProductTransferBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTrackShiftOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTrackShiftOrder.Designer.cs">
+      <DependentUpon>WorkTrackShiftOrder.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutVersion.resx">
+      <DependentUpon>AboutVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseRoleFunction.resx">
+      <DependentUpon>BaseRoleFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUser.resx">
+      <DependentUpon>BaseUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base_ColumnSetting.resx">
+      <DependentUpon>Base_ColumnSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PdaGetIntQuantity.resx">
+      <DependentUpon>PdaGetIntQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,10 +397,49 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TTest.resx">
-      <DependentUpon>TTest.cs</DependentUpon>
+    <EmbeddedResource Include="UpjdControl\lblTitle.resx">
+      <DependentUpon>lblTitle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WmsLogin.resx">
+      <DependentUpon>WmsLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WmsMainChild.resx">
+      <DependentUpon>WmsMainChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WmsRibbonMain.resx">
+      <DependentUpon>WmsRibbonMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkRmLabelPrint.resx">
+      <DependentUpon>WorkRmLabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkRmPurchaseOrder.resx">
+      <DependentUpon>WorkRmPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="BaseDs.xsc">
+      <DependentUpon>BaseDs.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDs.xss">
+      <DependentUpon>BaseDs.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\DataInventory.xsc">
+      <DependentUpon>DataInventory.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\DataInventory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataInventory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DLL\DataInventory.xss">
+      <DependentUpon>DataInventory.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +449,453 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Web References\WmsService\BaseConService.wsdl" />
+    <None Include="Web References\WmsService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abandon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_obj.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addtsk_tsk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amount.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approveprogress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundImageStore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcodeicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collect.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\column.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Convert.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corresponding.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cRefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currencytransfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer BOM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\department.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\design.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop_Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\details.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down_load.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\examin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExportDialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first page.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_page.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Framework_loading_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Framework_pictureBox.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giveup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goods_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goods_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goods_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gotoobj_tsk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JARAN_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keepbusinessrecords.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Last page.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_page.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading all.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_down.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_btn_default_focus_normal.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_cn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_defalt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_dropdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_login_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_login_btn_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_login_btn_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_login_btn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginForm_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mine.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MTC_bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next page.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_page.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParentItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous page.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_page.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printDialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Production_orders_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purchase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\query.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Query.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Raw_material.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\record.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relogin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report_Center.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\role.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savegif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scan barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sorting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Storage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store issue.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title_banner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tool_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_BizNavigation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolbarBk.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trans8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Validation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vary.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendor bom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_menu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_titlebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wms.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\working_center.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:9991/BaseConService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WmsService\</RelPath>
+      <UpdateFromURL>http://localhost:9991/BaseConService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>JWMSH_WmsService_BaseConService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WmsService\BaseConService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
