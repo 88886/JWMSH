@@ -27,7 +27,7 @@ namespace DataService.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=JWMSH_2016;Persist Security Info=True;User ID" +
-            "=sa;Password=3281528zqs")]
+            "=sa;Password=4000212099")]
         public string BaseCon {
             get {
                 return ((string)(this["BaseCon"]));
