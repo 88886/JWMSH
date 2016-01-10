@@ -12,6 +12,16 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetKisConstring">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetKisConstringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKisConstringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="GetWmsConstringSoapIn">
@@ -20,10 +30,20 @@
   <wsdl:message name="GetWmsConstringSoapOut">
     <wsdl:part name="parameters" element="tns:GetWmsConstringResponse" />
   </wsdl:message>
+  <wsdl:message name="GetKisConstringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKisConstring" />
+  </wsdl:message>
+  <wsdl:message name="GetKisConstringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKisConstringResponse" />
+  </wsdl:message>
   <wsdl:portType name="BaseConServiceSoap">
     <wsdl:operation name="GetWmsConstring">
       <wsdl:input message="tns:GetWmsConstringSoapIn" />
       <wsdl:output message="tns:GetWmsConstringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKisConstring">
+      <wsdl:input message="tns:GetKisConstringSoapIn" />
+      <wsdl:output message="tns:GetKisConstringSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BaseConServiceSoap" type="tns:BaseConServiceSoap">
@@ -37,11 +57,29 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetKisConstring">
+      <soap:operation soapAction="http://tempuri.org/GetKisConstring" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="BaseConServiceSoap12" type="tns:BaseConServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetWmsConstring">
       <soap12:operation soapAction="http://tempuri.org/GetWmsConstring" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKisConstring">
+      <soap12:operation soapAction="http://tempuri.org/GetKisConstring" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

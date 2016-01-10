@@ -252,6 +252,17 @@
     <Compile Include="Base_ColumnSetting.Designer.cs">
       <DependentUpon>Base_ColumnSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Base_Templet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base_Templet.Designer.cs">
+      <DependentUpon>Base_Templet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLL\DataBaseControl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseControl.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DLL\DataInventory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -271,6 +282,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RptProLabelPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptProLabelPrint.Designer.cs">
+      <DependentUpon>RptProLabelPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptRmDeliveryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptRmDeliveryDetail.Designer.cs">
+      <DependentUpon>RptRmDeliveryDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="RptRmLabelPrint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +305,12 @@
     </Compile>
     <Compile Include="RptRmStoreDetail.Designer.cs">
       <DependentUpon>RptRmStoreDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectKisInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectKisInventory.Designer.cs">
+      <DependentUpon>SelectKisInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="UpjdControl\lblTitle.cs">
       <SubType>UserControl</SubType>
@@ -385,9 +414,13 @@
     <EmbeddedResource Include="Base_ColumnSetting.resx">
       <DependentUpon>Base_ColumnSetting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Base_Templet.resx">
+      <DependentUpon>Base_Templet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PdaGetIntQuantity.resx">
       <DependentUpon>PdaGetIntQuantity.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -398,6 +431,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RptProLabelPrint.resx">
+      <DependentUpon>RptProLabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptRmDeliveryDetail.resx">
+      <DependentUpon>RptRmDeliveryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptRmLabelPrint.resx">
+      <DependentUpon>RptRmLabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptRmStoreDetail.resx">
+      <DependentUpon>RptRmStoreDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectKisInventory.resx">
+      <DependentUpon>SelectKisInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpjdControl\lblTitle.resx">
       <DependentUpon>lblTitle.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,6 +464,15 @@
     <EmbeddedResource Include="WorkRmPurchaseOrder.resx">
       <DependentUpon>WorkRmPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WorkTrackBom.resx">
+      <DependentUpon>WorkTrackBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkTrackBomQuery.resx">
+      <DependentUpon>WorkTrackBomQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkTrackProductLabelPrint.resx">
+      <DependentUpon>WorkTrackProductLabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="BaseDs.xsc">
       <DependentUpon>BaseDs.xsd</DependentUpon>
@@ -427,6 +484,17 @@
     </None>
     <None Include="BaseDs.xss">
       <DependentUpon>BaseDs.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\DataBaseControl.xsc">
+      <DependentUpon>DataBaseControl.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\DataBaseControl.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseControl.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DLL\DataBaseControl.xss">
+      <DependentUpon>DataBaseControl.xsd</DependentUpon>
     </None>
     <None Include="DLL\DataInventory.xsc">
       <DependentUpon>DataInventory.xsd</DependentUpon>

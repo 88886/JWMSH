@@ -1,6 +1,6 @@
 ﻿namespace JWMSH
 {
-    partial class RptRmLabelPrint
+    partial class RptRmDeliveryDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RptRmLabelPrint));
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Bar_RawMaterial", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("AutoID");
@@ -56,6 +55,10 @@
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RptRmDeliveryDetail));
+            this.uGridRawMaterial = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.tsgfMain = new UpjdControlBox.ToolStripGridFunction();
+            this.pageChange = new UpjdControlBox.PageChange();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ImgCollection16 = new DevExpress.Utils.ImageCollection(this.components);
             this.biExport = new DevExpress.XtraBars.BarButtonItem();
@@ -70,165 +73,11 @@
             this.rpgSystem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgExport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgSearch = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.uGridRawMaterial = new Infragistics.Win.UltraWinGrid.UltraGrid();
-            this.tsgfMain = new UpjdControlBox.ToolStripGridFunction();
-            this.pageChange = new UpjdControlBox.PageChange();
+            ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ribbon
-            // 
-            this.ribbon.ExpandCollapseItem.Id = 0;
-            this.ribbon.ExpandCollapseItem.Name = "";
-            this.ribbon.Images = this.ImgCollection16;
-            this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbon.ExpandCollapseItem,
-            this.biExport,
-            this.biPreview,
-            this.biDesign,
-            this.biPrint,
-            this.biExit,
-            this.biSearch,
-            this.bbiRefresh});
-            this.ribbon.LargeImages = this.ImgCollection32;
-            this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 69;
-            this.ribbon.Name = "ribbon";
-            this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage});
-            this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbon.ShowCategoryInCaption = false;
-            this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbon.Size = new System.Drawing.Size(984, 98);
-            this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-            // 
-            // ImgCollection16
-            // 
-            this.ImgCollection16.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("ImgCollection16.ImageStream")));
-            this.ImgCollection16.InsertImage(global::JWMSH.Properties.Resources.design, "design", typeof(global::JWMSH.Properties.Resources), 0);
-            this.ImgCollection16.Images.SetKeyName(0, "design");
-            this.ImgCollection16.InsertImage(global::JWMSH.Properties.Resources.preview, "preview", typeof(global::JWMSH.Properties.Resources), 1);
-            this.ImgCollection16.Images.SetKeyName(1, "preview");
-            this.ImgCollection16.InsertImage(global::JWMSH.Properties.Resources.print, "print", typeof(global::JWMSH.Properties.Resources), 2);
-            this.ImgCollection16.Images.SetKeyName(2, "print");
-            this.ImgCollection16.InsertImage(global::JWMSH.Properties.Resources.search, "search", typeof(global::JWMSH.Properties.Resources), 3);
-            this.ImgCollection16.Images.SetKeyName(3, "search");
-            // 
-            // biExport
-            // 
-            this.biExport.Caption = "输出";
-            this.biExport.Id = 3;
-            this.biExport.LargeImageIndex = 5;
-            this.biExport.Name = "biExport";
-            this.biExport.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.biExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biExport_ItemClick);
-            // 
-            // biPreview
-            // 
-            this.biPreview.Caption = "预览";
-            this.biPreview.Id = 53;
-            this.biPreview.ImageIndex = 1;
-            this.biPreview.Name = "biPreview";
-            // 
-            // biDesign
-            // 
-            this.biDesign.Caption = "设计";
-            this.biDesign.Id = 54;
-            this.biDesign.ImageIndex = 0;
-            this.biDesign.Name = "biDesign";
-            // 
-            // biPrint
-            // 
-            this.biPrint.Caption = "打印";
-            this.biPrint.Id = 55;
-            this.biPrint.ImageIndex = 2;
-            this.biPrint.Name = "biPrint";
-            // 
-            // biExit
-            // 
-            this.biExit.Caption = "退出";
-            this.biExit.Id = 62;
-            this.biExit.LargeImageIndex = 4;
-            this.biExit.Name = "biExit";
-            this.biExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biExit_ItemClick);
-            // 
-            // biSearch
-            // 
-            this.biSearch.Caption = "查询";
-            this.biSearch.Id = 67;
-            this.biSearch.ImageIndex = 3;
-            this.biSearch.LargeImageIndex = 9;
-            this.biSearch.Name = "biSearch";
-            this.biSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)));
-            this.biSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biSearch_ItemClick);
-            // 
-            // bbiRefresh
-            // 
-            this.bbiRefresh.Caption = "刷新";
-            this.bbiRefresh.Id = 68;
-            this.bbiRefresh.LargeImageIndex = 10;
-            this.bbiRefresh.Name = "bbiRefresh";
-            this.bbiRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRefresh_ItemClick);
-            // 
-            // ImgCollection32
-            // 
-            this.ImgCollection32.ImageSize = new System.Drawing.Size(32, 32);
-            this.ImgCollection32.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("ImgCollection32.ImageStream")));
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.abandon, "abandon", typeof(global::JWMSH.Properties.Resources), 0);
-            this.ImgCollection32.Images.SetKeyName(0, "abandon");
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.add, "add", typeof(global::JWMSH.Properties.Resources), 1);
-            this.ImgCollection32.Images.SetKeyName(1, "add");
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.edit, "edit", typeof(global::JWMSH.Properties.Resources), 2);
-            this.ImgCollection32.Images.SetKeyName(2, "edit");
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.examin, "examin", typeof(global::JWMSH.Properties.Resources), 3);
-            this.ImgCollection32.Images.SetKeyName(3, "examin");
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.exit, "exit", typeof(global::JWMSH.Properties.Resources), 4);
-            this.ImgCollection32.Images.SetKeyName(4, "exit");
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.ExportDialog, "ExportDialog", typeof(global::JWMSH.Properties.Resources), 5);
-            this.ImgCollection32.Images.SetKeyName(5, "ExportDialog");
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.giveup, "giveup", typeof(global::JWMSH.Properties.Resources), 6);
-            this.ImgCollection32.Images.SetKeyName(6, "giveup");
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.printDialog, "printDialog", typeof(global::JWMSH.Properties.Resources), 7);
-            this.ImgCollection32.Images.SetKeyName(7, "printDialog");
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.save, "save", typeof(global::JWMSH.Properties.Resources), 8);
-            this.ImgCollection32.Images.SetKeyName(8, "save");
-            this.ImgCollection32.Images.SetKeyName(9, "Query.png");
-            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.cRefresh, "cRefresh", typeof(global::JWMSH.Properties.Resources), 10);
-            this.ImgCollection32.Images.SetKeyName(10, "cRefresh");
-            // 
-            // ribbonPage
-            // 
-            this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgSystem,
-            this.rpgExport,
-            this.rpgSearch});
-            this.ribbonPage.Name = "ribbonPage";
-            this.ribbonPage.Text = "菜单选项";
-            // 
-            // rpgSystem
-            // 
-            this.rpgSystem.ItemLinks.Add(this.biExit);
-            this.rpgSystem.Name = "rpgSystem";
-            this.rpgSystem.ShowCaptionButton = false;
-            this.rpgSystem.Text = "系统";
-            // 
-            // rpgExport
-            // 
-            this.rpgExport.ItemLinks.Add(this.biExport);
-            this.rpgExport.Name = "rpgExport";
-            this.rpgExport.ShowCaptionButton = false;
-            this.rpgExport.Text = "处理";
-            // 
-            // rpgSearch
-            // 
-            this.rpgSearch.ItemLinks.Add(this.biSearch);
-            this.rpgSearch.ItemLinks.Add(this.bbiRefresh);
-            this.rpgSearch.Name = "rpgSearch";
-            this.rpgSearch.Text = "查询";
             // 
             // uGridRawMaterial
             // 
@@ -355,9 +204,8 @@
             this.uGridRawMaterial.Location = new System.Drawing.Point(0, 123);
             this.uGridRawMaterial.Name = "uGridRawMaterial";
             this.uGridRawMaterial.Size = new System.Drawing.Size(984, 412);
-            this.uGridRawMaterial.TabIndex = 34;
+            this.uGridRawMaterial.TabIndex = 42;
             this.uGridRawMaterial.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
-            this.uGridRawMaterial.DoubleClickCell += new Infragistics.Win.UltraWinGrid.DoubleClickCellEventHandler(this.uGridRawMaterial_DoubleClickCell);
             // 
             // tsgfMain
             // 
@@ -368,7 +216,7 @@
             this.tsgfMain.Location = new System.Drawing.Point(0, 98);
             this.tsgfMain.Name = "tsgfMain";
             this.tsgfMain.Size = new System.Drawing.Size(984, 25);
-            this.tsgfMain.TabIndex = 32;
+            this.tsgfMain.TabIndex = 40;
             this.tsgfMain.UGrid = this.uGridRawMaterial;
             // 
             // pageChange
@@ -383,12 +231,159 @@
             this.pageChange.PageSize = 100;
             this.pageChange.RecordCount = 0;
             this.pageChange.Size = new System.Drawing.Size(984, 27);
-            this.pageChange.TabIndex = 33;
+            this.pageChange.TabIndex = 41;
             this.pageChange.TableRecord = "RMLabel";
             this.pageChange.UGrid = this.uGridRawMaterial;
             this.pageChange.WhereStr = null;
             // 
-            // RptRmLabelPrint
+            // ribbon
+            // 
+            this.ribbon.ExpandCollapseItem.Id = 0;
+            this.ribbon.ExpandCollapseItem.Name = "";
+            this.ribbon.Images = this.ImgCollection16;
+            this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbon.ExpandCollapseItem,
+            this.biExport,
+            this.biPreview,
+            this.biDesign,
+            this.biPrint,
+            this.biExit,
+            this.biSearch,
+            this.bbiRefresh});
+            this.ribbon.LargeImages = this.ImgCollection32;
+            this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.MaxItemId = 69;
+            this.ribbon.Name = "ribbon";
+            this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage});
+            this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
+            this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbon.ShowCategoryInCaption = false;
+            this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
+            this.ribbon.Size = new System.Drawing.Size(984, 98);
+            this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            // 
+            // ImgCollection16
+            // 
+            this.ImgCollection16.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("ImgCollection16.ImageStream")));
+            this.ImgCollection16.InsertImage(global::JWMSH.Properties.Resources.design, "design", typeof(global::JWMSH.Properties.Resources), 0);
+            this.ImgCollection16.Images.SetKeyName(0, "design");
+            this.ImgCollection16.InsertImage(global::JWMSH.Properties.Resources.preview, "preview", typeof(global::JWMSH.Properties.Resources), 1);
+            this.ImgCollection16.Images.SetKeyName(1, "preview");
+            this.ImgCollection16.InsertImage(global::JWMSH.Properties.Resources.print, "print", typeof(global::JWMSH.Properties.Resources), 2);
+            this.ImgCollection16.Images.SetKeyName(2, "print");
+            this.ImgCollection16.InsertImage(global::JWMSH.Properties.Resources.search, "search", typeof(global::JWMSH.Properties.Resources), 3);
+            this.ImgCollection16.Images.SetKeyName(3, "search");
+            // 
+            // biExport
+            // 
+            this.biExport.Caption = "输出";
+            this.biExport.Id = 3;
+            this.biExport.LargeImageIndex = 5;
+            this.biExport.Name = "biExport";
+            this.biExport.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // biPreview
+            // 
+            this.biPreview.Caption = "预览";
+            this.biPreview.Id = 53;
+            this.biPreview.ImageIndex = 1;
+            this.biPreview.Name = "biPreview";
+            // 
+            // biDesign
+            // 
+            this.biDesign.Caption = "设计";
+            this.biDesign.Id = 54;
+            this.biDesign.ImageIndex = 0;
+            this.biDesign.Name = "biDesign";
+            // 
+            // biPrint
+            // 
+            this.biPrint.Caption = "打印";
+            this.biPrint.Id = 55;
+            this.biPrint.ImageIndex = 2;
+            this.biPrint.Name = "biPrint";
+            // 
+            // biExit
+            // 
+            this.biExit.Caption = "退出";
+            this.biExit.Id = 62;
+            this.biExit.LargeImageIndex = 4;
+            this.biExit.Name = "biExit";
+            // 
+            // biSearch
+            // 
+            this.biSearch.Caption = "查询";
+            this.biSearch.Id = 67;
+            this.biSearch.ImageIndex = 3;
+            this.biSearch.LargeImageIndex = 9;
+            this.biSearch.Name = "biSearch";
+            this.biSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)));
+            // 
+            // bbiRefresh
+            // 
+            this.bbiRefresh.Caption = "刷新";
+            this.bbiRefresh.Id = 68;
+            this.bbiRefresh.LargeImageIndex = 10;
+            this.bbiRefresh.Name = "bbiRefresh";
+            // 
+            // ImgCollection32
+            // 
+            this.ImgCollection32.ImageSize = new System.Drawing.Size(32, 32);
+            this.ImgCollection32.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("ImgCollection32.ImageStream")));
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.abandon, "abandon", typeof(global::JWMSH.Properties.Resources), 0);
+            this.ImgCollection32.Images.SetKeyName(0, "abandon");
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.add, "add", typeof(global::JWMSH.Properties.Resources), 1);
+            this.ImgCollection32.Images.SetKeyName(1, "add");
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.edit, "edit", typeof(global::JWMSH.Properties.Resources), 2);
+            this.ImgCollection32.Images.SetKeyName(2, "edit");
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.examin, "examin", typeof(global::JWMSH.Properties.Resources), 3);
+            this.ImgCollection32.Images.SetKeyName(3, "examin");
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.exit, "exit", typeof(global::JWMSH.Properties.Resources), 4);
+            this.ImgCollection32.Images.SetKeyName(4, "exit");
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.ExportDialog, "ExportDialog", typeof(global::JWMSH.Properties.Resources), 5);
+            this.ImgCollection32.Images.SetKeyName(5, "ExportDialog");
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.giveup, "giveup", typeof(global::JWMSH.Properties.Resources), 6);
+            this.ImgCollection32.Images.SetKeyName(6, "giveup");
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.printDialog, "printDialog", typeof(global::JWMSH.Properties.Resources), 7);
+            this.ImgCollection32.Images.SetKeyName(7, "printDialog");
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.save, "save", typeof(global::JWMSH.Properties.Resources), 8);
+            this.ImgCollection32.Images.SetKeyName(8, "save");
+            this.ImgCollection32.Images.SetKeyName(9, "Query.png");
+            this.ImgCollection32.InsertImage(global::JWMSH.Properties.Resources.cRefresh, "cRefresh", typeof(global::JWMSH.Properties.Resources), 10);
+            this.ImgCollection32.Images.SetKeyName(10, "cRefresh");
+            // 
+            // ribbonPage
+            // 
+            this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgSystem,
+            this.rpgExport,
+            this.rpgSearch});
+            this.ribbonPage.Name = "ribbonPage";
+            this.ribbonPage.Text = "菜单选项";
+            // 
+            // rpgSystem
+            // 
+            this.rpgSystem.ItemLinks.Add(this.biExit);
+            this.rpgSystem.Name = "rpgSystem";
+            this.rpgSystem.ShowCaptionButton = false;
+            this.rpgSystem.Text = "系统";
+            // 
+            // rpgExport
+            // 
+            this.rpgExport.ItemLinks.Add(this.biExport);
+            this.rpgExport.Name = "rpgExport";
+            this.rpgExport.ShowCaptionButton = false;
+            this.rpgExport.Text = "处理";
+            // 
+            // rpgSearch
+            // 
+            this.rpgSearch.ItemLinks.Add(this.biSearch);
+            this.rpgSearch.ItemLinks.Add(this.bbiRefresh);
+            this.rpgSearch.Name = "rpgSearch";
+            this.rpgSearch.Text = "查询";
+            // 
+            // RptRmDeliveryDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -398,19 +393,21 @@
             this.Controls.Add(this.pageChange);
             this.Controls.Add(this.ribbon);
             this.Icon = global::JWMSH.Properties.Resources.scanicon;
-            this.Name = "RptRmLabelPrint";
-            this.Text = "原料标签打印记录表";
-            this.Load += new System.EventHandler(this.RptRmLabelPrint_Load);
+            this.Name = "RptRmDeliveryDetail";
+            this.Text = "原料领料记录表";
+            ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private Infragistics.Win.UltraWinGrid.UltraGrid uGridRawMaterial;
+        private UpjdControlBox.ToolStripGridFunction tsgfMain;
+        private UpjdControlBox.PageChange pageChange;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.Utils.ImageCollection ImgCollection16;
         private DevExpress.XtraBars.BarButtonItem biExport;
@@ -425,8 +422,5 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSystem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgExport;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSearch;
-        private Infragistics.Win.UltraWinGrid.UltraGrid uGridRawMaterial;
-        private UpjdControlBox.ToolStripGridFunction tsgfMain;
-        private UpjdControlBox.PageChange pageChange;
     }
 }

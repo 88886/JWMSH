@@ -22,5 +22,10 @@ namespace DataService
         {
             return Properties.Settings.Default.BaseCon;
         }
+        [WebMethod]
+        public string GetKisConstring()
+        {
+            return Properties.Settings.Default.KisCon;
+        }
     }
 }

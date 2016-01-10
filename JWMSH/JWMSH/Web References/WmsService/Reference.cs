@@ -31,6 +31,8 @@ namespace JWMSH.WmsService {
         
         private System.Threading.SendOrPostCallback GetWmsConstringOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetKisConstringOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -73,6 +75,9 @@ namespace JWMSH.WmsService {
         public event GetWmsConstringCompletedEventHandler GetWmsConstringCompleted;
         
         /// <remarks/>
+        public event GetKisConstringCompletedEventHandler GetKisConstringCompleted;
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetWmsConstring", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string GetWmsConstring() {
             object[] results = this.Invoke("GetWmsConstring", new object[0]);
@@ -96,6 +101,33 @@ namespace JWMSH.WmsService {
             if ((this.GetWmsConstringCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetWmsConstringCompleted(this, new GetWmsConstringCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetKisConstring", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetKisConstring() {
+            object[] results = this.Invoke("GetKisConstring", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetKisConstringAsync() {
+            this.GetKisConstringAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetKisConstringAsync(object userState) {
+            if ((this.GetKisConstringOperationCompleted == null)) {
+                this.GetKisConstringOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetKisConstringOperationCompleted);
+            }
+            this.InvokeAsync("GetKisConstring", new object[0], this.GetKisConstringOperationCompleted, userState);
+        }
+        
+        private void OnGetKisConstringOperationCompleted(object arg) {
+            if ((this.GetKisConstringCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetKisConstringCompleted(this, new GetKisConstringCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -131,6 +163,32 @@ namespace JWMSH.WmsService {
         private object[] results;
         
         internal GetWmsConstringCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.34209")]
+    public delegate void GetKisConstringCompletedEventHandler(object sender, GetKisConstringCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.34209")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetKisConstringCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetKisConstringCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

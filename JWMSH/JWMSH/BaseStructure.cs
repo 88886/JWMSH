@@ -54,7 +54,7 @@ namespace JWMSH
         /// <summary>
         /// 报单系统WebService服务所在地址
         /// </summary>
-        public static string OrderServiceUri;
+        public static string KisConstring;
 
 
         /// <summary>

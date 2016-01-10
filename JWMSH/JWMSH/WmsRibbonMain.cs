@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using DevExpress.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Painters;
 using Infragistics.Win.UltraWinExplorerBar;
@@ -99,6 +100,8 @@ namespace JWMSH
         private void biMenu_ItemClick(object sender, ItemClickEventArgs e)
         {
             uSplitterLeft.Collapsed = !uSplitterLeft.Collapsed;
+            
+            
         }
 
         private void WmsRibbonMain_FormClosing(object sender, FormClosingEventArgs e)

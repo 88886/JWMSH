@@ -44,7 +44,7 @@ namespace JWMSH
                 BaseStructure.WmsServer = utxtServer.Text;
                 BaseStructure.WmsCon = ws.GetWmsConstring();
                 BaseStructure.WmsServiceUri = ws.Url;
-                BaseStructure.OrderServiceUri = string.Format(@"http://{0}/EasOrder.asmx", utxtServer.Text);
+                BaseStructure.KisConstring = ws.GetKisConstring();
             }
             catch (Exception ex)
             {
@@ -119,7 +119,7 @@ namespace JWMSH
                 BaseStructure.WmsServer = utxtServer.Text;
                 BaseStructure.WmsCon = ws.GetWmsConstring();
                 BaseStructure.WmsServiceUri = ws.Url;
-                BaseStructure.OrderServiceUri = string.Format(@"http://{0}/EasOrder.asmx", utxtServer.Text);
+                BaseStructure.KisConstring =ws.GetKisConstring();
             }
             catch (Exception ex)
             {
