@@ -164,4 +164,13 @@
         gGp7CGs3CECAvv847ePP83b3C1UvvhZ75DxpAAAAAElFTkSuQmCCCw==
 </value>
   </data>
+  <metadata name="dataInventory.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>313, 102</value>
+  </metadata>
+  <metadata name="bomDetailBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>447, 102</value>
+  </metadata>
+  <metadata name="bomDetailTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>646, 102</value>
+  </metadata>
 </root>

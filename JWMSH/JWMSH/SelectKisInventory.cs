@@ -50,6 +50,10 @@ namespace JWMSH
         public string DefalutSP;
 
 
+        public string FUnitID;
+
+        public string FUnitName;
+
 
         public SelectKisInventory(DataTable dSoure,string cInvCode)
         {
@@ -76,6 +80,8 @@ namespace JWMSH
             FullName = e.Cell.Row.Cells["FFullName"].Value.ToString();
             DefaultLoc = e.Cell.Row.Cells["FDefaultLoc"].Value.ToString();
             DefalutSP = e.Cell.Row.Cells["FSPID"].Value.ToString();
+            FUnitID = e.Cell.Row.Cells["FUnitID"].Value.ToString();
+            FUnitName= e.Cell.Row.Cells["FUnitName"].Value.ToString();
             DialogResult = DialogResult.Yes;
         }
     }

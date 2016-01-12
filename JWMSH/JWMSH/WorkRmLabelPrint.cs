@@ -259,7 +259,7 @@ namespace JWMSH
 
         private void GetRawMaterial()
         {
-            var cmd = new SqlCommand("select FItemID,FNumber,FName,FModel,FFullName,FDefaultLoc,FSPID from t_icItem order by FitemID ");
+            var cmd = new SqlCommand("select   a.FItemID,a.FNumber,a.FName,FModel,FFullName,FDefaultLoc,FSPID,a.FUnitID,b.FName from t_icitem a inner join t_MeasureUnit b on a.FUnitID=b.FMeasureUnitID where isnull(a.FDeleted,0)<>1  order by a.FitemID");
             var wf=new WmsFunction(BaseStructure.KisConstring);
             _dtRawMaterial = wf.GetSqlTable(cmd);
             txtcInvCode.DataSource = _dtRawMaterial;

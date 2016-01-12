@@ -500,6 +500,7 @@
             this.Icon = global::JWMSH.Properties.Resources.scanicon;
             this.Name = "WorkRmPurchaseOrder";
             this.Text = "金蝶采购订单";
+            this.Load += new System.EventHandler(this.WorkRmPurchaseOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uGridChecks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uGridCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();

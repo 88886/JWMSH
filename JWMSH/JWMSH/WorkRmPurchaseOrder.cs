@@ -15,5 +15,10 @@ namespace JWMSH
         {
             InitializeComponent();
         }
+
+        private void WorkRmPurchaseOrder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
