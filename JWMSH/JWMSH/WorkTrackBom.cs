@@ -498,5 +498,15 @@ namespace JWMSH
                 }
             }
         }
+
+        private void biExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Close();
+        }
+
+        private void biExport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+        }
     }
 }

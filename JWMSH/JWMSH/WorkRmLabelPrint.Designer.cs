@@ -546,7 +546,7 @@
             this.txtcVendor.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.txtcVendor.DisplayMember = "FName";
             this.txtcVendor.Enabled = false;
-            this.txtcVendor.Location = new System.Drawing.Point(705, 48);
+            this.txtcVendor.Location = new System.Drawing.Point(705, 43);
             this.txtcVendor.Name = "txtcVendor";
             this.txtcVendor.Size = new System.Drawing.Size(194, 22);
             this.txtcVendor.TabIndex = 70;
@@ -604,7 +604,7 @@
             this.uneiQuantity.MaxValue = 100000000D;
             this.uneiQuantity.MinValue = 0;
             this.uneiQuantity.Name = "uneiQuantity";
-            this.uneiQuantity.NumericType = Infragistics.Win.UltraWinEditors.NumericType.Double;
+            this.uneiQuantity.NumericType = Infragistics.Win.UltraWinEditors.NumericType.Decimal;
             this.uneiQuantity.Size = new System.Drawing.Size(194, 21);
             this.uneiQuantity.TabIndex = 59;
             // 

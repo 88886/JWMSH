@@ -162,6 +162,7 @@
             this.biExport.LargeImageIndex = 5;
             this.biExport.Name = "biExport";
             this.biExport.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.biExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biExport_ItemClick);
             // 
             // biSave
             // 
@@ -188,6 +189,7 @@
             this.biExit.Id = 62;
             this.biExit.LargeImageIndex = 4;
             this.biExit.Name = "biExit";
+            this.biExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biExit_ItemClick);
             // 
             // biEdit
             // 

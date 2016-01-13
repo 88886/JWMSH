@@ -306,6 +306,12 @@
     <Compile Include="RptRmStoreDetail.Designer.cs">
       <DependentUpon>RptRmStoreDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectKisCurrectStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectKisCurrectStock.Designer.cs">
+      <DependentUpon>SelectKisCurrectStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectKisInventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -443,6 +449,9 @@
     <EmbeddedResource Include="RptRmStoreDetail.resx">
       <DependentUpon>RptRmStoreDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SelectKisCurrectStock.resx">
+      <DependentUpon>SelectKisCurrectStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectKisInventory.resx">
       <DependentUpon>SelectKisInventory.cs</DependentUpon>
     </EmbeddedResource>
@@ -472,6 +481,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WorkTrackProductLabelPrint.resx">
       <DependentUpon>WorkTrackProductLabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkTrackShiftOrder.resx">
+      <DependentUpon>WorkTrackShiftOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="BaseDs.xsc">
