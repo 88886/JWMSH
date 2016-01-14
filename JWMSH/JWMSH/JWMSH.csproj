@@ -390,6 +390,12 @@
     <Compile Include="WorkTrackPrintTransfer.Designer.cs">
       <DependentUpon>WorkTrackPrintTransfer.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkTrackProductLabelCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTrackProductLabelCreate.Designer.cs">
+      <DependentUpon>WorkTrackProductLabelCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkTrackProductLabelPrint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WorkTrackBomQuery.resx">
       <DependentUpon>WorkTrackBomQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkTrackProductLabelCreate.resx">
+      <DependentUpon>WorkTrackProductLabelCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkTrackProductLabelPrint.resx">
       <DependentUpon>WorkTrackProductLabelPrint.cs</DependentUpon>

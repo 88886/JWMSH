@@ -87,7 +87,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cMemo");
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("dAddTime");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FitemID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cFitemID");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FStockPlaceID");
             Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
@@ -144,7 +144,7 @@
             this.lblTitleMain = new JWMSH.UpjdControl.lblTitle();
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabMaterial = new System.Windows.Forms.TabPage();
-            this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.uGridShiftDetail = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.shiftDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataInventory = new JWMSH.DLL.DataInventory();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -153,7 +153,6 @@
             this.uGridRawMaterial = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.bomDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
             this.bsiPrint = new DevExpress.XtraBars.BarSubItem();
             this.biPrint = new DevExpress.XtraBars.BarButtonItem();
             this.biPreview = new DevExpress.XtraBars.BarButtonItem();
@@ -170,7 +169,6 @@
             this.bsiPrinter = new DevExpress.XtraBars.BarStaticItem();
             this.biEditPrinter = new DevExpress.XtraBars.BarButtonItem();
             this.beiCopies = new DevExpress.XtraBars.BarEditItem();
-            this.imageCollection4 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgSystem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgExport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -189,7 +187,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtcInvCode)).BeginInit();
             this.tabMain.SuspendLayout();
             this.tabMaterial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uGridShiftDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shiftDetailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventory)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -197,8 +195,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bomDetailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection4)).BeginInit();
             this.SuspendLayout();
             // 
             // imageCollection1
@@ -600,7 +596,7 @@
             // 
             // tabMaterial
             // 
-            this.tabMaterial.Controls.Add(this.ultraGrid1);
+            this.tabMaterial.Controls.Add(this.uGridShiftDetail);
             this.tabMaterial.Controls.Add(this.toolStrip1);
             this.tabMaterial.Location = new System.Drawing.Point(4, 22);
             this.tabMaterial.Name = "tabMaterial";
@@ -610,11 +606,11 @@
             this.tabMaterial.Text = "实际用料表";
             this.tabMaterial.UseVisualStyleBackColor = true;
             // 
-            // ultraGrid1
+            // uGridShiftDetail
             // 
-            this.ultraGrid1.DataSource = this.shiftDetailBindingSource;
+            this.uGridShiftDetail.DataSource = this.shiftDetailBindingSource;
             appearance26.BackColor = System.Drawing.Color.White;
-            this.ultraGrid1.DisplayLayout.Appearance = appearance26;
+            this.uGridShiftDetail.DisplayLayout.Appearance = appearance26;
             ultraGridColumn19.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn19.Header.VisiblePosition = 0;
             ultraGridColumn19.Hidden = true;
@@ -675,7 +671,7 @@
             ultraGridColumn18.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn18.Header.Caption = "添加时间";
             ultraGridColumn18.Header.VisiblePosition = 14;
-            ultraGridColumn2.Header.VisiblePosition = 15;
+            ultraGridColumn11.Header.VisiblePosition = 15;
             ultraGridColumn7.Header.VisiblePosition = 16;
             ultraGridBand3.Columns.AddRange(new object[] {
             ultraGridColumn19,
@@ -693,58 +689,58 @@
             ultraGridColumn42,
             ultraGridColumn28,
             ultraGridColumn18,
-            ultraGridColumn2,
+            ultraGridColumn11,
             ultraGridColumn7});
-            this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand3);
-            this.ultraGrid1.DisplayLayout.GroupByBox.Prompt = "如需按照某个列进行分类汇总请把列名拖动到此处";
-            this.ultraGrid1.DisplayLayout.MaxColScrollRegions = 1;
-            this.ultraGrid1.DisplayLayout.MaxRowScrollRegions = 1;
+            this.uGridShiftDetail.DisplayLayout.BandsSerializer.Add(ultraGridBand3);
+            this.uGridShiftDetail.DisplayLayout.GroupByBox.Prompt = "如需按照某个列进行分类汇总请把列名拖动到此处";
+            this.uGridShiftDetail.DisplayLayout.MaxColScrollRegions = 1;
+            this.uGridShiftDetail.DisplayLayout.MaxRowScrollRegions = 1;
             appearance30.BackColor = System.Drawing.Color.Transparent;
-            this.ultraGrid1.DisplayLayout.Override.CardAreaAppearance = appearance30;
-            this.ultraGrid1.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.ultraGrid1.DisplayLayout.Override.CellPadding = 3;
+            this.uGridShiftDetail.DisplayLayout.Override.CardAreaAppearance = appearance30;
+            this.uGridShiftDetail.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
+            this.uGridShiftDetail.DisplayLayout.Override.CellPadding = 3;
             appearance31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             appearance31.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(167)))), ((int)(((byte)(191)))));
             appearance31.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
             appearance31.TextHAlignAsString = "Center";
             appearance31.TextVAlignAsString = "Middle";
             appearance31.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
-            this.ultraGrid1.DisplayLayout.Override.HeaderAppearance = appearance31;
-            this.ultraGrid1.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.Select;
+            this.uGridShiftDetail.DisplayLayout.Override.HeaderAppearance = appearance31;
+            this.uGridShiftDetail.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.Select;
             appearance32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ultraGrid1.DisplayLayout.Override.RowAlternateAppearance = appearance32;
+            this.uGridShiftDetail.DisplayLayout.Override.RowAlternateAppearance = appearance32;
             appearance33.BorderColor = System.Drawing.Color.Black;
             appearance33.TextHAlignAsString = "Right";
             appearance33.TextVAlignAsString = "Middle";
-            this.ultraGrid1.DisplayLayout.Override.RowAppearance = appearance33;
+            this.uGridShiftDetail.DisplayLayout.Override.RowAppearance = appearance33;
             appearance34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(167)))), ((int)(((byte)(191)))));
             appearance34.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             appearance34.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            this.ultraGrid1.DisplayLayout.Override.RowSelectorAppearance = appearance34;
+            this.uGridShiftDetail.DisplayLayout.Override.RowSelectorAppearance = appearance34;
             appearance35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(167)))), ((int)(((byte)(191)))));
             appearance35.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             appearance35.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            this.ultraGrid1.DisplayLayout.Override.RowSelectorHeaderAppearance = appearance35;
-            this.ultraGrid1.DisplayLayout.Override.RowSelectorHeaderStyle = Infragistics.Win.UltraWinGrid.RowSelectorHeaderStyle.ColumnChooserButton;
-            this.ultraGrid1.DisplayLayout.Override.RowSelectorNumberStyle = Infragistics.Win.UltraWinGrid.RowSelectorNumberStyle.RowIndex;
-            this.ultraGrid1.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.True;
-            this.ultraGrid1.DisplayLayout.Override.RowSelectorWidth = 40;
+            this.uGridShiftDetail.DisplayLayout.Override.RowSelectorHeaderAppearance = appearance35;
+            this.uGridShiftDetail.DisplayLayout.Override.RowSelectorHeaderStyle = Infragistics.Win.UltraWinGrid.RowSelectorHeaderStyle.ColumnChooserButton;
+            this.uGridShiftDetail.DisplayLayout.Override.RowSelectorNumberStyle = Infragistics.Win.UltraWinGrid.RowSelectorNumberStyle.RowIndex;
+            this.uGridShiftDetail.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.True;
+            this.uGridShiftDetail.DisplayLayout.Override.RowSelectorWidth = 40;
             appearance36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(167)))), ((int)(((byte)(191)))));
             appearance36.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             appearance36.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
             appearance36.BorderColor = System.Drawing.Color.Black;
             appearance36.ForeColor = System.Drawing.Color.Black;
-            this.ultraGrid1.DisplayLayout.Override.SelectedRowAppearance = appearance36;
-            this.ultraGrid1.DisplayLayout.RowConnectorStyle = Infragistics.Win.UltraWinGrid.RowConnectorStyle.None;
-            this.ultraGrid1.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
-            this.ultraGrid1.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.ultraGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ultraGrid1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ultraGrid1.Location = new System.Drawing.Point(3, 28);
-            this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(970, 210);
-            this.ultraGrid1.TabIndex = 35;
-            this.ultraGrid1.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
+            this.uGridShiftDetail.DisplayLayout.Override.SelectedRowAppearance = appearance36;
+            this.uGridShiftDetail.DisplayLayout.RowConnectorStyle = Infragistics.Win.UltraWinGrid.RowConnectorStyle.None;
+            this.uGridShiftDetail.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
+            this.uGridShiftDetail.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
+            this.uGridShiftDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uGridShiftDetail.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uGridShiftDetail.Location = new System.Drawing.Point(3, 28);
+            this.uGridShiftDetail.Name = "uGridShiftDetail";
+            this.uGridShiftDetail.Size = new System.Drawing.Size(970, 210);
+            this.uGridShiftDetail.TabIndex = 35;
+            this.uGridShiftDetail.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             // 
             // shiftDetailBindingSource
             // 
@@ -914,7 +910,7 @@
             // 
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.ExpandCollapseItem.Name = "";
-            this.ribbon.Images = this.imageCollection3;
+            this.ribbon.Images = this.imageCollection1;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.bsiPrint,
@@ -933,7 +929,7 @@
             this.beiCopies,
             this.biPreview,
             this.biDesign});
-            this.ribbon.LargeImages = this.imageCollection4;
+            this.ribbon.LargeImages = this.imageCollection2;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 81;
             this.ribbon.Name = "ribbon";
@@ -945,16 +941,6 @@
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbon.Size = new System.Drawing.Size(984, 98);
             this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-            // 
-            // imageCollection3
-            // 
-            this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            this.imageCollection3.InsertImage(global::JWMSH.Properties.Resources.design, "design", typeof(global::JWMSH.Properties.Resources), 0);
-            this.imageCollection3.Images.SetKeyName(0, "design");
-            this.imageCollection3.InsertImage(global::JWMSH.Properties.Resources.preview, "preview", typeof(global::JWMSH.Properties.Resources), 1);
-            this.imageCollection3.Images.SetKeyName(1, "preview");
-            this.imageCollection3.InsertImage(global::JWMSH.Properties.Resources.print, "print", typeof(global::JWMSH.Properties.Resources), 2);
-            this.imageCollection3.Images.SetKeyName(2, "print");
             // 
             // bsiPrint
             // 
@@ -1086,31 +1072,6 @@
             this.beiCopies.Name = "beiCopies";
             this.beiCopies.Width = 100;
             // 
-            // imageCollection4
-            // 
-            this.imageCollection4.ImageSize = new System.Drawing.Size(32, 32);
-            this.imageCollection4.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection4.ImageStream")));
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.abandon, "abandon", typeof(global::JWMSH.Properties.Resources), 0);
-            this.imageCollection4.Images.SetKeyName(0, "abandon");
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.add, "add", typeof(global::JWMSH.Properties.Resources), 1);
-            this.imageCollection4.Images.SetKeyName(1, "add");
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.edit, "edit", typeof(global::JWMSH.Properties.Resources), 2);
-            this.imageCollection4.Images.SetKeyName(2, "edit");
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.examin, "examin", typeof(global::JWMSH.Properties.Resources), 3);
-            this.imageCollection4.Images.SetKeyName(3, "examin");
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.exit, "exit", typeof(global::JWMSH.Properties.Resources), 4);
-            this.imageCollection4.Images.SetKeyName(4, "exit");
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.ExportDialog, "ExportDialog", typeof(global::JWMSH.Properties.Resources), 5);
-            this.imageCollection4.Images.SetKeyName(5, "ExportDialog");
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.giveup, "giveup", typeof(global::JWMSH.Properties.Resources), 6);
-            this.imageCollection4.Images.SetKeyName(6, "giveup");
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.printDialog, "printDialog", typeof(global::JWMSH.Properties.Resources), 7);
-            this.imageCollection4.Images.SetKeyName(7, "printDialog");
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.save, "save", typeof(global::JWMSH.Properties.Resources), 8);
-            this.imageCollection4.Images.SetKeyName(8, "save");
-            this.imageCollection4.InsertImage(global::JWMSH.Properties.Resources.delete1, "delete1", typeof(global::JWMSH.Properties.Resources), 9);
-            this.imageCollection4.Images.SetKeyName(9, "delete1");
-            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1197,7 +1158,7 @@
             this.tabMain.ResumeLayout(false);
             this.tabMaterial.ResumeLayout(false);
             this.tabMaterial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uGridShiftDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shiftDetailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventory)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -1206,8 +1167,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bomDetailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1232,13 +1191,12 @@
         private System.Windows.Forms.TabControl tabMain;
         private System.Windows.Forms.TabPage tabMaterial;
         private System.Windows.Forms.TabPage tabBomDetail;
-        private Infragistics.Win.UltraWinGrid.UltraGrid ultraGrid1;
+        private Infragistics.Win.UltraWinGrid.UltraGrid uGridShiftDetail;
         private Infragistics.Win.UltraWinGrid.UltraGrid uGridRawMaterial;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Label lblcOrderNumber;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.Utils.ImageCollection imageCollection3;
         private DevExpress.XtraBars.BarSubItem bsiPrint;
         private DevExpress.XtraBars.BarButtonItem biPrint;
         private DevExpress.XtraBars.BarButtonItem biPreview;
@@ -1255,7 +1213,6 @@
         private DevExpress.XtraBars.BarStaticItem bsiPrinter;
         private DevExpress.XtraBars.BarButtonItem biEditPrinter;
         private DevExpress.XtraBars.BarEditItem beiCopies;
-        private DevExpress.Utils.ImageCollection imageCollection4;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSystem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgExport;
