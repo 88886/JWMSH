@@ -435,10 +435,10 @@
             appearance22.Image = "item.gif";
             ultraExplorerBarItem1.Settings.AppearancesSmall.Appearance = appearance22;
             ultraExplorerBarItem1.Text = "原料批次追溯";
-            ultraExplorerBarItem15.Key = "产成品批次追溯";
+            ultraExplorerBarItem15.Key = "产成品追溯表";
             appearance23.Image = "item.gif";
             ultraExplorerBarItem15.Settings.AppearancesSmall.Appearance = appearance23;
-            ultraExplorerBarItem15.Text = "产成品批次追溯";
+            ultraExplorerBarItem15.Text = "产成品追溯表";
             ultraExplorerBarGroup14.Items.AddRange(new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem[] {
             ultraExplorerBarItem7,
             ultraExplorerBarItem8,

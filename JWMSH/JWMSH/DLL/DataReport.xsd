@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataReport" targetNamespace="http://tempuri.org/DataReport.xsd" xmlns:mstns="http://tempuri.org/DataReport.xsd" xmlns="http://tempuri.org/DataReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BCon" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BCon (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.JWMSH.Properties.Settings.GlobalReference.Default.BCon" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ProductLabelTableAdapter" GeneratorDataComponentClassName="View_ProductLabelTableAdapter" Name="View_ProductLabel" UserDataComponentName="View_ProductLabelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BCon (Settings)" DbObjectName="JWMSH_2016.dbo.View_ProductLabel" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   AutoID, cSerialNumber, cBarCode, iQuantity, cDefine1, cDefine2, cDefine3, cDefine4, cMemo, BomID, cFitemID, 
+                cInvCode, cInvName, cInvStd, cFullName, cOrderNumber, iSheduleQty, dDate, iSheduleMemo, cDeptName, 
+                dAddTime
+FROM      View_ProductLabel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AutoID" DataSetColumn="AutoID" />
+              <Mapping SourceColumn="cSerialNumber" DataSetColumn="cSerialNumber" />
+              <Mapping SourceColumn="cBarCode" DataSetColumn="cBarCode" />
+              <Mapping SourceColumn="iQuantity" DataSetColumn="iQuantity" />
+              <Mapping SourceColumn="cDefine1" DataSetColumn="cDefine1" />
+              <Mapping SourceColumn="cDefine2" DataSetColumn="cDefine2" />
+              <Mapping SourceColumn="cDefine3" DataSetColumn="cDefine3" />
+              <Mapping SourceColumn="cDefine4" DataSetColumn="cDefine4" />
+              <Mapping SourceColumn="cMemo" DataSetColumn="cMemo" />
+              <Mapping SourceColumn="BomID" DataSetColumn="BomID" />
+              <Mapping SourceColumn="cFitemID" DataSetColumn="cFitemID" />
+              <Mapping SourceColumn="cInvCode" DataSetColumn="cInvCode" />
+              <Mapping SourceColumn="cInvName" DataSetColumn="cInvName" />
+              <Mapping SourceColumn="cInvStd" DataSetColumn="cInvStd" />
+              <Mapping SourceColumn="cFullName" DataSetColumn="cFullName" />
+              <Mapping SourceColumn="cOrderNumber" DataSetColumn="cOrderNumber" />
+              <Mapping SourceColumn="iSheduleQty" DataSetColumn="iSheduleQty" />
+              <Mapping SourceColumn="dDate" DataSetColumn="dDate" />
+              <Mapping SourceColumn="iSheduleMemo" DataSetColumn="iSheduleMemo" />
+              <Mapping SourceColumn="cDeptName" DataSetColumn="cDeptName" />
+              <Mapping SourceColumn="dAddTime" DataSetColumn="dAddTime" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShiftDetailTableAdapter" GeneratorDataComponentClassName="ShiftDetailTableAdapter" Name="ShiftDetail" UserDataComponentName="ShiftDetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BCon (Settings)" DbObjectName="JWMSH_2016.dbo.ShiftDetail" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   AutoID, cSerialNumber, cFitemID, cInvCode, cInvName, cInvStd, cFullName, iQuantity, FBatchNo, FStockID, 
+                FStockNumber, FStockName, FStockPlaceID, FStockPlaceNumber, FStockPlaceName, cMemo, dAddTime
+FROM      ShiftDetail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AutoID" DataSetColumn="AutoID" />
+              <Mapping SourceColumn="cSerialNumber" DataSetColumn="cSerialNumber" />
+              <Mapping SourceColumn="cFitemID" DataSetColumn="cFitemID" />
+              <Mapping SourceColumn="cInvCode" DataSetColumn="cInvCode" />
+              <Mapping SourceColumn="cInvName" DataSetColumn="cInvName" />
+              <Mapping SourceColumn="cInvStd" DataSetColumn="cInvStd" />
+              <Mapping SourceColumn="cFullName" DataSetColumn="cFullName" />
+              <Mapping SourceColumn="iQuantity" DataSetColumn="iQuantity" />
+              <Mapping SourceColumn="FBatchNo" DataSetColumn="FBatchNo" />
+              <Mapping SourceColumn="FStockID" DataSetColumn="FStockID" />
+              <Mapping SourceColumn="FStockNumber" DataSetColumn="FStockNumber" />
+              <Mapping SourceColumn="FStockName" DataSetColumn="FStockName" />
+              <Mapping SourceColumn="FStockPlaceID" DataSetColumn="FStockPlaceID" />
+              <Mapping SourceColumn="FStockPlaceNumber" DataSetColumn="FStockPlaceNumber" />
+              <Mapping SourceColumn="FStockPlaceName" DataSetColumn="FStockPlaceName" />
+              <Mapping SourceColumn="cMemo" DataSetColumn="cMemo" />
+              <Mapping SourceColumn="dAddTime" DataSetColumn="dAddTime" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataReport" msprop:Generator_UserDSName="DataReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_ProductLabel" msprop:Generator_TableClassName="View_ProductLabelDataTable" msprop:Generator_TableVarName="tableView_ProductLabel" msprop:Generator_TablePropName="View_ProductLabel" msprop:Generator_RowDeletingName="View_ProductLabelRowDeleting" msprop:Generator_RowChangingName="View_ProductLabelRowChanging" msprop:Generator_RowEvHandlerName="View_ProductLabelRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ProductLabelRowDeleted" msprop:Generator_UserTableName="View_ProductLabel" msprop:Generator_RowChangedName="View_ProductLabelRowChanged" msprop:Generator_RowEvArgName="View_ProductLabelRowChangeEvent" msprop:Generator_RowClassName="View_ProductLabelRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AutoID" msprop:Generator_ColumnVarNameInTable="columnAutoID" msprop:Generator_ColumnPropNameInRow="AutoID" msprop:Generator_ColumnPropNameInTable="AutoIDColumn" msprop:Generator_UserColumnName="AutoID" type="xs:long" />
+              <xs:element name="cSerialNumber" msprop:Generator_ColumnVarNameInTable="columncSerialNumber" msprop:Generator_ColumnPropNameInRow="cSerialNumber" msprop:Generator_ColumnPropNameInTable="cSerialNumberColumn" msprop:Generator_UserColumnName="cSerialNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cBarCode" msprop:Generator_ColumnVarNameInTable="columncBarCode" msprop:Generator_ColumnPropNameInRow="cBarCode" msprop:Generator_ColumnPropNameInTable="cBarCodeColumn" msprop:Generator_UserColumnName="cBarCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="iQuantity" msprop:Generator_ColumnVarNameInTable="columniQuantity" msprop:Generator_ColumnPropNameInRow="iQuantity" msprop:Generator_ColumnPropNameInTable="iQuantityColumn" msprop:Generator_UserColumnName="iQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="cDefine1" msprop:Generator_ColumnVarNameInTable="columncDefine1" msprop:Generator_ColumnPropNameInRow="cDefine1" msprop:Generator_ColumnPropNameInTable="cDefine1Column" msprop:Generator_UserColumnName="cDefine1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cDefine2" msprop:Generator_ColumnVarNameInTable="columncDefine2" msprop:Generator_ColumnPropNameInRow="cDefine2" msprop:Generator_ColumnPropNameInTable="cDefine2Column" msprop:Generator_UserColumnName="cDefine2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cDefine3" msprop:Generator_ColumnVarNameInTable="columncDefine3" msprop:Generator_ColumnPropNameInRow="cDefine3" msprop:Generator_ColumnPropNameInTable="cDefine3Column" msprop:Generator_UserColumnName="cDefine3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cDefine4" msprop:Generator_ColumnVarNameInTable="columncDefine4" msprop:Generator_ColumnPropNameInRow="cDefine4" msprop:Generator_ColumnPropNameInTable="cDefine4Column" msprop:Generator_UserColumnName="cDefine4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cMemo" msprop:Generator_ColumnVarNameInTable="columncMemo" msprop:Generator_ColumnPropNameInRow="cMemo" msprop:Generator_ColumnPropNameInTable="cMemoColumn" msprop:Generator_UserColumnName="cMemo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BomID" msprop:Generator_ColumnVarNameInTable="columnBomID" msprop:Generator_ColumnPropNameInRow="BomID" msprop:Generator_ColumnPropNameInTable="BomIDColumn" msprop:Generator_UserColumnName="BomID" type="xs:long" />
+              <xs:element name="cFitemID" msprop:Generator_ColumnVarNameInTable="columncFitemID" msprop:Generator_ColumnPropNameInRow="cFitemID" msprop:Generator_ColumnPropNameInTable="cFitemIDColumn" msprop:Generator_UserColumnName="cFitemID" type="xs:int" minOccurs="0" />
+              <xs:element name="cInvCode" msprop:Generator_ColumnVarNameInTable="columncInvCode" msprop:Generator_ColumnPropNameInRow="cInvCode" msprop:Generator_ColumnPropNameInTable="cInvCodeColumn" msprop:Generator_UserColumnName="cInvCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cInvName" msprop:Generator_ColumnVarNameInTable="columncInvName" msprop:Generator_ColumnPropNameInRow="cInvName" msprop:Generator_ColumnPropNameInTable="cInvNameColumn" msprop:Generator_UserColumnName="cInvName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cInvStd" msprop:Generator_ColumnVarNameInTable="columncInvStd" msprop:Generator_ColumnPropNameInRow="cInvStd" msprop:Generator_ColumnPropNameInTable="cInvStdColumn" msprop:Generator_UserColumnName="cInvStd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cFullName" msprop:Generator_ColumnVarNameInTable="columncFullName" msprop:Generator_ColumnPropNameInRow="cFullName" msprop:Generator_ColumnPropNameInTable="cFullNameColumn" msprop:Generator_UserColumnName="cFullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cOrderNumber" msprop:Generator_ColumnVarNameInTable="columncOrderNumber" msprop:Generator_ColumnPropNameInRow="cOrderNumber" msprop:Generator_ColumnPropNameInTable="cOrderNumberColumn" msprop:Generator_UserColumnName="cOrderNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="iSheduleQty" msprop:Generator_ColumnVarNameInTable="columniSheduleQty" msprop:Generator_ColumnPropNameInRow="iSheduleQty" msprop:Generator_ColumnPropNameInTable="iSheduleQtyColumn" msprop:Generator_UserColumnName="iSheduleQty" type="xs:int" minOccurs="0" />
+              <xs:element name="dDate" msprop:Generator_ColumnVarNameInTable="columndDate" msprop:Generator_ColumnPropNameInRow="dDate" msprop:Generator_ColumnPropNameInTable="dDateColumn" msprop:Generator_UserColumnName="dDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="iSheduleMemo" msprop:Generator_ColumnVarNameInTable="columniSheduleMemo" msprop:Generator_ColumnPropNameInRow="iSheduleMemo" msprop:Generator_ColumnPropNameInTable="iSheduleMemoColumn" msprop:Generator_UserColumnName="iSheduleMemo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cDeptName" msprop:Generator_ColumnVarNameInTable="columncDeptName" msprop:Generator_ColumnPropNameInRow="cDeptName" msprop:Generator_ColumnPropNameInTable="cDeptNameColumn" msprop:Generator_UserColumnName="cDeptName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dAddTime" msprop:Generator_ColumnVarNameInTable="columndAddTime" msprop:Generator_ColumnPropNameInRow="dAddTime" msprop:Generator_ColumnPropNameInTable="dAddTimeColumn" msprop:Generator_UserColumnName="dAddTime" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ShiftDetail" msprop:Generator_TableClassName="ShiftDetailDataTable" msprop:Generator_TableVarName="tableShiftDetail" msprop:Generator_TablePropName="ShiftDetail" msprop:Generator_RowDeletingName="ShiftDetailRowDeleting" msprop:Generator_RowChangingName="ShiftDetailRowChanging" msprop:Generator_RowEvHandlerName="ShiftDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="ShiftDetailRowDeleted" msprop:Generator_UserTableName="ShiftDetail" msprop:Generator_RowChangedName="ShiftDetailRowChanged" msprop:Generator_RowEvArgName="ShiftDetailRowChangeEvent" msprop:Generator_RowClassName="ShiftDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AutoID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAutoID" msprop:Generator_ColumnPropNameInRow="AutoID" msprop:Generator_ColumnPropNameInTable="AutoIDColumn" msprop:Generator_UserColumnName="AutoID" type="xs:long" />
+              <xs:element name="cSerialNumber" msprop:Generator_ColumnVarNameInTable="columncSerialNumber" msprop:Generator_ColumnPropNameInRow="cSerialNumber" msprop:Generator_ColumnPropNameInTable="cSerialNumberColumn" msprop:Generator_UserColumnName="cSerialNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cFitemID" msprop:Generator_ColumnVarNameInTable="columncFitemID" msprop:Generator_ColumnPropNameInRow="cFitemID" msprop:Generator_ColumnPropNameInTable="cFitemIDColumn" msprop:Generator_UserColumnName="cFitemID" type="xs:int" minOccurs="0" />
+              <xs:element name="cInvCode" msprop:Generator_ColumnVarNameInTable="columncInvCode" msprop:Generator_ColumnPropNameInRow="cInvCode" msprop:Generator_ColumnPropNameInTable="cInvCodeColumn" msprop:Generator_UserColumnName="cInvCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cInvName" msprop:Generator_ColumnVarNameInTable="columncInvName" msprop:Generator_ColumnPropNameInRow="cInvName" msprop:Generator_ColumnPropNameInTable="cInvNameColumn" msprop:Generator_UserColumnName="cInvName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cInvStd" msprop:Generator_ColumnVarNameInTable="columncInvStd" msprop:Generator_ColumnPropNameInRow="cInvStd" msprop:Generator_ColumnPropNameInTable="cInvStdColumn" msprop:Generator_UserColumnName="cInvStd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cFullName" msprop:Generator_ColumnVarNameInTable="columncFullName" msprop:Generator_ColumnPropNameInRow="cFullName" msprop:Generator_ColumnPropNameInTable="cFullNameColumn" msprop:Generator_UserColumnName="cFullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="iQuantity" msprop:Generator_ColumnVarNameInTable="columniQuantity" msprop:Generator_ColumnPropNameInRow="iQuantity" msprop:Generator_ColumnPropNameInTable="iQuantityColumn" msprop:Generator_UserColumnName="iQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FBatchNo" msprop:Generator_ColumnVarNameInTable="columnFBatchNo" msprop:Generator_ColumnPropNameInRow="FBatchNo" msprop:Generator_ColumnPropNameInTable="FBatchNoColumn" msprop:Generator_UserColumnName="FBatchNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FStockID" msprop:Generator_ColumnVarNameInTable="columnFStockID" msprop:Generator_ColumnPropNameInRow="FStockID" msprop:Generator_ColumnPropNameInTable="FStockIDColumn" msprop:Generator_UserColumnName="FStockID" type="xs:int" minOccurs="0" />
+              <xs:element name="FStockNumber" msprop:Generator_ColumnVarNameInTable="columnFStockNumber" msprop:Generator_ColumnPropNameInRow="FStockNumber" msprop:Generator_ColumnPropNameInTable="FStockNumberColumn" msprop:Generator_UserColumnName="FStockNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FStockName" msprop:Generator_ColumnVarNameInTable="columnFStockName" msprop:Generator_ColumnPropNameInRow="FStockName" msprop:Generator_ColumnPropNameInTable="FStockNameColumn" msprop:Generator_UserColumnName="FStockName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FStockPlaceID" msprop:Generator_ColumnVarNameInTable="columnFStockPlaceID" msprop:Generator_ColumnPropNameInRow="FStockPlaceID" msprop:Generator_ColumnPropNameInTable="FStockPlaceIDColumn" msprop:Generator_UserColumnName="FStockPlaceID" type="xs:int" minOccurs="0" />
+              <xs:element name="FStockPlaceNumber" msprop:Generator_ColumnVarNameInTable="columnFStockPlaceNumber" msprop:Generator_ColumnPropNameInRow="FStockPlaceNumber" msprop:Generator_ColumnPropNameInTable="FStockPlaceNumberColumn" msprop:Generator_UserColumnName="FStockPlaceNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FStockPlaceName" msprop:Generator_ColumnVarNameInTable="columnFStockPlaceName" msprop:Generator_ColumnPropNameInRow="FStockPlaceName" msprop:Generator_ColumnPropNameInTable="FStockPlaceNameColumn" msprop:Generator_UserColumnName="FStockPlaceName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cMemo" msprop:Generator_ColumnVarNameInTable="columncMemo" msprop:Generator_ColumnPropNameInRow="cMemo" msprop:Generator_ColumnPropNameInTable="cMemoColumn" msprop:Generator_UserColumnName="cMemo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dAddTime" msprop:Generator_ColumnVarNameInTable="columndAddTime" msprop:Generator_ColumnPropNameInRow="dAddTime" msprop:Generator_ColumnPropNameInTable="dAddTimeColumn" msprop:Generator_UserColumnName="dAddTime" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_ProductLabel" />
+      <xs:field xpath="mstns:AutoID" />
+    </xs:unique>
+    <xs:unique name="ShiftDetail_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ShiftDetail" />
+      <xs:field xpath="mstns:AutoID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="View_ProductLabel_ShiftDetail" msdata:parent="View_ProductLabel" msdata:child="ShiftDetail" msdata:parentkey="cSerialNumber" msdata:childkey="cSerialNumber" msprop:Generator_UserChildTable="ShiftDetail" msprop:Generator_ChildPropName="GetShiftDetailRows" msprop:Generator_UserRelationName="View_ProductLabel_ShiftDetail" msprop:Generator_ParentPropName="View_ProductLabelRow" msprop:Generator_RelationVarName="relationView_ProductLabel_ShiftDetail" msprop:Generator_UserParentTable="View_ProductLabel" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

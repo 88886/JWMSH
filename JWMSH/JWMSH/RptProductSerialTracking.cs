@@ -10,22 +10,28 @@ using System.Windows.Forms;
 
 namespace JWMSH
 {
-    public partial class RptProLabelPrint : Form
+    public partial class RptProductSerialTracking : Form
     {
-        public RptProLabelPrint()
+        public RptProductSerialTracking()
         {
             InitializeComponent();
         }
 
-        private void RptProLabelPrint_Load(object sender, EventArgs e)
+        private void RptProductSerialTracking_Load(object sender, EventArgs e)
         {
-            pageChange.Constr = BaseStructure.WmsCon;
-            pageChange.GetRecord();
+
             //初始化表格功能控件
             tsgfMain.FormId = Name.GetHashCode().ToString(CultureInfo.CurrentCulture);
             tsgfMain.FormName = Text;
             tsgfMain.Constr = BaseStructure.WmsCon;
             tsgfMain.GetGridStyle(tsgfMain.FormId);
+            RefreshData();
+        }
+
+        private void RefreshData()
+        {
+            view_ProductLabelTableAdapter.Fill(dataReport.View_ProductLabel);
+            shiftDetailTableAdapter.Fill(dataReport.ShiftDetail);
         }
     }
 }
