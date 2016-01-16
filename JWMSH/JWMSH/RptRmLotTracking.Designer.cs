@@ -88,6 +88,10 @@
             this.biExit = new DevExpress.XtraBars.BarButtonItem();
             this.biSearch = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.biRmLotNo = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.biRmcInvCode = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.ImgCollection32 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgSystem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -95,16 +99,12 @@
             this.rpgSearch = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tsgfMain = new UpjdControlBox.ToolStripGridFunction();
             this.uGridRawMaterial = new Infragistics.Win.UltraWinGrid.UltraGrid();
-            this.biRmLotNo = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.biRmcInvCode = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -204,6 +204,32 @@
             this.bbiRefresh.LargeImageIndex = 10;
             this.bbiRefresh.Name = "bbiRefresh";
             // 
+            // biRmLotNo
+            // 
+            this.biRmLotNo.Caption = "输入原料批号";
+            this.biRmLotNo.Edit = this.repositoryItemTextEdit1;
+            this.biRmLotNo.Id = 69;
+            this.biRmLotNo.Name = "biRmLotNo";
+            this.biRmLotNo.Width = 255;
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // biRmcInvCode
+            // 
+            this.biRmcInvCode.Caption = "输入原料编码";
+            this.biRmcInvCode.Edit = this.repositoryItemTextEdit2;
+            this.biRmcInvCode.Id = 70;
+            this.biRmcInvCode.Name = "biRmcInvCode";
+            this.biRmcInvCode.Width = 255;
+            // 
+            // repositoryItemTextEdit2
+            // 
+            this.repositoryItemTextEdit2.AutoHeight = false;
+            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
+            // 
             // ImgCollection32
             // 
             this.ImgCollection32.ImageSize = new System.Drawing.Size(32, 32);
@@ -272,7 +298,7 @@
             this.tsgfMain.Name = "tsgfMain";
             this.tsgfMain.Size = new System.Drawing.Size(984, 25);
             this.tsgfMain.TabIndex = 41;
-            this.tsgfMain.UGrid = null;
+            this.tsgfMain.UGrid = this.uGridRawMaterial;
             // 
             // uGridRawMaterial
             // 
@@ -429,32 +455,6 @@
             this.uGridRawMaterial.TabIndex = 42;
             this.uGridRawMaterial.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             // 
-            // biRmLotNo
-            // 
-            this.biRmLotNo.Caption = "输入原料批号";
-            this.biRmLotNo.Edit = this.repositoryItemTextEdit1;
-            this.biRmLotNo.Id = 69;
-            this.biRmLotNo.Name = "biRmLotNo";
-            this.biRmLotNo.Width = 255;
-            // 
-            // repositoryItemTextEdit1
-            // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            // 
-            // biRmcInvCode
-            // 
-            this.biRmcInvCode.Caption = "输入原料编码";
-            this.biRmcInvCode.Edit = this.repositoryItemTextEdit2;
-            this.biRmcInvCode.Id = 70;
-            this.biRmcInvCode.Name = "biRmcInvCode";
-            this.biRmcInvCode.Width = 255;
-            // 
-            // repositoryItemTextEdit2
-            // 
-            this.repositoryItemTextEdit2.AutoHeight = false;
-            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
-            // 
             // RptRmLotTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -469,10 +469,10 @@
             this.Load += new System.EventHandler(this.RptRmLotTracking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).EndInit();
             this.ResumeLayout(false);
 
         }

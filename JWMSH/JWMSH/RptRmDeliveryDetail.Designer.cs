@@ -395,6 +395,7 @@
             this.Icon = global::JWMSH.Properties.Resources.scanicon;
             this.Name = "RptRmDeliveryDetail";
             this.Text = "原料领料记录表";
+            this.Load += new System.EventHandler(this.RptRmDeliveryDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).EndInit();

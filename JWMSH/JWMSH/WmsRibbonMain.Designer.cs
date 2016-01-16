@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WmsRibbonMain));
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup ultraExplorerBarGroup11 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem35 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
@@ -95,10 +94,10 @@
             Infragistics.Win.UltraWinStatusBar.UltraStatusPanel ultraStatusPanel5 = new Infragistics.Win.UltraWinStatusBar.UltraStatusPanel();
             Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.aMenuMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.aMenuMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
             this.biExit = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnFreshFunction = new DevExpress.XtraBars.BarButtonItem();
-            this.ImgCollection16 = new DevExpress.Utils.ImageCollection(this.components);
+            this.ImgCollection16 = new DevExpress.Utils.ImageCollection();
             this.biMenu = new DevExpress.XtraBars.BarButtonItem();
             this.bbiExit = new DevExpress.XtraBars.BarButtonItem();
             this.bsiOneText = new DevExpress.XtraBars.BarStaticItem();
@@ -108,16 +107,16 @@
             this.bsiThreeText = new DevExpress.XtraBars.BarStaticItem();
             this.bsiThreeValue = new DevExpress.XtraBars.BarStaticItem();
             this.btnCalc = new DevExpress.XtraBars.BarButtonItem();
-            this.ImgCollection32 = new DevExpress.Utils.ImageCollection(this.components);
+            this.ImgCollection32 = new DevExpress.Utils.ImageCollection();
             this.rpgMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgSys = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgFunction = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.panel1 = new System.Windows.Forms.Panel();
             this.uExplorerBar = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBar();
-            this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
+            this.imageListSmall = new System.Windows.Forms.ImageList();
             this.uSplitterLeft = new Infragistics.Win.Misc.UltraSplitter();
-            this.MdiManager = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
+            this.MdiManager = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager();
             this.uStatusBar = new Infragistics.Win.UltraWinStatusBar.UltraStatusBar();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aMenuMain)).BeginInit();
@@ -292,7 +291,7 @@
             this.rpgSys,
             this.rpgFunction});
             this.rpgMain.Name = "rpgMain";
-            this.rpgMain.Text = "JARAN WMS";
+            this.rpgMain.Text = "JARAN MES WMS";
             // 
             // rpgSys
             // 
@@ -570,7 +569,7 @@
             this.IsMdiContainer = true;
             this.Name = "WmsRibbonMain";
             this.Ribbon = this.ribbon;
-            this.Text = "WMS主界面";
+            this.Text = "MES主界面";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WmsRibbonMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WmsRibbonMain_FormClosed);

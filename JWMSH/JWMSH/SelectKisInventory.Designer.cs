@@ -66,7 +66,7 @@
             this.tsgfMain.FormName = null;
             this.tsgfMain.Location = new System.Drawing.Point(0, 0);
             this.tsgfMain.Name = "tsgfMain";
-            this.tsgfMain.Size = new System.Drawing.Size(784, 25);
+            this.tsgfMain.Size = new System.Drawing.Size(984, 25);
             this.tsgfMain.TabIndex = 56;
             this.tsgfMain.UGrid = this.uGirdKisInventory;
             // 
@@ -188,7 +188,7 @@
             this.uGirdKisInventory.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uGirdKisInventory.Location = new System.Drawing.Point(0, 25);
             this.uGirdKisInventory.Name = "uGirdKisInventory";
-            this.uGirdKisInventory.Size = new System.Drawing.Size(784, 537);
+            this.uGirdKisInventory.Size = new System.Drawing.Size(984, 537);
             this.uGirdKisInventory.TabIndex = 57;
             this.uGirdKisInventory.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             this.uGirdKisInventory.DoubleClickCell += new Infragistics.Win.UltraWinGrid.DoubleClickCellEventHandler(this.uGirdKisInventory_DoubleClickCell);
@@ -197,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(984, 562);
             this.Controls.Add(this.uGirdKisInventory);
             this.Controls.Add(this.tsgfMain);
             this.Icon = global::JWMSH.Properties.Resources.scanicon;

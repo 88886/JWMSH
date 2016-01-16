@@ -15,5 +15,10 @@ namespace JWMSH
         {
             InitializeComponent();
         }
+
+        private void RptRmDeliveryDetail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

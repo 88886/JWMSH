@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkRmLabelPrint));
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
@@ -57,6 +56,8 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn30 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FFullName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn31 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FDefaultLoc");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn32 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FSPID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FUnitID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FUnitName");
             Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
@@ -94,10 +95,10 @@
             Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
-            this.ImgCollection16 = new DevExpress.Utils.ImageCollection(this.components);
-            this.ImgCollection32 = new DevExpress.Utils.ImageCollection(this.components);
+            this.ImgCollection16 = new DevExpress.Utils.ImageCollection();
+            this.ImgCollection32 = new DevExpress.Utils.ImageCollection();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection();
             this.bsiPrint = new DevExpress.XtraBars.BarSubItem();
             this.biPrint = new DevExpress.XtraBars.BarButtonItem();
             this.biPreview = new DevExpress.XtraBars.BarButtonItem();
@@ -115,7 +116,7 @@
             this.biEditPrinter = new DevExpress.XtraBars.BarButtonItem();
             this.beiCopies = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemCalcEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.imageCollection2 = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollection2 = new DevExpress.Utils.ImageCollection();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgSystem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgExport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -124,6 +125,8 @@
             this.rpgPrinter = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.lblTitleMain = new JWMSH.UpjdControl.lblTitle();
             this.ugbxMain = new Infragistics.Win.Misc.UltraGroupBox();
+            this.txtcDefine1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtcVendor = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.txtcMemo = new System.Windows.Forms.TextBox();
             this.备注 = new System.Windows.Forms.Label();
@@ -194,7 +197,7 @@
             this.biDesign});
             this.ribbon.LargeImages = this.imageCollection2;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 81;
+            this.ribbon.MaxItemId = 82;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage});
@@ -359,6 +362,7 @@
             this.repositoryItemCalcEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemCalcEdit1.Name = "repositoryItemCalcEdit1";
+            this.repositoryItemCalcEdit1.NullText = "1";
             // 
             // imageCollection2
             // 
@@ -451,6 +455,8 @@
             // 
             // ugbxMain
             // 
+            this.ugbxMain.Controls.Add(this.txtcDefine1);
+            this.ugbxMain.Controls.Add(this.label8);
             this.ugbxMain.Controls.Add(this.txtcVendor);
             this.ugbxMain.Controls.Add(this.txtcMemo);
             this.ugbxMain.Controls.Add(this.备注);
@@ -475,8 +481,28 @@
             this.ugbxMain.Size = new System.Drawing.Size(984, 140);
             this.ugbxMain.TabIndex = 30;
             // 
+            // txtcDefine1
+            // 
+            this.txtcDefine1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtcDefine1.Enabled = false;
+            this.txtcDefine1.Location = new System.Drawing.Point(705, 74);
+            this.txtcDefine1.Name = "txtcDefine1";
+            this.txtcDefine1.Size = new System.Drawing.Size(194, 21);
+            this.txtcDefine1.TabIndex = 72;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(627, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 12);
+            this.label8.TabIndex = 71;
+            this.label8.Text = "供应商批次：";
+            // 
             // txtcVendor
             // 
+            this.txtcVendor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcVendor.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
             this.txtcVendor.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.Contains;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
@@ -554,6 +580,7 @@
             // 
             // txtcMemo
             // 
+            this.txtcMemo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcMemo.Enabled = false;
             this.txtcMemo.Location = new System.Drawing.Point(151, 107);
             this.txtcMemo.Name = "txtcMemo";
@@ -562,6 +589,7 @@
             // 
             // 备注
             // 
+            this.备注.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.备注.AutoSize = true;
             this.备注.Location = new System.Drawing.Point(107, 111);
             this.备注.Name = "备注";
@@ -571,6 +599,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(649, 48);
             this.label7.Name = "label7";
@@ -580,6 +609,7 @@
             // 
             // txtcFullName
             // 
+            this.txtcFullName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcFullName.Enabled = false;
             this.txtcFullName.Location = new System.Drawing.Point(437, 74);
             this.txtcFullName.Name = "txtcFullName";
@@ -589,6 +619,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(369, 78);
             this.label5.Name = "label5";
@@ -598,6 +629,7 @@
             // 
             // uneiQuantity
             // 
+            this.uneiQuantity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.uneiQuantity.Enabled = false;
             this.uneiQuantity.Location = new System.Drawing.Point(437, 44);
             this.uneiQuantity.MaskInput = "nnnnnnnnn.nnnn";
@@ -610,6 +642,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(393, 48);
             this.label4.Name = "label4";
@@ -619,6 +652,7 @@
             // 
             // txtcLotNo
             // 
+            this.txtcLotNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcLotNo.Enabled = false;
             this.txtcLotNo.Location = new System.Drawing.Point(705, 14);
             this.txtcLotNo.Name = "txtcLotNo";
@@ -627,6 +661,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(661, 18);
             this.label3.Name = "label3";
@@ -636,6 +671,7 @@
             // 
             // utecInvName
             // 
+            this.utecInvName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             appearance13.Image = ((object)(resources.GetObject("appearance13.Image")));
             editorButton1.Appearance = appearance13;
             this.utecInvName.ButtonsRight.Add(editorButton1);
@@ -649,6 +685,7 @@
             // 
             // txtcInvCode
             // 
+            this.txtcInvCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcInvCode.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
             this.txtcInvCode.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.StartsWith;
             appearance14.BackColor = System.Drawing.SystemColors.Window;
@@ -668,6 +705,10 @@
             ultraGridColumn31.Header.VisiblePosition = 5;
             ultraGridColumn32.Header.Caption = "默认仓位";
             ultraGridColumn32.Header.VisiblePosition = 6;
+            ultraGridColumn2.Header.Caption = "单位编码";
+            ultraGridColumn2.Header.VisiblePosition = 7;
+            ultraGridColumn7.Header.Caption = "单位名称";
+            ultraGridColumn7.Header.VisiblePosition = 8;
             ultraGridBand2.Columns.AddRange(new object[] {
             ultraGridColumn16,
             ultraGridColumn17,
@@ -675,7 +716,9 @@
             ultraGridColumn29,
             ultraGridColumn30,
             ultraGridColumn31,
-            ultraGridColumn32});
+            ultraGridColumn32,
+            ultraGridColumn2,
+            ultraGridColumn7});
             this.txtcInvCode.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.txtcInvCode.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.txtcInvCode.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
@@ -739,6 +782,7 @@
             // 
             // txtcInvStd
             // 
+            this.txtcInvStd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcInvStd.Enabled = false;
             this.txtcInvStd.Location = new System.Drawing.Point(151, 74);
             this.txtcInvStd.Name = "txtcInvStd";
@@ -747,6 +791,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(83, 78);
             this.label9.Name = "label9";
@@ -756,6 +801,7 @@
             // 
             // dtpdDate
             // 
+            this.dtpdDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpdDate.Checked = false;
             this.dtpdDate.Enabled = false;
             this.dtpdDate.Location = new System.Drawing.Point(437, 14);
@@ -766,6 +812,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(369, 18);
             this.label6.Name = "label6";
@@ -775,6 +822,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(83, 48);
             this.label2.Name = "label2";
@@ -784,6 +832,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(83, 18);
             this.label1.Name = "label1";
@@ -1036,5 +1085,7 @@
         private DevExpress.XtraBars.BarButtonItem biPreview;
         private DevExpress.XtraBars.BarButtonItem biDesign;
         private Infragistics.Win.UltraWinGrid.UltraCombo txtcVendor;
+        private System.Windows.Forms.TextBox txtcDefine1;
+        private System.Windows.Forms.Label label8;
     }
 }

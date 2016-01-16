@@ -204,7 +204,7 @@ namespace JWMSH
             var xtreport = new XtraReport();
             // _btApp = new BarTender.Application();
             //判断当前打印模版路径是否存在
-            var temPath = Application.StartupPath + @"\Label\" + _cTempletFileName;
+            var temPath = _cTempletFileName;     //_cTempletFileName;      //Application.StartupPath + @"\Label\" +   _cTempletFileName;
 
             if (!File.Exists(temPath))
             {
@@ -224,13 +224,14 @@ namespace JWMSH
             DllWorkPrintLabel.SetParametersValue(xtreport, "cBarCode", "R*" + _FitemId + "*L*" + txtcLotNo.Text + "*S*" + lblTitleMain.lblcSerialNumber.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cInvCode", txtcInvCode.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cInvName", utecInvName.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value.ToShortDateString());
             DllWorkPrintLabel.SetParametersValue(xtreport, "cInvStd", txtcInvStd.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cFullName", txtcFullName.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cVendor", txtcVendor.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cLotNo", txtcLotNo.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "iQuantity", uneiQuantity.Value);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", txtcMemo.Text);
-
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cDefine1", txtcDefine1.Text);
             //模板赋值
             switch (operation)
             {
@@ -248,6 +249,11 @@ namespace JWMSH
         }
         private void PrintingSystem_StartPrint(object sender, DevExpress.XtraPrinting.PrintDocumentEventArgs e)
         {
+            if (beiCopies.EditValue == null)
+            {
+                e.PrintDocument.PrinterSettings.Copies = 1;
+                return;
+            }
             short iCopies;
             if (short.TryParse(beiCopies.EditValue.ToString(), out iCopies))
                 e.PrintDocument.PrinterSettings.Copies = iCopies;
@@ -259,7 +265,7 @@ namespace JWMSH
 
         private void GetRawMaterial()
         {
-            var cmd = new SqlCommand("select   a.FItemID,a.FNumber,a.FName,FModel,FFullName,FDefaultLoc,FSPID,a.FUnitID,b.FName from t_icitem a inner join t_MeasureUnit b on a.FUnitID=b.FMeasureUnitID where isnull(a.FDeleted,0)<>1  order by a.FitemID");
+            var cmd = new SqlCommand("select   a.FItemID,a.FNumber,a.FName,FModel,FFullName,FDefaultLoc,FSPID,a.FUnitID,b.FName FUnitName from t_icitem a inner join t_MeasureUnit b on a.FUnitID=b.FMeasureUnitID where isnull(a.FDeleted,0)<>1  order by a.FitemID");
             var wf=new WmsFunction(BaseStructure.KisConstring);
             _dtRawMaterial = wf.GetSqlTable(cmd);
             txtcInvCode.DataSource = _dtRawMaterial;
@@ -434,8 +440,9 @@ namespace JWMSH
                     cmd.Parameters.AddWithValue("@cVendor", txtcVendor.Text);
                     cmd.Parameters.AddWithValue("@cMemo", txtcMemo.Text);
                     cmd.Parameters.AddWithValue("@cDefaultLoc", _DefaultLoc);
-                    cmd.Parameters.AddWithValue("@cDefaultSP", _DefaultSP);con.Open();
-
+                    cmd.Parameters.AddWithValue("@cDefaultSP", _DefaultSP);
+                    cmd.Parameters.AddWithValue("@cDefine1", txtcDefine1.Text); 
+                    con.Open();
                     try
                     {
                         var ieffect = cmd.ExecuteNonQuery();

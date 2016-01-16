@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -49,16 +50,22 @@ namespace JWMSH
             }
             cFitemList = cFitemList.Remove(cFitemList.Length - 1);
             GetCurrentStock(cFitemList);
+
+            //初始化表格功能控件
+            tsgfMain.FormId = Name.GetHashCode().ToString(CultureInfo.CurrentCulture);
+            tsgfMain.FormName = Text;
+            tsgfMain.Constr = BaseStructure.WmsCon;
+            tsgfMain.GetGridStyle(tsgfMain.FormId);
         }
 
 
         private void GetCurrentStock(string cFitemList)
         {
-            var cmd = new SqlCommand(@" select a.FItemID,b.FNumber,b.FName,b.FModel,b.FFullName,a.FBatchNo,a.FStockID,
+            var cmd = new SqlCommand(@" select a.FItemID,b.FNumber,b.FName,a.FQty Quantity,b.FModel,b.FFullName,a.FBatchNo,a.FStockID,
 c.FNumber FStockNumber,c.FName FStockName,a.FStockPlaceID,d.FNumber FStockPlaceNumber,d.FName FStockPlaceName
 from ICInventory a inner join t_ICItem b on a.FItemID=b.FItemID 
 inner join t_Stock c on a.FStockID=c.FItemID inner join t_StockPlace d on a.FStockPlaceID=d.FSPID
-where a.FQty>=0 and a.FItemID in(" + cFitemList + ")   order by a.FItemID,a.FBatchNo,a.FStockID,a.FStockPlaceID ");
+where a.FQty>0 and a.FItemID in(" + cFitemList + ")   order by a.FItemID,a.FBatchNo,a.FStockID,a.FStockPlaceID ");
             var wf = new WmsFunction(BaseStructure.KisConstring);
             uGridCurrentStock.DataSource = wf.GetSqlTable(cmd);
         }

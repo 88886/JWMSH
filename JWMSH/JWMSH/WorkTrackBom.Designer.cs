@@ -296,6 +296,7 @@
             // 
             // txtcMemo
             // 
+            this.txtcMemo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcMemo.Enabled = false;
             this.txtcMemo.Location = new System.Drawing.Point(151, 78);
             this.txtcMemo.Name = "txtcMemo";
@@ -304,6 +305,7 @@
             // 
             // 备注
             // 
+            this.备注.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.备注.AutoSize = true;
             this.备注.Location = new System.Drawing.Point(107, 82);
             this.备注.Name = "备注";
@@ -313,6 +315,7 @@
             // 
             // txtcFullName
             // 
+            this.txtcFullName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcFullName.Enabled = false;
             this.txtcFullName.Location = new System.Drawing.Point(548, 44);
             this.txtcFullName.Name = "txtcFullName";
@@ -322,6 +325,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(477, 48);
             this.label5.Name = "label5";
@@ -331,6 +335,7 @@
             // 
             // utecInvName
             // 
+            this.utecInvName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             appearance1.Image = ((object)(resources.GetObject("appearance1.Image")));
             editorButton1.Appearance = appearance1;
             this.utecInvName.ButtonsRight.Add(editorButton1);
@@ -344,6 +349,7 @@
             // 
             // txtcInvStd
             // 
+            this.txtcInvStd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcInvStd.Enabled = false;
             this.txtcInvStd.Location = new System.Drawing.Point(545, 14);
             this.txtcInvStd.Name = "txtcInvStd";
@@ -353,6 +359,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(477, 18);
             this.label9.Name = "label9";
@@ -362,6 +369,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(83, 48);
             this.label2.Name = "label2";
@@ -371,6 +379,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(83, 18);
             this.label1.Name = "label1";
@@ -380,6 +389,7 @@
             // 
             // txtcInvCode
             // 
+            this.txtcInvCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcInvCode.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
             this.txtcInvCode.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.StartsWith;
             appearance2.BackColor = System.Drawing.SystemColors.Window;

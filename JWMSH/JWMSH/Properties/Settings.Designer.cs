@@ -79,5 +79,16 @@ namespace JWMSH.Properties {
                 return ((string)(this["JWMSH_WmsService_BaseConService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.244.138;Initial Catalog=AIS20150527083422;Persist Security In" +
+            "fo=True;User ID=sa;Password=sa")]
+        public string KisCon {
+            get {
+                return ((string)(this["KisCon"]));
+            }
+        }
     }
 }

@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="Aspose.Cells">
       <HintPath>bin\Debug\dll_library\Aspose.Cells.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -183,17 +184,21 @@
       <HintPath>bin\Debug\dll_library\Infragistics2.Win.v12.1.dll</HintPath>
     </Reference>
     <Reference Include="Interop.LabelManager2">
-      <HintPath>bin\Debug\dll_library\Interop.LabelManager2.dll</HintPath>
+      <HintPath>bin\debug\dll_library\Interop.LabelManager2.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Data.ConnectionUI">
       <HintPath>bin\Debug\dll_library\Microsoft.Data.ConnectionUI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Data.ConnectionUI.Dialog">
       <HintPath>bin\Debug\dll_library\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SearchFilter">
       <HintPath>bin\Debug\dll_library\SearchFilter.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -208,6 +213,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="UpjdControlBox">
       <HintPath>bin\Debug\dll_library\UpjdControlBox.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

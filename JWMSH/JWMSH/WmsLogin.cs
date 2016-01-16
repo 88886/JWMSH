@@ -39,12 +39,9 @@ namespace JWMSH
         {
             try
             {
-                var ws = new WmsService.BaseConService {Url = "http://" + utxtServer.Text + "/BaseConService.asmx"};
-
                 BaseStructure.WmsServer = utxtServer.Text;
-                BaseStructure.WmsCon = ws.GetWmsConstring();
-                BaseStructure.WmsServiceUri = ws.Url;
-                BaseStructure.KisConstring = ws.GetKisConstring();
+                BaseStructure.WmsCon = Properties.Settings.Default.BCon;
+                BaseStructure.KisConstring = Properties.Settings.Default.KisCon;
             }
             catch (Exception ex)
             {

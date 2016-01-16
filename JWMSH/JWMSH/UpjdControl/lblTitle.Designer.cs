@@ -39,6 +39,7 @@
             // 
             // lText
             // 
+            this.lText.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lText.AutoSize = true;
             this.lText.BackColor = System.Drawing.Color.Transparent;
             this.lText.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -69,7 +70,7 @@
             // 
             // btnPre
             // 
-            this.btnPre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnPre.BackColor = System.Drawing.Color.Transparent;
             this.btnPre.BackgroundImage = global::JWMSH.Properties.Resources.pre;
             this.btnPre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -87,7 +88,7 @@
             // 
             // btnLast
             // 
-            this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLast.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLast.BackColor = System.Drawing.Color.Transparent;
             this.btnLast.BackgroundImage = global::JWMSH.Properties.Resources.last;
             this.btnLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -105,7 +106,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNext.BackColor = System.Drawing.Color.Transparent;
             this.btnNext.BackgroundImage = global::JWMSH.Properties.Resources.next;
             this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -123,7 +124,7 @@
             // 
             // btnFirst
             // 
-            this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFirst.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFirst.BackColor = System.Drawing.Color.Transparent;
             this.btnFirst.BackgroundImage = global::JWMSH.Properties.Resources.first;
             this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;

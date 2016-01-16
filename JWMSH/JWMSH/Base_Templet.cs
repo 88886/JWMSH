@@ -182,7 +182,7 @@ namespace JWMSH
                 }
                 else
                 {
-                    e.Cell.Value = ofdMain.SafeFileName;
+                    e.Cell.Value = ofdMain.FileName;
                 }
             }
         }

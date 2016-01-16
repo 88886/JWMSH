@@ -21,6 +21,7 @@ namespace JWMSH
         private void biSearch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Query_RmTrackingUseInProduct();
+            
         }
 
         /// <summary>
@@ -31,6 +32,8 @@ namespace JWMSH
             if (string.IsNullOrEmpty(biRmcInvCode.EditValue.ToString()) ||
                 string.IsNullOrEmpty(biRmLotNo.EditValue.ToString()))
                 return;
+
+            uGridRawMaterial.Text = string.Format("原料编码 {0}   原料批号：{1}", biRmcInvCode.EditValue, biRmLotNo.EditValue);
             var cmd = new SqlCommand("Query_RmTrackingUseInProduct") {CommandType = CommandType.StoredProcedure};
             cmd.Parameters.AddWithValue("@cInvCode", biRmcInvCode.EditValue);
             cmd.Parameters.AddWithValue("@FBatchNo", biRmLotNo.EditValue);

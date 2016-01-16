@@ -149,6 +149,7 @@
             this.utxtServer.Name = "utxtServer";
             this.utxtServer.Size = new System.Drawing.Size(315, 29);
             this.utxtServer.TabIndex = 2;
+            this.utxtServer.Text = "Huxiang MES WMS ";
             // 
             // lblLogin
             // 
@@ -182,11 +183,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(134, 52);
+            this.label1.Location = new System.Drawing.Point(94, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 39);
+            this.label1.Size = new System.Drawing.Size(313, 39);
             this.label1.TabIndex = 9;
-            this.label1.Text = "WMS_HuaXiang";
+            this.label1.Text = "华翔条码追溯MES系统";
             // 
             // ultraFormattedLinkLabel1
             // 

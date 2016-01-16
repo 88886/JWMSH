@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.XtraReports.UI;
 using Infragistics.Win.Misc;
 using Infragistics.Win.UltraWinEditors;
 using JWMSH.DLL;
@@ -500,6 +502,69 @@ namespace JWMSH
                     }
                 }
             }
+        }
+
+        private void biPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            PrintDialog("print");
+        }
+
+        private void biPreview_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            PrintDialog("preview");
+        }
+
+        private void biDesign_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            PrintDialog("design");
+        }
+
+
+        public void PrintDialog(string operation)
+        {
+            var xtreport = new XtraReport();
+            // _btApp = new BarTender.Application();
+            //判断当前打印模版路径是否存在
+            var temPath = _cTempletFileName;      //Application.StartupPath + @"\Label\" +  _cTempletFileName;
+
+            if (!File.Exists(temPath))
+            {
+                MessageBox.Show(@"当前路径下的打印模版文件不存在!", @"异常", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                xtreport.ShowDesigner();
+                return;
+            }
+            xtreport.LoadLayout(temPath);
+            xtreport.PrinterName = _cPrinter;
+            xtreport.RequestParameters = false;
+            xtreport.ShowPrintStatusDialog = false;
+            xtreport.ShowPrintMarginsWarning = false;
+
+            //模板赋值
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cSerialNumber", lblTitleMain.lblcSerialNumber.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cInvCode", txtcInvCode.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cInvName", utecInvName.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cInvStd", txtcInvStd.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cFullName", txtcFullName.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cOrderNuber", txtcOrderNumber.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "iQuantity", uneiQuantity.Value);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cDepartment", txtcDept.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value.ToShortDateString());
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", txtcMemo.Text);
+            xtreport.DataSource = dataInventory.ShiftDetail;
+            //模板赋值
+            switch (operation)
+            {
+                case "print":
+                    xtreport.Print();
+                    break;
+                case "design":
+                    xtreport.ShowDesigner();
+                    break;
+                case "preview":
+                    xtreport.ShowPreview();
+                    break;
+            }
+
         }
     }
 }

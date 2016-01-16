@@ -260,6 +260,7 @@
             // 
             // txtcDept
             // 
+            this.txtcDept.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcDept.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
             this.txtcDept.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.Contains;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
@@ -337,6 +338,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(721, 48);
             this.label7.Name = "label7";
@@ -346,6 +348,7 @@
             // 
             // dtpdDate
             // 
+            this.dtpdDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpdDate.Checked = false;
             this.dtpdDate.Enabled = false;
             this.dtpdDate.Location = new System.Drawing.Point(447, 44);
@@ -356,6 +359,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(390, 48);
             this.label6.Name = "label6";
@@ -365,6 +369,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(673, 18);
             this.label3.Name = "label3";
@@ -374,6 +379,7 @@
             // 
             // txtcOrderNumber
             // 
+            this.txtcOrderNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcOrderNumber.Enabled = false;
             this.txtcOrderNumber.Location = new System.Drawing.Point(447, 14);
             this.txtcOrderNumber.Name = "txtcOrderNumber";
@@ -382,6 +388,7 @@
             // 
             // uneiQuantity
             // 
+            this.uneiQuantity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.uneiQuantity.Enabled = false;
             this.uneiQuantity.Location = new System.Drawing.Point(753, 14);
             this.uneiQuantity.MaskInput = "nnnnnnnnn";
@@ -393,6 +400,7 @@
             // 
             // lblcOrderNumber
             // 
+            this.lblcOrderNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblcOrderNumber.AutoSize = true;
             this.lblcOrderNumber.Location = new System.Drawing.Point(378, 18);
             this.lblcOrderNumber.Name = "lblcOrderNumber";
@@ -402,6 +410,7 @@
             // 
             // txtcMemo
             // 
+            this.txtcMemo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcMemo.Enabled = false;
             this.txtcMemo.Location = new System.Drawing.Point(151, 108);
             this.txtcMemo.Name = "txtcMemo";
@@ -410,6 +419,7 @@
             // 
             // 备注
             // 
+            this.备注.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.备注.AutoSize = true;
             this.备注.Location = new System.Drawing.Point(118, 112);
             this.备注.Name = "备注";
@@ -419,6 +429,7 @@
             // 
             // txtcFullName
             // 
+            this.txtcFullName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcFullName.Enabled = false;
             this.txtcFullName.Location = new System.Drawing.Point(447, 74);
             this.txtcFullName.Name = "txtcFullName";
@@ -428,6 +439,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(390, 78);
             this.label5.Name = "label5";
@@ -437,6 +449,7 @@
             // 
             // utecInvName
             // 
+            this.utecInvName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             appearance13.Image = ((object)(resources.GetObject("appearance13.Image")));
             editorButton1.Appearance = appearance13;
             this.utecInvName.ButtonsRight.Add(editorButton1);
@@ -449,6 +462,7 @@
             // 
             // txtcInvStd
             // 
+            this.txtcInvStd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcInvStd.Enabled = false;
             this.txtcInvStd.Location = new System.Drawing.Point(151, 74);
             this.txtcInvStd.Name = "txtcInvStd";
@@ -458,6 +472,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(94, 78);
             this.label9.Name = "label9";
@@ -467,6 +482,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(94, 48);
             this.label2.Name = "label2";
@@ -476,6 +492,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(94, 18);
             this.label1.Name = "label1";
@@ -485,6 +502,7 @@
             // 
             // txtcInvCode
             // 
+            this.txtcInvCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcInvCode.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
             this.txtcInvCode.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.StartsWith;
             appearance14.BackColor = System.Drawing.SystemColors.Window;
@@ -641,7 +659,8 @@
             ultraGridColumn1.CellAppearance = appearance28;
             ultraGridColumn1.Header.Caption = "数量";
             ultraGridColumn1.Header.VisiblePosition = 4;
-            ultraGridColumn1.MaskInput = "nnnnn.nnnn";
+            ultraGridColumn1.MaskInput = "nnnnn.nnnnnnnnnn";
+            ultraGridColumn1.Width = 102;
             ultraGridColumn30.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn30.Header.Caption = "批次";
             ultraGridColumn30.Header.VisiblePosition = 5;
@@ -656,12 +675,14 @@
             ultraGridColumn39.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn39.Header.Caption = "仓库名称";
             ultraGridColumn39.Header.VisiblePosition = 8;
+            ultraGridColumn39.Width = 140;
             ultraGridColumn41.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn41.Header.Caption = "仓位编码";
             ultraGridColumn41.Header.VisiblePosition = 9;
             ultraGridColumn42.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn42.Header.Caption = "仓位名称";
             ultraGridColumn42.Header.VisiblePosition = 10;
+            ultraGridColumn42.Width = 173;
             ultraGridColumn28.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             appearance29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             ultraGridColumn28.CellAppearance = appearance29;
@@ -672,7 +693,9 @@
             ultraGridColumn18.Header.Caption = "添加时间";
             ultraGridColumn18.Header.VisiblePosition = 14;
             ultraGridColumn11.Header.VisiblePosition = 15;
+            ultraGridColumn11.Hidden = true;
             ultraGridColumn7.Header.VisiblePosition = 16;
+            ultraGridColumn7.Hidden = true;
             ultraGridBand3.Columns.AddRange(new object[] {
             ultraGridColumn19,
             ultraGridColumn29,
@@ -960,6 +983,7 @@
             this.biPrint.Id = 55;
             this.biPrint.ImageIndex = 2;
             this.biPrint.Name = "biPrint";
+            this.biPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biPrint_ItemClick);
             // 
             // biPreview
             // 
@@ -967,6 +991,7 @@
             this.biPreview.Id = 79;
             this.biPreview.ImageIndex = 1;
             this.biPreview.Name = "biPreview";
+            this.biPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biPreview_ItemClick);
             // 
             // biDesign
             // 
@@ -974,6 +999,7 @@
             this.biDesign.Id = 80;
             this.biDesign.ImageIndex = 0;
             this.biDesign.Name = "biDesign";
+            this.biDesign.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biDesign_ItemClick);
             // 
             // biExport
             // 
@@ -1136,6 +1162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 562);
             this.Controls.Add(this.tabMain);

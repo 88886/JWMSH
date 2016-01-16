@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -78,6 +79,12 @@ namespace JWMSH
 
             biEditPrinter.Caption = _cPrinter;
             biEditTemplet.Caption = _cCaption;
+
+            //初始化表格功能控件
+            tsgfMain.FormId = Name.GetHashCode().ToString(CultureInfo.CurrentCulture);
+            tsgfMain.FormName = Text;
+            tsgfMain.Constr = BaseStructure.WmsCon;
+            tsgfMain.GetGridStyle(tsgfMain.FormId);
         }
 
 
@@ -265,7 +272,7 @@ namespace JWMSH
             var xtreport = new XtraReport();
             // _btApp = new BarTender.Application();
             //判断当前打印模版路径是否存在
-            var temPath = Application.StartupPath + @"\Label\" + _cTempletFileName;
+            var temPath = _cTempletFileName;     //_cTempletFileName;      //Application.StartupPath + @"\Label\" +   _cTempletFileName;
 
             if (!File.Exists(temPath))
             {
@@ -287,6 +294,8 @@ namespace JWMSH
             DllWorkPrintLabel.SetParametersValue(xtreport, "cFullName", txtcFullName.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "iQuantity", uneiQuantity.Value);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", txtcMemo.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cOrderNumber", txtcOrderNumber.Text);
             xtreport.DataSource = dataInventory.ProductLabel;
             //模板赋值
             switch (operation)
