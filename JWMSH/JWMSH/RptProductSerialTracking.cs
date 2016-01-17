@@ -19,7 +19,8 @@ namespace JWMSH
 
         private void RptProductSerialTracking_Load(object sender, EventArgs e)
         {
-
+            shiftDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
+            view_ProductLabelTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
             //初始化表格功能控件
             tsgfMain.FormId = Name.GetHashCode().ToString(CultureInfo.CurrentCulture);
             tsgfMain.FormName = Text;

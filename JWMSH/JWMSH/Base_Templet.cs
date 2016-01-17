@@ -94,7 +94,8 @@ namespace JWMSH
             uGridRawMaterial.DisplayLayout.ValueLists["Function"].ValueListItems.Add("原料标签", "原料标签");
             uGridRawMaterial.DisplayLayout.ValueLists["Function"].ValueListItems.Add("产成品标签", "产成品标签");
             uGridRawMaterial.DisplayLayout.ValueLists["Function"].ValueListItems.Add("班次制单模板", "班次制单模板");
-            
+            //仓位标签
+            uGridRawMaterial.DisplayLayout.ValueLists["Function"].ValueListItems.Add("仓位标签", "仓位标签");
             uGridRawMaterial.DisplayLayout.Bands[0].Columns["cFunction"].ValueList =
                 uGridRawMaterial.DisplayLayout.ValueLists["Function"];
         }

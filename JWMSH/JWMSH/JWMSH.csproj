@@ -274,6 +274,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataInventory.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DLL\DataKis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataKis.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DLL\DataReport.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -382,6 +387,12 @@
     </Compile>
     <Compile Include="WorkRmPurchaseOrder.Designer.cs">
       <DependentUpon>WorkRmPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkStockPlaceLabelPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkStockPlaceLabelPrint.Designer.cs">
+      <DependentUpon>WorkStockPlaceLabelPrint.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkTrackBom.cs">
       <SubType>Form</SubType>
@@ -508,6 +519,9 @@
     <EmbeddedResource Include="WorkRmPurchaseOrder.resx">
       <DependentUpon>WorkRmPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WorkStockPlaceLabelPrint.resx">
+      <DependentUpon>WorkStockPlaceLabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkTrackBom.resx">
       <DependentUpon>WorkTrackBom.cs</DependentUpon>
     </EmbeddedResource>
@@ -556,6 +570,17 @@
     </None>
     <None Include="DLL\DataInventory.xss">
       <DependentUpon>DataInventory.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\DataKis.xsc">
+      <DependentUpon>DataKis.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\DataKis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataKis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DLL\DataKis.xss">
+      <DependentUpon>DataKis.xsd</DependentUpon>
     </None>
     <None Include="DLL\DataReport.xsc">
       <DependentUpon>DataReport.xsd</DependentUpon>

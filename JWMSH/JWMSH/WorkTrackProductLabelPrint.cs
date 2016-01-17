@@ -85,6 +85,9 @@ namespace JWMSH
             tsgfMain.FormName = Text;
             tsgfMain.Constr = BaseStructure.WmsCon;
             tsgfMain.GetGridStyle(tsgfMain.FormId);
+
+            shiftDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
+            bomDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
         }
 
 

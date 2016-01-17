@@ -70,6 +70,7 @@ namespace JWMSH
             lblTitleMain.btnPre.Click += btnFirst_Click;
             lblTitleMain.btnLast.Click += btnFirst_Click;
 
+            bomDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
           
         }
 

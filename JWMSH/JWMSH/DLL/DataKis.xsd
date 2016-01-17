@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataKis" targetNamespace="http://tempuri.org/DataKis.xsd" xmlns:mstns="http://tempuri.org/DataKis.xsd" xmlns="http://tempuri.org/DataKis.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="KisCon" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KisCon (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.JWMSH.Properties.Settings.GlobalReference.Default.KisCon" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="t_StockPlaceTableAdapter" GeneratorDataComponentClassName="t_StockPlaceTableAdapter" Name="t_StockPlace" UserDataComponentName="t_StockPlaceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KisCon (Settings)" DbObjectName="AIS20150527083422.dbo.t_StockPlace" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select FSPID,FNumber,FName,FFullName from t_StockPlace</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FSPID" DataSetColumn="FSPID" />
+              <Mapping SourceColumn="FNumber" DataSetColumn="FNumber" />
+              <Mapping SourceColumn="FName" DataSetColumn="FName" />
+              <Mapping SourceColumn="FFullName" DataSetColumn="FFullName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataKis" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataKis" msprop:Generator_UserDSName="DataKis">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="t_StockPlace" msprop:Generator_TableClassName="t_StockPlaceDataTable" msprop:Generator_TableVarName="tablet_StockPlace" msprop:Generator_RowChangedName="t_StockPlaceRowChanged" msprop:Generator_TablePropName="t_StockPlace" msprop:Generator_RowDeletingName="t_StockPlaceRowDeleting" msprop:Generator_RowChangingName="t_StockPlaceRowChanging" msprop:Generator_RowEvHandlerName="t_StockPlaceRowChangeEventHandler" msprop:Generator_RowDeletedName="t_StockPlaceRowDeleted" msprop:Generator_RowClassName="t_StockPlaceRow" msprop:Generator_UserTableName="t_StockPlace" msprop:Generator_RowEvArgName="t_StockPlaceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FSPID" msprop:Generator_ColumnVarNameInTable="columnFSPID" msprop:Generator_ColumnPropNameInRow="FSPID" msprop:Generator_ColumnPropNameInTable="FSPIDColumn" msprop:Generator_UserColumnName="FSPID" type="xs:int" />
+              <xs:element name="FNumber" msprop:Generator_ColumnVarNameInTable="columnFNumber" msprop:Generator_ColumnPropNameInRow="FNumber" msprop:Generator_ColumnPropNameInTable="FNumberColumn" msprop:Generator_UserColumnName="FNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FName" msprop:Generator_ColumnVarNameInTable="columnFName" msprop:Generator_ColumnPropNameInRow="FName" msprop:Generator_ColumnPropNameInTable="FNameColumn" msprop:Generator_UserColumnName="FName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FFullName" msprop:Generator_ColumnVarNameInTable="columnFFullName" msprop:Generator_ColumnPropNameInRow="FFullName" msprop:Generator_ColumnPropNameInTable="FFullNameColumn" msprop:Generator_UserColumnName="FFullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StockPlacePrint" msprop:Generator_TableClassName="StockPlacePrintDataTable" msprop:Generator_TableVarName="tableStockPlacePrint" msprop:Generator_TablePropName="StockPlacePrint" msprop:Generator_RowDeletingName="StockPlacePrintRowDeleting" msprop:Generator_RowChangingName="StockPlacePrintRowChanging" msprop:Generator_RowEvHandlerName="StockPlacePrintRowChangeEventHandler" msprop:Generator_RowDeletedName="StockPlacePrintRowDeleted" msprop:Generator_UserTableName="StockPlacePrint" msprop:Generator_RowChangedName="StockPlacePrintRowChanged" msprop:Generator_RowEvArgName="StockPlacePrintRowChangeEvent" msprop:Generator_RowClassName="StockPlacePrintRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FSPID" msprop:Generator_ColumnVarNameInTable="columnFSPID" msprop:Generator_ColumnPropNameInRow="FSPID" msprop:Generator_ColumnPropNameInTable="FSPIDColumn" msprop:Generator_UserColumnName="FSPID" type="xs:int" />
+              <xs:element name="FNumber" msprop:Generator_ColumnVarNameInTable="columnFNumber" msprop:Generator_ColumnPropNameInRow="FNumber" msprop:Generator_ColumnPropNameInTable="FNumberColumn" msprop:Generator_UserColumnName="FNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FName" msprop:Generator_ColumnVarNameInTable="columnFName" msprop:Generator_ColumnPropNameInRow="FName" msprop:Generator_ColumnPropNameInTable="FNameColumn" msprop:Generator_UserColumnName="FName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FFullName" msprop:Generator_ColumnVarNameInTable="columnFFullName" msprop:Generator_ColumnPropNameInRow="FFullName" msprop:Generator_ColumnPropNameInTable="FFullNameColumn" msprop:Generator_UserColumnName="FFullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:t_StockPlace" />
+      <xs:field xpath="mstns:FSPID" />
+    </xs:unique>
+    <xs:unique name="StockPlacePrint_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:StockPlacePrint" />
+      <xs:field xpath="mstns:FSPID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

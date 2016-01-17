@@ -94,6 +94,9 @@ namespace JWMSH
 
             biEditPrinter.Caption = _cPrinter;
             biEditTemplet.Caption = _cCaption;
+
+            shiftDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
+            bomDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
