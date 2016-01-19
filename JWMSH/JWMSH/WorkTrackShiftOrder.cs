@@ -341,6 +341,7 @@ namespace JWMSH
 
                         
                         txtcOrderNumber.Text = dr["cOrderNumber"].ToString();
+                        txtFBatchNo.Text = dr["FBatchNo"].ToString();
                         uneiQuantity.Text = dr["iQuantity"].ToString();
                         if (string.IsNullOrEmpty(dr["dDate"].ToString()))
                         {
@@ -395,6 +396,10 @@ namespace JWMSH
                 return "编码";
             if (string.IsNullOrEmpty(txtcOrderNumber.Text))
                 return "客户订单号";
+            if(string.IsNullOrEmpty(txtFBatchNo.Text))
+            {
+                return "生产批号";
+            }
             if (!dtpdDate.Checked)
                 return "日期";var cmdInvCode = new SqlCommand("select * from t_icItem where FNumber=@FNumber");
             cmdInvCode.Parameters.AddWithValue("@FNumber", txtcInvCode.Value);
@@ -465,6 +470,7 @@ namespace JWMSH
                     cmd.Parameters.AddWithValue("@cInvStd", txtcInvStd.Text);
                     cmd.Parameters.AddWithValue("@cFullName", txtcFullName.Text);
                     cmd.Parameters.AddWithValue("@cOrderNumber", txtcOrderNumber.Text);
+                    cmd.Parameters.AddWithValue("@FBatchNo", txtFBatchNo.Text);
                     cmd.Parameters.AddWithValue("@iQuantity", GetProductQuantity());
                     cmd.Parameters.AddWithValue("@dDate", dtpdDate.Value.Date);
                     cmd.Parameters.AddWithValue("@cDeptName", txtcDept.Text);
@@ -571,6 +577,7 @@ namespace JWMSH
             DllWorkPrintLabel.SetParametersValue(xtreport, "cInvStd", txtcInvStd.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cFullName", txtcFullName.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cOrderNuber", txtcOrderNumber.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "FBatchNo", txtFBatchNo.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "iQuantity", uneiQuantity.Value);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cDepartment", txtcDept.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value.ToShortDateString());

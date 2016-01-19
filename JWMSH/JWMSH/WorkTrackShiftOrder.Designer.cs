@@ -183,6 +183,8 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.shiftDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.ShiftDetailTableAdapter();
             this.bomDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.BomDetailTableAdapter();
+            this.txtFBatchNo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugbxMain)).BeginInit();
@@ -240,6 +242,8 @@
             // 
             // ugbxMain
             // 
+            this.ugbxMain.Controls.Add(this.txtFBatchNo);
+            this.ugbxMain.Controls.Add(this.label4);
             this.ugbxMain.Controls.Add(this.txtcDept);
             this.ugbxMain.Controls.Add(this.label7);
             this.ugbxMain.Controls.Add(this.dtpdDate);
@@ -420,7 +424,7 @@
             this.txtcMemo.Enabled = false;
             this.txtcMemo.Location = new System.Drawing.Point(151, 117);
             this.txtcMemo.Name = "txtcMemo";
-            this.txtcMemo.Size = new System.Drawing.Size(751, 20);
+            this.txtcMemo.Size = new System.Drawing.Size(294, 20);
             this.txtcMemo.TabIndex = 69;
             // 
             // 备注
@@ -437,17 +441,17 @@
             // 
             this.txtcFullName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcFullName.Enabled = false;
-            this.txtcFullName.Location = new System.Drawing.Point(447, 80);
+            this.txtcFullName.Location = new System.Drawing.Point(517, 117);
             this.txtcFullName.Name = "txtcFullName";
             this.txtcFullName.ReadOnly = true;
-            this.txtcFullName.Size = new System.Drawing.Size(455, 20);
+            this.txtcFullName.Size = new System.Drawing.Size(385, 20);
             this.txtcFullName.TabIndex = 61;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(390, 85);
+            this.label5.Location = new System.Drawing.Point(460, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 60;
@@ -480,7 +484,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(94, 85);
+            this.label9.Location = new System.Drawing.Point(94, 84);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 48;
@@ -1209,6 +1213,25 @@
             // 
             this.bomDetailTableAdapter.ClearBeforeFill = true;
             // 
+            // txtFBatchNo
+            // 
+            this.txtFBatchNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtFBatchNo.Enabled = false;
+            this.txtFBatchNo.Location = new System.Drawing.Point(447, 80);
+            this.txtFBatchNo.Name = "txtFBatchNo";
+            this.txtFBatchNo.Size = new System.Drawing.Size(191, 20);
+            this.txtFBatchNo.TabIndex = 79;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(390, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "生产批号";
+            // 
             // WorkTrackShiftOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1315,5 +1338,7 @@
         private DevExpress.XtraBars.BarButtonItem biRmPrinter;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private System.Windows.Forms.TextBox txtFBatchNo;
+        private System.Windows.Forms.Label label4;
     }
 }
