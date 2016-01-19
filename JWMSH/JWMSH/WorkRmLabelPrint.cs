@@ -169,7 +169,20 @@ namespace JWMSH
                         txtcInvStd.Text = dr["cInvStd"].ToString();
                         txtcFullName.Text = dr["cFullName"].ToString();
                         txtcVendor.Text = dr["cVendor"].ToString();
-                        txtcMemo.Text = dr["cMemo"].ToString();                    }
+                        txtcMemo.Text = dr["cMemo"].ToString();
+
+
+                        if (string.IsNullOrEmpty(dr["cDefine2"].ToString()))
+                        {
+                            dtpcDefine2.Checked = false;
+                            dtpcDefine2.Value = DateTime.Now;
+                        }
+                        else
+                        {
+                            dtpcDefine2.Checked = true;
+                            dtpcDefine2.Value = DateTime.Parse(dr["cDefine2"].ToString());
+                        }
+                    }
                     else
                     {
                         switch (llocation)
@@ -221,7 +234,7 @@ namespace JWMSH
             
             //模板赋值
             DllWorkPrintLabel.SetParametersValue(xtreport, "cSerialNumber", lblTitleMain.lblcSerialNumber.Text);
-            DllWorkPrintLabel.SetParametersValue(xtreport, "cBarCode", "R*" + _FitemId + "*L*" + txtcLotNo.Text + "*S*" + lblTitleMain.lblcSerialNumber.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cBarCode", "R*" + _FitemId + "*L*" + txtcLotNo.Text + "*S*" + lblTitleMain.lblcSerialNumber.Text+";"+dtpcDefine2.Value.ToShortDateString());
             DllWorkPrintLabel.SetParametersValue(xtreport, "cInvCode", txtcInvCode.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cInvName", utecInvName.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value.ToShortDateString());
@@ -232,6 +245,8 @@ namespace JWMSH
             DllWorkPrintLabel.SetParametersValue(xtreport, "iQuantity", uneiQuantity.Value);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", txtcMemo.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cDefine1", txtcDefine1.Text);
+            if (dtpdDate.Checked)
+                DllWorkPrintLabel.SetParametersValue(xtreport, "cVendorDate", dtpdDate.Value);
             //模板赋值
             switch (operation)
             {
@@ -373,6 +388,12 @@ namespace JWMSH
                 return "批号";
             if (!dtpdDate.Checked)
                 return "日期";
+            if (!dtpcDefine2.Checked)
+                return "供应商生产日期";
+            if(dtpcDefine2.Value>dtpdDate.Value)
+            {
+                return "供应商生产日期必需小于进货日期";
+            }
             var cmdInvCode = new SqlCommand("select * from t_icItem where FNumber=@FNumber");
             cmdInvCode.Parameters.AddWithValue("@FNumber", txtcInvCode.Value);
             var wfun = new WmsFunction(BaseStructure.KisConstring);
@@ -441,7 +462,12 @@ namespace JWMSH
                     cmd.Parameters.AddWithValue("@cMemo", txtcMemo.Text);
                     cmd.Parameters.AddWithValue("@cDefaultLoc", _DefaultLoc);
                     cmd.Parameters.AddWithValue("@cDefaultSP", _DefaultSP);
-                    cmd.Parameters.AddWithValue("@cDefine1", txtcDefine1.Text); 
+                    cmd.Parameters.AddWithValue("@cDefine1", txtcDefine1.Text);
+                    if(dtpcDefine2.Checked)
+                    {
+                        cmd.Parameters.AddWithValue("@cDefine2", dtpcDefine2.Value.ToShortDateString()); 
+                    }
+                    
                     con.Open();
                     try
                     {
@@ -494,7 +520,7 @@ namespace JWMSH
                     _FitemId = brm.FitemId;
                     _DefaultLoc = brm.DefaultLoc;
                     _DefaultSP = brm.DefalutSP;
-
+                    SetLotNoSourceAndRecentVendor();
                 }
             }
         }
@@ -504,6 +530,42 @@ namespace JWMSH
             var uRow = e.Row;
 
             SetDefaultValue(uRow);
+            SetLotNoSourceAndRecentVendor();
+        }
+
+        private void SetLotNoSourceAndRecentVendor()
+        {
+            if(!biSave.Enabled)
+                return;
+            var wf = new WmsFunction(BaseStructure.KisConstring);
+            var cmd = new SqlCommand("select FBatchNo,FQty from ICInventory where FitemID=@FItemID and FQty>0 order by FBatchNo desc");
+            cmd.Parameters.AddWithValue("@FItemID", _FitemId);
+            txtcLotNo.DataSource = wf.GetSqlTable(cmd);
+
+            
+
+        }
+
+        private void SetRecentVendor()
+        {
+            if (!biSave.Enabled)
+                return;
+            var cmdRecentVendor = new SqlCommand("select top 1 FSupplyID,FKFDate from vwICBill_1 where FNumber=@FNumber and FBatchNo=@FBatchNo");
+            var wf = new WmsFunction(BaseStructure.KisConstring);
+
+            cmdRecentVendor.Parameters.AddWithValue("@FNumber", txtcInvCode.Text);
+            cmdRecentVendor.Parameters.AddWithValue("@FBatchNo", txtcLotNo.Text);
+            var dtTemp = wf.GetSqlTable(cmdRecentVendor);
+            if(dtTemp!=null&&dtTemp.Rows.Count>0)
+            {
+                txtcVendor.Text = dtTemp.Rows[0]["FSupplyID"].ToString();
+                var cDate = dtTemp.Rows[0]["FKFDate"].ToString();
+                DateTime dTemp;
+                if(DateTime.TryParse(cDate,out dTemp))
+                {
+                    dtpdDate.Value = dTemp;
+                }
+            }
         }
 
         private void SetDefaultValue(UltraGridRow uRow)
@@ -551,6 +613,11 @@ namespace JWMSH
 
         private void uGridRawMaterial_DoubleClickCell(object sender, DoubleClickCellEventArgs e)
         {
+
+        }
+
+        private void uGridRawMaterial_ClickCell(object sender, ClickCellEventArgs e)
+        {
             if (e.Cell.Row.Index < 0)
                 return;
             if (biSave.Enabled)
@@ -559,6 +626,20 @@ namespace JWMSH
                 return;
             }
             SetPanelVlaue(e.Cell.Row.Cells["AutoID"].Value.ToString());
+        }
+
+        private void txtcLotNo_RowSelected(object sender, RowSelectedEventArgs e)
+        {
+            if(e.Row!=null&&e.Row.Index>-1)
+            {
+                var cQuantity = e.Row.Cells["FQty"].Value.ToString();
+                decimal iQuantity;
+                if(decimal.TryParse(cQuantity,out iQuantity))
+                {
+                    uneiQuantity.Value = iQuantity;
+                }
+                SetRecentVendor();
+            }
         }
     }
 }

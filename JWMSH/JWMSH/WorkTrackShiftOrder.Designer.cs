@@ -169,12 +169,18 @@
             this.bsiPrinter = new DevExpress.XtraBars.BarStaticItem();
             this.biEditPrinter = new DevExpress.XtraBars.BarButtonItem();
             this.beiCopies = new DevExpress.XtraBars.BarEditItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.biRmTemplet = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.biRmPrinter = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgSystem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgExport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgNew = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgTemplet = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgPrinter = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.shiftDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.ShiftDetailTableAdapter();
             this.bomDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.BomDetailTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -253,9 +259,9 @@
             this.ugbxMain.Controls.Add(this.label1);
             this.ugbxMain.Controls.Add(this.txtcInvCode);
             this.ugbxMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ugbxMain.Location = new System.Drawing.Point(0, 133);
+            this.ugbxMain.Location = new System.Drawing.Point(0, 134);
             this.ugbxMain.Name = "ugbxMain";
-            this.ugbxMain.Size = new System.Drawing.Size(984, 162);
+            this.ugbxMain.Size = new System.Drawing.Size(984, 176);
             this.ugbxMain.TabIndex = 34;
             // 
             // txtcDept
@@ -330,7 +336,7 @@
             this.txtcDept.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.txtcDept.DisplayMember = "FName";
             this.txtcDept.Enabled = false;
-            this.txtcDept.Location = new System.Drawing.Point(753, 43);
+            this.txtcDept.Location = new System.Drawing.Point(753, 47);
             this.txtcDept.Name = "txtcDept";
             this.txtcDept.Size = new System.Drawing.Size(149, 22);
             this.txtcDept.TabIndex = 77;
@@ -340,9 +346,9 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(721, 48);
+            this.label7.Location = new System.Drawing.Point(721, 52);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 12);
+            this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 76;
             this.label7.Text = "部门";
             // 
@@ -351,19 +357,19 @@
             this.dtpdDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpdDate.Checked = false;
             this.dtpdDate.Enabled = false;
-            this.dtpdDate.Location = new System.Drawing.Point(447, 44);
+            this.dtpdDate.Location = new System.Drawing.Point(447, 48);
             this.dtpdDate.Name = "dtpdDate";
             this.dtpdDate.ShowCheckBox = true;
-            this.dtpdDate.Size = new System.Drawing.Size(194, 21);
+            this.dtpdDate.Size = new System.Drawing.Size(194, 20);
             this.dtpdDate.TabIndex = 75;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(390, 48);
+            this.label6.Location = new System.Drawing.Point(390, 52);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 74;
             this.label6.Text = "生产日期";
             // 
@@ -371,9 +377,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(673, 18);
+            this.label3.Location = new System.Drawing.Point(673, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 12);
+            this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 73;
             this.label3.Text = "班次计划数量";
             // 
@@ -381,16 +387,16 @@
             // 
             this.txtcOrderNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcOrderNumber.Enabled = false;
-            this.txtcOrderNumber.Location = new System.Drawing.Point(447, 14);
+            this.txtcOrderNumber.Location = new System.Drawing.Point(447, 15);
             this.txtcOrderNumber.Name = "txtcOrderNumber";
-            this.txtcOrderNumber.Size = new System.Drawing.Size(191, 21);
+            this.txtcOrderNumber.Size = new System.Drawing.Size(191, 20);
             this.txtcOrderNumber.TabIndex = 72;
             // 
             // uneiQuantity
             // 
             this.uneiQuantity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.uneiQuantity.Enabled = false;
-            this.uneiQuantity.Location = new System.Drawing.Point(753, 14);
+            this.uneiQuantity.Location = new System.Drawing.Point(753, 15);
             this.uneiQuantity.MaskInput = "nnnnnnnnn";
             this.uneiQuantity.MaxValue = 100000000D;
             this.uneiQuantity.MinValue = 0;
@@ -402,9 +408,9 @@
             // 
             this.lblcOrderNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblcOrderNumber.AutoSize = true;
-            this.lblcOrderNumber.Location = new System.Drawing.Point(378, 18);
+            this.lblcOrderNumber.Location = new System.Drawing.Point(378, 20);
             this.lblcOrderNumber.Name = "lblcOrderNumber";
-            this.lblcOrderNumber.Size = new System.Drawing.Size(65, 12);
+            this.lblcOrderNumber.Size = new System.Drawing.Size(67, 13);
             this.lblcOrderNumber.TabIndex = 70;
             this.lblcOrderNumber.Text = "客户订单号";
             // 
@@ -412,18 +418,18 @@
             // 
             this.txtcMemo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcMemo.Enabled = false;
-            this.txtcMemo.Location = new System.Drawing.Point(151, 108);
+            this.txtcMemo.Location = new System.Drawing.Point(151, 117);
             this.txtcMemo.Name = "txtcMemo";
-            this.txtcMemo.Size = new System.Drawing.Size(751, 21);
+            this.txtcMemo.Size = new System.Drawing.Size(751, 20);
             this.txtcMemo.TabIndex = 69;
             // 
             // 备注
             // 
             this.备注.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.备注.AutoSize = true;
-            this.备注.Location = new System.Drawing.Point(118, 112);
+            this.备注.Location = new System.Drawing.Point(118, 121);
             this.备注.Name = "备注";
-            this.备注.Size = new System.Drawing.Size(29, 12);
+            this.备注.Size = new System.Drawing.Size(31, 13);
             this.备注.TabIndex = 68;
             this.备注.Text = "备注";
             // 
@@ -431,19 +437,19 @@
             // 
             this.txtcFullName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcFullName.Enabled = false;
-            this.txtcFullName.Location = new System.Drawing.Point(447, 74);
+            this.txtcFullName.Location = new System.Drawing.Point(447, 80);
             this.txtcFullName.Name = "txtcFullName";
             this.txtcFullName.ReadOnly = true;
-            this.txtcFullName.Size = new System.Drawing.Size(455, 21);
+            this.txtcFullName.Size = new System.Drawing.Size(455, 20);
             this.txtcFullName.TabIndex = 61;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(390, 78);
+            this.label5.Location = new System.Drawing.Point(390, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 60;
             this.label5.Text = "产品全称";
             // 
@@ -454,7 +460,7 @@
             editorButton1.Appearance = appearance13;
             this.utecInvName.ButtonsRight.Add(editorButton1);
             this.utecInvName.Enabled = false;
-            this.utecInvName.Location = new System.Drawing.Point(151, 44);
+            this.utecInvName.Location = new System.Drawing.Point(151, 48);
             this.utecInvName.Name = "utecInvName";
             this.utecInvName.ReadOnly = true;
             this.utecInvName.Size = new System.Drawing.Size(194, 21);
@@ -464,19 +470,19 @@
             // 
             this.txtcInvStd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcInvStd.Enabled = false;
-            this.txtcInvStd.Location = new System.Drawing.Point(151, 74);
+            this.txtcInvStd.Location = new System.Drawing.Point(151, 80);
             this.txtcInvStd.Name = "txtcInvStd";
             this.txtcInvStd.ReadOnly = true;
-            this.txtcInvStd.Size = new System.Drawing.Size(194, 21);
+            this.txtcInvStd.Size = new System.Drawing.Size(194, 20);
             this.txtcInvStd.TabIndex = 49;
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(94, 78);
+            this.label9.Location = new System.Drawing.Point(94, 85);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 12);
+            this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 48;
             this.label9.Text = "产品规格";
             // 
@@ -484,9 +490,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 48);
+            this.label2.Location = new System.Drawing.Point(94, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 29;
             this.label2.Text = "产品名称";
             // 
@@ -494,9 +500,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 18);
+            this.label1.Location = new System.Drawing.Point(94, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 28;
             this.label1.Text = "产品编码";
             // 
@@ -581,8 +587,8 @@
             this.txtcInvCode.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.txtcInvCode.DisplayMember = "cInvCode";
             this.txtcInvCode.Enabled = false;
-            this.txtcInvCode.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtcInvCode.Location = new System.Drawing.Point(151, 13);
+            this.txtcInvCode.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtcInvCode.Location = new System.Drawing.Point(151, 14);
             this.txtcInvCode.Name = "txtcInvCode";
             this.txtcInvCode.Size = new System.Drawing.Size(194, 22);
             this.txtcInvCode.TabIndex = 53;
@@ -596,9 +602,9 @@
             this.lblTitleMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lblTitleMain.CTitle = "班次制令单";
             this.lblTitleMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitleMain.Location = new System.Drawing.Point(0, 98);
+            this.lblTitleMain.Location = new System.Drawing.Point(0, 96);
             this.lblTitleMain.Name = "lblTitleMain";
-            this.lblTitleMain.Size = new System.Drawing.Size(984, 35);
+            this.lblTitleMain.Size = new System.Drawing.Size(984, 38);
             this.lblTitleMain.TabIndex = 33;
             // 
             // tabMain
@@ -606,10 +612,10 @@
             this.tabMain.Controls.Add(this.tabMaterial);
             this.tabMain.Controls.Add(this.tabBomDetail);
             this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabMain.Location = new System.Drawing.Point(0, 295);
+            this.tabMain.Location = new System.Drawing.Point(0, 310);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(984, 267);
+            this.tabMain.Size = new System.Drawing.Size(984, 299);
             this.tabMain.TabIndex = 35;
             // 
             // tabMaterial
@@ -619,7 +625,7 @@
             this.tabMaterial.Location = new System.Drawing.Point(4, 22);
             this.tabMaterial.Name = "tabMaterial";
             this.tabMaterial.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMaterial.Size = new System.Drawing.Size(976, 241);
+            this.tabMaterial.Size = new System.Drawing.Size(976, 273);
             this.tabMaterial.TabIndex = 0;
             this.tabMaterial.Text = "实际用料表";
             this.tabMaterial.UseVisualStyleBackColor = true;
@@ -758,12 +764,13 @@
             this.uGridShiftDetail.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.uGridShiftDetail.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.uGridShiftDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uGridShiftDetail.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uGridShiftDetail.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uGridShiftDetail.Location = new System.Drawing.Point(3, 28);
             this.uGridShiftDetail.Name = "uGridShiftDetail";
-            this.uGridShiftDetail.Size = new System.Drawing.Size(970, 210);
+            this.uGridShiftDetail.Size = new System.Drawing.Size(970, 242);
             this.uGridShiftDetail.TabIndex = 35;
             this.uGridShiftDetail.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
+            this.uGridShiftDetail.DoubleClickCell += new Infragistics.Win.UltraWinGrid.DoubleClickCellEventHandler(this.uGridShiftDetail_DoubleClickCell);
             // 
             // shiftDetailBindingSource
             // 
@@ -791,7 +798,7 @@
             this.toolStripButton1.Image = global::JWMSH.Properties.Resources.add_obj;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(52, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(51, 22);
             this.toolStripButton1.Text = "选料";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -801,7 +808,7 @@
             this.tabBomDetail.Location = new System.Drawing.Point(4, 22);
             this.tabBomDetail.Name = "tabBomDetail";
             this.tabBomDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBomDetail.Size = new System.Drawing.Size(976, 241);
+            this.tabBomDetail.Size = new System.Drawing.Size(976, 273);
             this.tabBomDetail.TabIndex = 1;
             this.tabBomDetail.Text = "Bom明细表";
             this.tabBomDetail.UseVisualStyleBackColor = true;
@@ -917,10 +924,10 @@
             this.uGridRawMaterial.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.uGridRawMaterial.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.uGridRawMaterial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uGridRawMaterial.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uGridRawMaterial.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uGridRawMaterial.Location = new System.Drawing.Point(3, 3);
             this.uGridRawMaterial.Name = "uGridRawMaterial";
-            this.uGridRawMaterial.Size = new System.Drawing.Size(970, 235);
+            this.uGridRawMaterial.Size = new System.Drawing.Size(970, 267);
             this.uGridRawMaterial.TabIndex = 34;
             this.uGridRawMaterial.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             // 
@@ -951,10 +958,14 @@
             this.biEditPrinter,
             this.beiCopies,
             this.biPreview,
-            this.biDesign});
+            this.biDesign,
+            this.barButtonItem1,
+            this.biRmTemplet,
+            this.barButtonItem3,
+            this.biRmPrinter});
             this.ribbon.LargeImages = this.imageCollection2;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 81;
+            this.ribbon.MaxItemId = 85;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage});
@@ -962,7 +973,7 @@
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowCategoryInCaption = false;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbon.Size = new System.Drawing.Size(984, 98);
+            this.ribbon.Size = new System.Drawing.Size(984, 96);
             this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bsiPrint
@@ -1061,11 +1072,11 @@
             // 
             // bsiTemplet
             // 
-            this.bsiTemplet.Caption = "当前模版如下";
+            this.bsiTemplet.Caption = "班次制令单模版如下";
             this.bsiTemplet.Id = 72;
             this.bsiTemplet.Name = "bsiTemplet";
             this.bsiTemplet.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.bsiTemplet.Width = 100;
+            this.bsiTemplet.Width = 130;
             // 
             // biGiveup
             // 
@@ -1079,10 +1090,11 @@
             // 
             // bsiPrinter
             // 
-            this.bsiPrinter.Caption = "当前打印机";
+            this.bsiPrinter.Caption = "班次制令单打印机";
             this.bsiPrinter.Id = 74;
             this.bsiPrinter.Name = "bsiPrinter";
             this.bsiPrinter.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.bsiPrinter.Width = 130;
             // 
             // biEditPrinter
             // 
@@ -1098,6 +1110,29 @@
             this.beiCopies.Name = "beiCopies";
             this.beiCopies.Width = 100;
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "原料模板";
+            this.barButtonItem1.Id = 81;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // biRmTemplet
+            // 
+            this.biRmTemplet.Id = 82;
+            this.biRmTemplet.Name = "biRmTemplet";
+            this.biRmTemplet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biRmTemplet_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "原料打印机";
+            this.barButtonItem3.Id = 83;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // biRmPrinter
+            // 
+            this.biRmPrinter.Id = 84;
+            this.biRmPrinter.Name = "biRmPrinter";
+            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1105,7 +1140,9 @@
             this.rpgExport,
             this.rpgNew,
             this.rpgTemplet,
-            this.rpgPrinter});
+            this.rpgPrinter,
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2});
             this.ribbonPage.Name = "ribbonPage";
             this.ribbonPage.Text = "菜单选项";
             // 
@@ -1140,7 +1177,7 @@
             this.rpgTemplet.ItemLinks.Add(this.bsiTemplet);
             this.rpgTemplet.ItemLinks.Add(this.biEditTemplet);
             this.rpgTemplet.Name = "rpgTemplet";
-            this.rpgTemplet.Text = "打印模版";
+            this.rpgTemplet.Text = "班次制令单模版";
             // 
             // rpgPrinter
             // 
@@ -1148,7 +1185,21 @@
             this.rpgPrinter.ItemLinks.Add(this.biEditPrinter);
             this.rpgPrinter.ItemLinks.Add(this.beiCopies);
             this.rpgPrinter.Name = "rpgPrinter";
-            this.rpgPrinter.Text = "打印机属性";
+            this.rpgPrinter.Text = "班次制令单打印机";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.biRmTemplet);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "补打原料模板";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.biRmPrinter);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "补打原料打印机";
             // 
             // shiftDetailTableAdapter
             // 
@@ -1160,11 +1211,11 @@
             // 
             // WorkTrackShiftOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(984, 562);
+            this.ClientSize = new System.Drawing.Size(984, 609);
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.ugbxMain);
             this.Controls.Add(this.lblTitleMain);
@@ -1258,5 +1309,11 @@
         private System.Windows.Forms.BindingSource bomDetailBindingSource;
         private DLL.DataInventoryTableAdapters.ShiftDetailTableAdapter shiftDetailTableAdapter;
         private DLL.DataInventoryTableAdapters.BomDetailTableAdapter bomDetailTableAdapter;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem biRmTemplet;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem biRmPrinter;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
     }
 }

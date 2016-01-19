@@ -42,6 +42,23 @@ namespace JWMSH
         private string _cPrinter;
 
 
+
+        /// <summary>
+        /// 打印模版路径
+        /// </summary>
+        private string _RmcTempletFileName;
+
+        /// <summary>
+        /// 打印模版路径
+        /// </summary>
+        private string _RmcCaption;
+
+        /// <summary>
+        /// 打印机
+        /// </summary>
+        private string _RmcPrinter;
+
+
         public WorkTrackShiftOrder()
         {
             InitializeComponent();
@@ -92,8 +109,13 @@ namespace JWMSH
 
             DllWorkPrintLabel.GetTemplet("班次制单模板", ref _cCaption, ref _cPrinter, ref _cTempletFileName);
 
+            DllWorkPrintLabel.GetTemplet("原料标签", ref _RmcCaption, ref _RmcPrinter, ref _RmcTempletFileName);
+
             biEditPrinter.Caption = _cPrinter;
             biEditTemplet.Caption = _cCaption;
+
+            biRmTemplet.Caption = _RmcCaption;
+            biRmPrinter.Caption = _RmcPrinter;
 
             shiftDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
             bomDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
@@ -554,6 +576,102 @@ namespace JWMSH
             DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value.ToShortDateString());
             DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", txtcMemo.Text);
             xtreport.DataSource = dataInventory.ShiftDetail;
+            //模板赋值
+            switch (operation)
+            {
+                case "print":
+                    xtreport.Print();
+                    break;
+                case "design":
+                    xtreport.ShowDesigner();
+                    break;
+                case "preview":
+                    xtreport.ShowPreview();
+                    break;
+            }
+
+        }
+
+        private void biRmTemplet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (var st = new Base_Templet(true, "原料标签"))
+            {
+                if (st.ShowDialog() == DialogResult.Yes)
+                {
+                    biRmTemplet.Caption = st.URow.Cells["cCaption"].Value.ToString();
+                    _RmcCaption = st.URow.Cells["cCaption"].Value.ToString();
+                    _RmcTempletFileName = st.URow.Cells["cTempletPath"].Value.ToString();
+                    biRmPrinter.Caption = st.URow.Cells["cPrinter"].Value.ToString();
+                    _RmcPrinter = st.URow.Cells["cPrinter"].Value.ToString();
+                }
+            }
+        }
+
+        private void uGridShiftDetail_DoubleClickCell(object sender, Infragistics.Win.UltraWinGrid.DoubleClickCellEventArgs e)
+        {
+            var wf = new WmsFunction(BaseStructure.WmsCon);
+            var cmd = new SqlCommand("select * from RmLabel where cInvCode=@cInvCode and cLotNo=@cLotNo");
+            cmd.Parameters.AddWithValue("@cInvCode", e.Cell.Row.Cells["cInvCode"].Value.ToString());
+            cmd.Parameters.AddWithValue("@cLotNo", e.Cell.Row.Cells["FBatchNo"].Value.ToString());
+
+            var dt = wf.GetSqlTable(cmd);
+            if (dt==null||dt.Rows.Count<1)
+            {
+                MessageBox.Show(@"当前批号，未在原料标签打印记录中，请手动在原料标签打印中，打印!", @"异常", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                return;
+            }
+            PrintDialogRm("print", e.Cell.Row, dt);
+        }
+
+
+        public void PrintDialogRm(string operation,Infragistics.Win.UltraWinGrid.UltraGridRow uRow,DataTable dt)
+        {
+            var xtreport = new XtraReport();
+            // _btApp = new BarTender.Application();
+            //判断当前打印模版路径是否存在
+            var temPath = _RmcTempletFileName;     //_cTempletFileName;      //Application.StartupPath + @"\Label\" +   _cTempletFileName;
+
+            if (!File.Exists(temPath))
+            {
+                MessageBox.Show(@"当前路径下的打印模版文件不存在!", @"异常", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                xtreport.ShowDesigner();
+                return;
+            }
+            xtreport.LoadLayout(temPath);
+            xtreport.PrinterName = _cPrinter;
+            xtreport.RequestParameters = false;
+            xtreport.ShowPrintStatusDialog = false;
+            xtreport.ShowPrintMarginsWarning = false;
+
+            var cFitemID = uRow.Cells["cFitemID"].Value.ToString();
+            var cLotNo = uRow.Cells["FBatchNo"].Value.ToString();
+            var cDefine2 = dt.Rows[0]["cDefine2"].ToString();
+            var cSerialNumber = dt.Rows[0]["cSerialNumber"].ToString();
+            var cInvCode = dt.Rows[0]["cInvCode"].ToString();
+            var cInvName = dt.Rows[0]["cInvName"].ToString();
+            var dDate= dt.Rows[0]["dDate"].ToString();
+            var cInvStd = dt.Rows[0]["cInvStd"].ToString();
+            var cFullName = dt.Rows[0]["cFullName"].ToString();
+            var iQuantity = uRow.Cells["iQuantity"].Value.ToString();
+            var cMemo = dt.Rows[0]["cMemo"].ToString();
+            var cDefine1 = dt.Rows[0]["cDefine1"].ToString();
+
+            //模板赋值
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cSerialNumber", lblTitleMain.lblcSerialNumber.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cBarCode", "R*" + cFitemID + "*L*" + cLotNo + "*S*" + cSerialNumber + ";" + cDefine2);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cInvCode", cInvCode);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cInvName", cInvName);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dDate);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cInvStd", cInvStd);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cFullName", txtcFullName.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cVendor", cFullName);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cLotNo", cLotNo);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "iQuantity", iQuantity);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", cMemo);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cDefine1", cDefine1);
+            if (dtpdDate.Checked)
+                DllWorkPrintLabel.SetParametersValue(xtreport, "cVendorDate", dtpdDate.Value);
             //模板赋值
             switch (operation)
             {

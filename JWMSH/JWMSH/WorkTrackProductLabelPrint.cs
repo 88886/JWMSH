@@ -297,7 +297,7 @@ namespace JWMSH
             DllWorkPrintLabel.SetParametersValue(xtreport, "cFullName", txtcFullName.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "iQuantity", uneiQuantity.Value);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", txtcMemo.Text);
-            DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value.ToShortDateString());
             DllWorkPrintLabel.SetParametersValue(xtreport, "cOrderNumber", txtcOrderNumber.Text);
             xtreport.DataSource = dataInventory.ProductLabel;
             //模板赋值

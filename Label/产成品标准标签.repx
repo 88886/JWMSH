@@ -1,8 +1,8 @@
 /// <XRTypeInfo>
 ///   <AssemblyFullName>DevExpress.XtraReports.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
-///   <AssemblyLocation>D:\WMS\dll_library\DevExpress.XtraReports.v12.1.dll</AssemblyLocation>
+///   <AssemblyLocation>C:\Windows\assembly\GAC_MSIL\DevExpress.XtraReports.v12.1\12.1.6.0__b88d1754d700e49a\DevExpress.XtraReports.v12.1.dll</AssemblyLocation>
 ///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
-///   <Localization>zh-CN</Localization>
+///   <Localization>en-US</Localization>
 /// </XRTypeInfo>
 namespace XtraReportSerialization {
     
@@ -160,19 +160,16 @@ namespace XtraReportSerialization {
             // 
             // barCode1
             // 
-            this.barCode1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "ProductLabel.cBarCode")});
             this.barCode1.LocationFloat = new DevExpress.Utils.PointFloat(15.08334F, 0F);
-            this.barCode1.Module = 3F;
             this.barCode1.Name = "barCode1";
             this.barCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.barCode1.ShowText = false;
             this.barCode1.SizeF = new System.Drawing.SizeF(85F, 70F);
             this.barCode1.StylePriority.UseTextAlignment = false;
             qRCodeGenerator1.CompactionMode = DevExpress.XtraPrinting.BarCode.QRCodeCompactionMode.Byte;
-            qRCodeGenerator1.Version = DevExpress.XtraPrinting.BarCode.QRCodeVersion.Version1;
+            qRCodeGenerator1.Version = DevExpress.XtraPrinting.BarCode.QRCodeVersion.Version3;
             this.barCode1.Symbology = qRCodeGenerator1;
-            this.barCode1.Text = "barCode1";
+            this.barCode1.Text = "[ProductLabel.cBarCode];[Parameters.dDate]";
             this.barCode1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
             // table1
@@ -300,7 +297,7 @@ namespace XtraReportSerialization {
             this.tableCell5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding(this.dDate, "Text", "{0:yyyy\'年\'M\'月\'d\'日\'}")});
             this.tableCell5.Name = "tableCell5";
-            this.tableCell5.Text = "tableCell5";
+            this.tableCell5.Text = "[Parameters.dDate]";
             this.tableCell5.Weight = 2.2066507563517597;
             // 
             // tableCell7
@@ -415,8 +412,7 @@ namespace XtraReportSerialization {
             // 
             this.dDate.Description = "dDate";
             this.dDate.Name = "dDate";
-            this.dDate.Type = typeof(System.DateTime);
-            this.dDate.Value = new System.DateTime(2016, 1, 14, 0, 0, 0, 0);
+            this.dDate.Value = "";
             // 
             // cInvCode
             // 
@@ -501,7 +497,7 @@ namespace XtraReportSerialization {
             // cOrderNumber
             // 
             this.cOrderNumber.Name = "cOrderNumber";
-            this.cOrderNumber.Value = "客户订单号";
+            this.cOrderNumber.Value = "2012020";
             // 
             // 产成品标准标签
             // 
@@ -534,7 +530,7 @@ namespace XtraReportSerialization {
                         this.cLotNo,
                         this.cMemo,
                         this.cOrderNumber});
-            this.PrinterName = "ZDesigner GX430t";
+            this.PrinterName = "Adobe PDF";
             this.RequestParameters = false;
             this.ShowPrintMarginsWarning = false;
             this.ShowPrintStatusDialog = false;

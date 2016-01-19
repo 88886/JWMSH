@@ -1,12 +1,12 @@
 /// <XRTypeInfo>
 ///   <AssemblyFullName>DevExpress.XtraReports.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
-///   <AssemblyLocation>D:\WMS\dll_library\DevExpress.XtraReports.v12.1.dll</AssemblyLocation>
+///   <AssemblyLocation>C:\Windows\assembly\GAC_MSIL\DevExpress.XtraReports.v12.1\12.1.6.0__b88d1754d700e49a\DevExpress.XtraReports.v12.1.dll</AssemblyLocation>
 ///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
-///   <Localization>zh-CN</Localization>
+///   <Localization>en-US</Localization>
 /// </XRTypeInfo>
 namespace XtraReportSerialization {
     
-    public class StoreBox : DevExpress.XtraReports.UI.XtraReport {
+    public class 原料标准标签 : DevExpress.XtraReports.UI.XtraReport {
         private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
         private DevExpress.XtraReports.UI.DetailBand detailBand1;
         private DevExpress.XtraReports.UI.XRLabel label10;
@@ -56,8 +56,9 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.Parameters.Parameter cSerialNumber;
         private DevExpress.XtraReports.Parameters.Parameter cFullName;
         private DevExpress.XtraReports.Parameters.Parameter cMemo;
+        private DevExpress.XtraReports.Parameters.Parameter cVendorDate;
         private System.Resources.ResourceManager _resources;
-        public StoreBox() {
+        public 原料标准标签() {
             this.InitializeComponent();
         }
         private System.Resources.ResourceManager resources {
@@ -122,6 +123,7 @@ namespace XtraReportSerialization {
             this.cLotNo = new DevExpress.XtraReports.Parameters.Parameter();
             this.cMemo = new DevExpress.XtraReports.Parameters.Parameter();
             this.cDefine1 = new DevExpress.XtraReports.Parameters.Parameter();
+            this.cVendorDate = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -399,26 +401,26 @@ namespace XtraReportSerialization {
             // 
             this.cBarCode.Description = "cBarCode";
             this.cBarCode.Name = "cBarCode";
-            this.cBarCode.Value = "R*3008*L*w20160116001*S*RM1601160024";
+            this.cBarCode.Value = "R*2980*L*y1504130102*S*RM1601190002;2015/12/19";
             // 
             // cInvName
             // 
             this.cInvName.Description = "cInvName";
             this.cInvName.Name = "cInvName";
-            this.cInvName.Value = "底漆";
+            this.cInvName.Value = "胶水";
             // 
             // dDate
             // 
             this.dDate.Description = "dDate";
             this.dDate.Name = "dDate";
             this.dDate.Type = typeof(System.DateTime);
-            this.dDate.Value = new System.DateTime(2016, 1, 16, 0, 0, 0, 0);
+            this.dDate.Value = new System.DateTime(2015, 12, 30, 0, 0, 0, 0);
             // 
             // cInvCode
             // 
             this.cInvCode.Description = "cInvCode";
             this.cInvCode.Name = "cInvCode";
-            this.cInvCode.Value = "16.08.008";
+            this.cInvCode.Value = "16.03.002";
             // 
             // cInvCName
             // 
@@ -461,37 +463,37 @@ namespace XtraReportSerialization {
             // 
             this.iQuantity.Description = "数量";
             this.iQuantity.Name = "iQuantity";
-            this.iQuantity.Type = typeof(int);
+            this.iQuantity.Type = typeof(decimal);
             this.iQuantity.Value = new decimal(new int[] {
-                        600000,
                         0,
                         0,
-                        262144});
+                        0,
+                        0});
             // 
             // cSerialNumber
             // 
             this.cSerialNumber.Name = "cSerialNumber";
-            this.cSerialNumber.Value = "RM1601160024";
+            this.cSerialNumber.Value = "RM1601190002";
             // 
             // cInvStd
             // 
             this.cInvStd.Name = "cInvStd";
-            this.cInvStd.Value = "TOGOCOLL DV930V1";
+            this.cInvStd.Value = "CH487A";
             // 
             // cFullName
             // 
             this.cFullName.Name = "cFullName";
-            this.cFullName.Value = "辅助材料_底漆_底漆";
+            this.cFullName.Value = "辅助材料_胶水_胶水";
             // 
             // cVendor
             // 
             this.cVendor.Name = "cVendor";
-            this.cVendor.Value = "长春井上华翔汽车零部件有限公司公主岭分公司";
+            this.cVendor.Value = "上海建禾华生物科技有限公司";
             // 
             // cLotNo
             // 
             this.cLotNo.Name = "cLotNo";
-            this.cLotNo.Value = "w20160116001";
+            this.cLotNo.Value = "y1504130102";
             // 
             // cMemo
             // 
@@ -501,16 +503,21 @@ namespace XtraReportSerialization {
             // cDefine1
             // 
             this.cDefine1.Name = "cDefine1";
-            this.cDefine1.Value = "S2314556";
+            this.cDefine1.Value = "";
             // 
-            // StoreBox
+            // cVendorDate
+            // 
+            this.cVendorDate.Name = "cVendorDate";
+            this.cVendorDate.Value = new System.DateTime(2015, 12, 30, 0, 0, 0, 0);
+            // 
+            // 原料标准标签
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
                         this.topMarginBand1,
                         this.detailBand1,
                         this.bottomMarginBand1});
             this.Margins = new System.Drawing.Printing.Margins(9, 4, 4, 7);
-            this.Name = "StoreBox";
+            this.Name = "原料标准标签";
             this.PageHeight = 276;
             this.PageWidth = 394;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
@@ -533,8 +540,9 @@ namespace XtraReportSerialization {
                         this.cVendor,
                         this.cLotNo,
                         this.cMemo,
-                        this.cDefine1});
-            this.PrinterName = "ZDesigner GX430t";
+                        this.cDefine1,
+                        this.cVendorDate});
+            this.PrinterName = "Adobe PDF";
             this.RequestParameters = false;
             this.ShowPrintMarginsWarning = false;
             this.ShowPrintStatusDialog = false;

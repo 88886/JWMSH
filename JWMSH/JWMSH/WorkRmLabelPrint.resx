@@ -219,7 +219,7 @@
         0oxf5MxvWRWO47AAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="appearance13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="appearance25.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIYAAAAAAP///09PiVZWj09PgVlZi1ZWh15ej0pMhUVHeUpLfVFShFZXiV9hk19gkUtO
         gDo+d6220jpNhlxmhDpOdr3X/73Y/3SYynqezX+i0H6gzomq1YSn0our1JWz2ZW02Ze12py53J663L3a
@@ -234,4 +234,7 @@
         KBhYYOCLChZGjEiR4kaCgwgQMBhwQMCCBxAeqg4IADs=
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>81</value>
+  </metadata>
 </root>
