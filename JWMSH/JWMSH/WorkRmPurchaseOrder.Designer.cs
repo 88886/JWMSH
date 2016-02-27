@@ -98,11 +98,15 @@
             this.rpgSystem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgExport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgSearch = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.beiOrder = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.barListItem1 = new DevExpress.XtraBars.BarListItem();
             ((System.ComponentModel.ISupportInitialize)(this.uGridChecks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uGridCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // uGridChecks
@@ -314,6 +318,7 @@
             this.uGridCheck.Size = new System.Drawing.Size(984, 181);
             this.uGridCheck.TabIndex = 56;
             this.uGridCheck.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
+            this.uGridCheck.DoubleClickCell += new Infragistics.Win.UltraWinGrid.DoubleClickCellEventHandler(this.uGridCheck_DoubleClickCell);
             // 
             // tsgfMain
             // 
@@ -341,13 +346,17 @@
             this.biPrint,
             this.biExit,
             this.biSearch,
-            this.bbiRefresh});
+            this.bbiRefresh,
+            this.beiOrder,
+            this.barListItem1});
             this.ribbon.LargeImages = this.ImgCollection32;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 69;
+            this.ribbon.MaxItemId = 71;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage});
+            this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowCategoryInCaption = false;
@@ -385,6 +394,7 @@
             this.biPreview.Id = 53;
             this.biPreview.ImageIndex = 1;
             this.biPreview.Name = "biPreview";
+            this.biPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biPreview_ItemClick);
             // 
             // biDesign
             // 
@@ -392,6 +402,7 @@
             this.biDesign.Id = 54;
             this.biDesign.ImageIndex = 0;
             this.biDesign.Name = "biDesign";
+            this.biDesign.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biDesign_ItemClick);
             // 
             // biPrint
             // 
@@ -399,6 +410,7 @@
             this.biPrint.Id = 55;
             this.biPrint.ImageIndex = 2;
             this.biPrint.Name = "biPrint";
+            this.biPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biPrint_ItemClick);
             // 
             // biExport
             // 
@@ -414,6 +426,7 @@
             this.biExit.Id = 62;
             this.biExit.LargeImageIndex = 4;
             this.biExit.Name = "biExit";
+            this.biExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biExit_ItemClick);
             // 
             // biSearch
             // 
@@ -423,6 +436,7 @@
             this.biSearch.LargeImageIndex = 9;
             this.biSearch.Name = "biSearch";
             this.biSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)));
+            this.biSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biSearch_ItemClick);
             // 
             // bbiRefresh
             // 
@@ -430,6 +444,7 @@
             this.bbiRefresh.Id = 68;
             this.bbiRefresh.LargeImageIndex = 10;
             this.bbiRefresh.Name = "bbiRefresh";
+            this.bbiRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRefresh_ItemClick);
             // 
             // ImgCollection32
             // 
@@ -483,10 +498,30 @@
             // 
             // rpgSearch
             // 
+            this.rpgSearch.ItemLinks.Add(this.barListItem1);
+            this.rpgSearch.ItemLinks.Add(this.beiOrder);
             this.rpgSearch.ItemLinks.Add(this.biSearch);
             this.rpgSearch.ItemLinks.Add(this.bbiRefresh);
             this.rpgSearch.Name = "rpgSearch";
             this.rpgSearch.Text = "查询";
+            // 
+            // beiOrder
+            // 
+            this.beiOrder.Edit = this.repositoryItemTextEdit1;
+            this.beiOrder.Id = 69;
+            this.beiOrder.Name = "beiOrder";
+            this.beiOrder.Width = 150;
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // barListItem1
+            // 
+            this.barListItem1.Caption = "模糊匹配订单号";
+            this.barListItem1.Id = 70;
+            this.barListItem1.Name = "barListItem1";
             // 
             // WorkRmPurchaseOrder
             // 
@@ -506,6 +541,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,5 +566,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSystem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgExport;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSearch;
+        private DevExpress.XtraBars.BarEditItem beiOrder;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraBars.BarListItem barListItem1;
     }
 }

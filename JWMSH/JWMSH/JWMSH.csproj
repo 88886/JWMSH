@@ -528,6 +528,15 @@
     <EmbeddedResource Include="WorkTrackBomQuery.resx">
       <DependentUpon>WorkTrackBomQuery.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WorkTrackDeliveryOrder.resx">
+      <DependentUpon>WorkTrackDeliveryOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkTrackPrintCheck.resx">
+      <DependentUpon>WorkTrackPrintCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkTrackPrintTransfer.resx">
+      <DependentUpon>WorkTrackPrintTransfer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkTrackProductLabelCreate.resx">
       <DependentUpon>WorkTrackProductLabelCreate.cs</DependentUpon>
     </EmbeddedResource>
