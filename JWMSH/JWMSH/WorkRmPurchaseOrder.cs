@@ -115,6 +115,8 @@ where FInterID=@FinterID");
                 DLL.DllWorkPrintLabel.SetParametersValue(xtreport, cKey, cValue);
             }
 
+            DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "cOrder", _cOrderNumber);
+            DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "cOrderInterID", _cOrderNumber+";"+_FinterID);
 
             //模板赋值
             switch (operation)
