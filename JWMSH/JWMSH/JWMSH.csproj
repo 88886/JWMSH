@@ -269,6 +269,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataBaseControl.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DLL\DataBiDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBiDetail.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DLL\DataInventory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -333,6 +338,12 @@
     </Compile>
     <Compile Include="RptRmStoreDetail.Designer.cs">
       <DependentUpon>RptRmStoreDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCustomer.Designer.cs">
+      <DependentUpon>SelectCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectKisCurrectStock.cs">
       <SubType>Form</SubType>
@@ -495,6 +506,9 @@
     <EmbeddedResource Include="RptRmStoreDetail.resx">
       <DependentUpon>RptRmStoreDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SelectCustomer.resx">
+      <DependentUpon>SelectCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectKisCurrectStock.resx">
       <DependentUpon>SelectKisCurrectStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -568,6 +582,17 @@
     </None>
     <None Include="DLL\DataBaseControl.xss">
       <DependentUpon>DataBaseControl.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\DataBiDetail.xsc">
+      <DependentUpon>DataBiDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\DataBiDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBiDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DLL\DataBiDetail.xss">
+      <DependentUpon>DataBiDetail.xsd</DependentUpon>
     </None>
     <None Include="DLL\DataInventory.xsc">
       <DependentUpon>DataInventory.xsd</DependentUpon>
