@@ -26,6 +26,44 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="t_OrganizationTableAdapter" GeneratorDataComponentClassName="t_OrganizationTableAdapter" Name="t_Organization" UserDataComponentName="t_OrganizationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KisCon (Settings)" DbObjectName="AIS20150527083422.dbo.t_Organization" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select FItemID,FNumber,FName,FAddress from t_Organization</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FItemID" DataSetColumn="FItemID" />
+              <Mapping SourceColumn="FNumber" DataSetColumn="FNumber" />
+              <Mapping SourceColumn="FName" DataSetColumn="FName" />
+              <Mapping SourceColumn="FAddress" DataSetColumn="FAddress" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="t_StockTableAdapter" GeneratorDataComponentClassName="t_StockTableAdapter" Name="t_Stock" UserDataComponentName="t_StockTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KisCon (Settings)" DbObjectName="AIS20150527083422.dbo.t_Stock" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select FItemID,FNumber,FName,FAddress from t_Stock </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FItemID" DataSetColumn="FItemID" />
+              <Mapping SourceColumn="FNumber" DataSetColumn="FNumber" />
+              <Mapping SourceColumn="FName" DataSetColumn="FName" />
+              <Mapping SourceColumn="FAddress" DataSetColumn="FAddress" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -90,6 +128,62 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="t_Organization" msprop:Generator_TableClassName="t_OrganizationDataTable" msprop:Generator_TableVarName="tablet_Organization" msprop:Generator_RowChangedName="t_OrganizationRowChanged" msprop:Generator_TablePropName="t_Organization" msprop:Generator_RowDeletingName="t_OrganizationRowDeleting" msprop:Generator_RowChangingName="t_OrganizationRowChanging" msprop:Generator_RowEvHandlerName="t_OrganizationRowChangeEventHandler" msprop:Generator_RowDeletedName="t_OrganizationRowDeleted" msprop:Generator_RowClassName="t_OrganizationRow" msprop:Generator_UserTableName="t_Organization" msprop:Generator_RowEvArgName="t_OrganizationRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FItemID" msprop:Generator_ColumnVarNameInTable="columnFItemID" msprop:Generator_ColumnPropNameInRow="FItemID" msprop:Generator_ColumnPropNameInTable="FItemIDColumn" msprop:Generator_UserColumnName="FItemID" type="xs:int" />
+              <xs:element name="FNumber" msprop:Generator_ColumnVarNameInTable="columnFNumber" msprop:Generator_ColumnPropNameInRow="FNumber" msprop:Generator_ColumnPropNameInTable="FNumberColumn" msprop:Generator_UserColumnName="FNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FName" msprop:Generator_ColumnVarNameInTable="columnFName" msprop:Generator_ColumnPropNameInRow="FName" msprop:Generator_ColumnPropNameInTable="FNameColumn" msprop:Generator_UserColumnName="FName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FAddress" msprop:Generator_ColumnVarNameInTable="columnFAddress" msprop:Generator_ColumnPropNameInRow="FAddress" msprop:Generator_ColumnPropNameInTable="FAddressColumn" msprop:Generator_UserColumnName="FAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="t_Stock" msprop:Generator_TableClassName="t_StockDataTable" msprop:Generator_TableVarName="tablet_Stock" msprop:Generator_TablePropName="t_Stock" msprop:Generator_RowDeletingName="t_StockRowDeleting" msprop:Generator_RowChangingName="t_StockRowChanging" msprop:Generator_RowEvHandlerName="t_StockRowChangeEventHandler" msprop:Generator_RowDeletedName="t_StockRowDeleted" msprop:Generator_UserTableName="t_Stock" msprop:Generator_RowChangedName="t_StockRowChanged" msprop:Generator_RowEvArgName="t_StockRowChangeEvent" msprop:Generator_RowClassName="t_StockRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FItemID" msprop:Generator_ColumnVarNameInTable="columnFItemID" msprop:Generator_ColumnPropNameInRow="FItemID" msprop:Generator_ColumnPropNameInTable="FItemIDColumn" msprop:Generator_UserColumnName="FItemID" type="xs:int" />
+              <xs:element name="FNumber" msprop:Generator_ColumnVarNameInTable="columnFNumber" msprop:Generator_ColumnPropNameInRow="FNumber" msprop:Generator_ColumnPropNameInTable="FNumberColumn" msprop:Generator_UserColumnName="FNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FName" msprop:Generator_ColumnVarNameInTable="columnFName" msprop:Generator_ColumnPropNameInRow="FName" msprop:Generator_ColumnPropNameInTable="FNameColumn" msprop:Generator_UserColumnName="FName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FAddress" msprop:Generator_ColumnVarNameInTable="columnFAddress" msprop:Generator_ColumnPropNameInRow="FAddress" msprop:Generator_ColumnPropNameInTable="FAddressColumn" msprop:Generator_UserColumnName="FAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -99,6 +193,14 @@
     <xs:unique name="StockPlacePrint_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:StockPlacePrint" />
       <xs:field xpath="mstns:FSPID" />
+    </xs:unique>
+    <xs:unique name="t_Organization_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:t_Organization" />
+      <xs:field xpath="mstns:FItemID" />
+    </xs:unique>
+    <xs:unique name="t_Stock_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:t_Stock" />
+      <xs:field xpath="mstns:FItemID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

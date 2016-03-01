@@ -21,6 +21,9 @@ namespace JWMSH
 
         private void SelectCustomer_Load(object sender, EventArgs e)
         {
+            t_OrganizationTableAdapter.Connection.ConnectionString = BaseStructure.KisConstring;
+            // TODO:  这行代码将数据加载到表“dataKis.t_Organization”中。您可以根据需要移动或删除它。
+            this.t_OrganizationTableAdapter.Fill(this.dataKis.t_Organization);
             
             //初始化表格功能控件
             tsgfMain.FormId = Name.GetHashCode().ToString(CultureInfo.CurrentCulture);
@@ -33,8 +36,8 @@ namespace JWMSH
         {
             if (e.Cell.Row.Index < 0)
                 return;
-            CCusCode = e.Cell.Row.Cells["cCusCode"].Value.ToString();
-            CCusName = e.Cell.Row.Cells["cCusName"].Value.ToString();
+            CCusCode = e.Cell.Row.Cells["FNumber"].Value.ToString();
+            CCusName = e.Cell.Row.Cells["FName"].Value.ToString();
            
             DialogResult = DialogResult.Yes;
         }

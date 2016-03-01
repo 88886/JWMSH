@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Customer", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cCusCode");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cCusName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cCusAddress");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("YuShouQi");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OutType");
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("t_Organization", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FItemID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FNumber");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FAddress");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
@@ -43,34 +43,35 @@
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             this.uGridCustomer = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.tsgfMain = new UpjdControlBox.ToolStripGridFunction();
+            this.tOrganizationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataKis = new JWMSH.DLL.DataKis();
+            this.t_OrganizationTableAdapter = new JWMSH.DLL.DataKisTableAdapters.t_OrganizationTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.uGridCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tOrganizationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataKis)).BeginInit();
             this.SuspendLayout();
             // 
             // uGridCustomer
             // 
+            this.uGridCustomer.DataSource = this.tOrganizationBindingSource;
             appearance1.BackColor = System.Drawing.Color.White;
             this.uGridCustomer.DisplayLayout.Appearance = appearance1;
+            ultraGridColumn1.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn1.Header.VisiblePosition = 0;
+            ultraGridColumn1.Width = 93;
             ultraGridColumn2.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn2.Header.Caption = "客户编码";
-            ultraGridColumn2.Header.VisiblePosition = 0;
+            ultraGridColumn2.Header.VisiblePosition = 1;
             ultraGridColumn3.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn3.Header.Caption = "客户名称";
-            ultraGridColumn3.Header.VisiblePosition = 1;
+            ultraGridColumn3.Header.VisiblePosition = 2;
+            ultraGridColumn3.Width = 168;
             ultraGridColumn4.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn4.Header.Caption = "客户地址";
-            ultraGridColumn4.Header.VisiblePosition = 2;
-            ultraGridColumn4.Width = 236;
-            ultraGridColumn6.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn6.Header.Caption = "允收期";
-            ultraGridColumn6.Header.VisiblePosition = 3;
-            ultraGridColumn1.Header.Caption = "出库规则";
-            ultraGridColumn1.Header.VisiblePosition = 4;
+            ultraGridColumn4.Header.VisiblePosition = 3;
+            ultraGridColumn4.Width = 248;
             ultraGridBand1.Columns.AddRange(new object[] {
+            ultraGridColumn1,
             ultraGridColumn2,
             ultraGridColumn3,
-            ultraGridColumn4,
-            ultraGridColumn6,
-            ultraGridColumn1});
+            ultraGridColumn4});
             this.uGridCustomer.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.uGridCustomer.DisplayLayout.GroupByBox.Prompt = "如需按照某个列进行分类汇总请把列名拖动到此处";
             this.uGridCustomer.DisplayLayout.MaxColScrollRegions = 1;
@@ -112,10 +113,10 @@
             this.uGridCustomer.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.uGridCustomer.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.uGridCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uGridCustomer.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uGridCustomer.Location = new System.Drawing.Point(0, 27);
+            this.uGridCustomer.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uGridCustomer.Location = new System.Drawing.Point(0, 25);
             this.uGridCustomer.Name = "uGridCustomer";
-            this.uGridCustomer.Size = new System.Drawing.Size(784, 535);
+            this.uGridCustomer.Size = new System.Drawing.Size(784, 494);
             this.uGridCustomer.TabIndex = 24;
             this.uGridCustomer.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             this.uGridCustomer.DoubleClickCell += new Infragistics.Win.UltraWinGrid.DoubleClickCellEventHandler(this.uGridCustomer_DoubleClickCell);
@@ -128,21 +129,37 @@
             this.tsgfMain.FormName = null;
             this.tsgfMain.Location = new System.Drawing.Point(0, 0);
             this.tsgfMain.Name = "tsgfMain";
-            this.tsgfMain.Size = new System.Drawing.Size(784, 27);
+            this.tsgfMain.Size = new System.Drawing.Size(784, 25);
             this.tsgfMain.TabIndex = 23;
             this.tsgfMain.UGrid = this.uGridCustomer;
             // 
+            // tOrganizationBindingSource
+            // 
+            this.tOrganizationBindingSource.DataMember = "t_Organization";
+            this.tOrganizationBindingSource.DataSource = this.dataKis;
+            // 
+            // dataKis
+            // 
+            this.dataKis.DataSetName = "DataKis";
+            this.dataKis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t_OrganizationTableAdapter
+            // 
+            this.t_OrganizationTableAdapter.ClearBeforeFill = true;
+            // 
             // SelectCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(784, 519);
             this.Controls.Add(this.uGridCustomer);
             this.Controls.Add(this.tsgfMain);
             this.Icon = global::JWMSH.Properties.Resources.scanicon;
             this.Name = "SelectCustomer";
             this.Load += new System.EventHandler(this.SelectCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uGridCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tOrganizationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataKis)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -151,5 +168,8 @@
 
         private Infragistics.Win.UltraWinGrid.UltraGrid uGridCustomer;
         private UpjdControlBox.ToolStripGridFunction tsgfMain;
+        private DLL.DataKis dataKis;
+        private System.Windows.Forms.BindingSource tOrganizationBindingSource;
+        private DLL.DataKisTableAdapters.t_OrganizationTableAdapter t_OrganizationTableAdapter;
     }
 }

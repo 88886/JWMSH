@@ -463,5 +463,29 @@ namespace JWMSH
                 }
             }
         }
+
+        private void utxtcCusName_EditorButtonClick(object sender, EditorButtonEventArgs e)
+        {
+            using (var sc = new SelectCustomer())
+            {
+                if (sc.ShowDialog() == DialogResult.Yes)
+                {
+                    _cCusCode = sc.CCusCode;
+                    utxtcCusName.Text = sc.CCusName;
+                }
+            }
+        }
+
+        private void utecDepName_EditorButtonClick(object sender, EditorButtonEventArgs e)
+        {
+            using (var sc = new SelectWarehouse())
+            {
+                if (sc.ShowDialog() == DialogResult.Yes)
+                {
+                    _cDepCode = sc.CWhCode;
+                    utecDepName.Text = sc.CWhName;
+                }
+            }
+        }
     }
 }

@@ -170,6 +170,7 @@ namespace JWMSH
                             dtpdDate.Checked = true;
                             dtpdDate.Value = (DateTime)dr["dDate"];
                         }
+                        txtFBatchNo.Text = dr["FBatchNo"].ToString();
                         txtcInvCode.Text = dr["cInvCode"].ToString();
                         utecInvName.Text = dr["cInvName"].ToString();
                         txtcInvStd.Text = dr["cInvStd"].ToString();

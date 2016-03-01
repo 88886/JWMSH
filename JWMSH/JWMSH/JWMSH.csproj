@@ -357,6 +357,12 @@
     <Compile Include="SelectKisInventory.Designer.cs">
       <DependentUpon>SelectKisInventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectWarehouse.Designer.cs">
+      <DependentUpon>SelectWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpjdControl\lblTitle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -514,6 +520,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SelectKisInventory.resx">
       <DependentUpon>SelectKisInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectWarehouse.resx">
+      <DependentUpon>SelectWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpjdControl\lblTitle.resx">
       <DependentUpon>lblTitle.cs</DependentUpon>
