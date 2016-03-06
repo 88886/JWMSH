@@ -30,23 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Bar_RawMaterial", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("AutoID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cSerialNumber");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FItemID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cBarCode");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cCode");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cLotNo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("iQuantity");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("dDate");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cInvCode");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cInvName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cInvPackStd");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cInvStd");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cInvPackStyle");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cVendor");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cMassUnit");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("iMassDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cKeepRequire");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn26 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cAddress");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn27 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cProperty");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("iQuantity");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FSPNumber");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("dAddTime");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("dScanTime");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cBoxNumber");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cOperator");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cMemo");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
@@ -86,75 +84,65 @@
             ultraGridColumn19.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn19.Header.VisiblePosition = 0;
             ultraGridColumn19.Hidden = true;
-            ultraGridColumn20.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn20.Header.Caption = "序列号";
-            ultraGridColumn20.Header.VisiblePosition = 2;
+            ultraGridColumn2.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn2.Header.VisiblePosition = 1;
+            ultraGridColumn2.Hidden = true;
+            ultraGridColumn4.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn4.Header.Caption = "物料ID";
+            ultraGridColumn4.Header.VisiblePosition = 3;
+            ultraGridColumn5.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn5.Header.Caption = "条码号";
+            ultraGridColumn5.Header.VisiblePosition = 4;
+            ultraGridColumn7.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn7.Header.Caption = "指令单号";
+            ultraGridColumn7.Header.VisiblePosition = 6;
             ultraGridColumn14.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn14.Header.Caption = "批号";
-            ultraGridColumn14.Header.VisiblePosition = 3;
-            ultraGridColumn21.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn21.Header.Caption = "数量";
-            ultraGridColumn21.Header.VisiblePosition = 4;
-            ultraGridColumn11.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn11.Header.Caption = "生产日期";
-            ultraGridColumn11.Header.VisiblePosition = 11;
+            ultraGridColumn14.Header.VisiblePosition = 5;
             ultraGridColumn3.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn3.Header.Caption = "产品编码";
-            ultraGridColumn3.Header.VisiblePosition = 1;
+            ultraGridColumn3.Header.VisiblePosition = 2;
             ultraGridColumn3.Width = 77;
             ultraGridColumn6.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn6.Header.Caption = "产品名称";
-            ultraGridColumn6.Header.VisiblePosition = 5;
+            ultraGridColumn6.Header.VisiblePosition = 8;
             ultraGridColumn6.Width = 132;
-            ultraGridColumn22.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn22.Header.Caption = "包装规格";
-            ultraGridColumn22.Header.VisiblePosition = 7;
-            ultraGridColumn8.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn8.Header.Caption = "产品规格";
-            ultraGridColumn8.Header.VisiblePosition = 6;
-            ultraGridColumn8.Width = 101;
-            ultraGridColumn23.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn23.Header.Caption = "包装形式";
-            ultraGridColumn23.Header.VisiblePosition = 9;
-            ultraGridColumn24.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn24.Header.Caption = "供应商";
-            ultraGridColumn24.Header.VisiblePosition = 10;
-            ultraGridColumn1.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn1.Header.Caption = "保质期单位";
-            ultraGridColumn1.Header.VisiblePosition = 12;
-            ultraGridColumn12.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn12.Header.Caption = "保质期天数";
-            ultraGridColumn12.Header.VisiblePosition = 8;
-            ultraGridColumn12.Width = 79;
-            ultraGridColumn25.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn25.Header.Caption = "贮存条件";
-            ultraGridColumn25.Header.VisiblePosition = 13;
-            ultraGridColumn26.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn26.Header.Caption = "产地";
-            ultraGridColumn26.Header.VisiblePosition = 14;
-            ultraGridColumn27.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn27.Header.Caption = "特性";
-            ultraGridColumn27.Header.VisiblePosition = 15;
+            ultraGridColumn21.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn21.Header.Caption = "数量";
+            ultraGridColumn21.Header.VisiblePosition = 7;
+            ultraGridColumn9.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn9.Header.Caption = "仓位编码";
+            ultraGridColumn9.Header.VisiblePosition = 9;
+            ultraGridColumn10.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn10.Header.Caption = "添加时间";
+            ultraGridColumn10.Header.VisiblePosition = 10;
+            ultraGridColumn13.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn13.Header.Caption = "扫描时间";
+            ultraGridColumn13.Header.VisiblePosition = 11;
+            ultraGridColumn15.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn15.Header.Caption = "箱号";
+            ultraGridColumn15.Header.VisiblePosition = 12;
+            ultraGridColumn16.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn16.Header.Caption = "操作员";
+            ultraGridColumn16.Header.VisiblePosition = 13;
             ultraGridColumn28.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn28.Header.Caption = "备注";
-            ultraGridColumn28.Header.VisiblePosition = 16;
+            ultraGridColumn28.Header.VisiblePosition = 14;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn19,
-            ultraGridColumn20,
+            ultraGridColumn2,
+            ultraGridColumn4,
+            ultraGridColumn5,
+            ultraGridColumn7,
             ultraGridColumn14,
-            ultraGridColumn21,
-            ultraGridColumn11,
             ultraGridColumn3,
             ultraGridColumn6,
-            ultraGridColumn22,
-            ultraGridColumn8,
-            ultraGridColumn23,
-            ultraGridColumn24,
-            ultraGridColumn1,
-            ultraGridColumn12,
-            ultraGridColumn25,
-            ultraGridColumn26,
-            ultraGridColumn27,
+            ultraGridColumn21,
+            ultraGridColumn9,
+            ultraGridColumn10,
+            ultraGridColumn13,
+            ultraGridColumn15,
+            ultraGridColumn16,
             ultraGridColumn28});
             this.uGridRawMaterial.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.uGridRawMaterial.DisplayLayout.GroupByBox.Prompt = "如需按照某个列进行分类汇总请把列名拖动到此处";

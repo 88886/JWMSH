@@ -292,6 +292,7 @@ namespace JWMSH
 
             //模板赋值
             DllWorkPrintLabel.SetParametersValue(xtreport, "cSerialNumber", lblTitleMain.lblcSerialNumber.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "cBarCode", "P*" + _FitemId + "*L*" + txtFBatchNo.Text + "*S*" );
             DllWorkPrintLabel.SetParametersValue(xtreport, "cInvCode", txtcInvCode.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cInvName", utecInvName.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "cInvStd", txtcInvStd.Text);
@@ -300,7 +301,7 @@ namespace JWMSH
             DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", txtcMemo.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value.ToShortDateString());
             DllWorkPrintLabel.SetParametersValue(xtreport, "cOrderNumber", txtcOrderNumber.Text);
-            xtreport.DataSource = dataInventory.ProductLabel;
+            xtreport.DataSource = GetPrintData();
             //模板赋值
             switch (operation)
             {
@@ -316,6 +317,13 @@ namespace JWMSH
             }
 
         }
+
+        private DataTable GetPrintData()
+        {
+            var cmd = new SqlCommand("select * from View_ProductLabel where cSerialNumber=@cSerialNumber");
+            cmd.Parameters.AddWithValue("@cSerialNumber", lblTitleMain.lblcSerialNumber.Text);
+            var wf=new WmsFunction(BaseStructure.WmsCon);
+            return wf.GetSqlTable(cmd);}
 
         private void biPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

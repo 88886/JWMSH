@@ -340,7 +340,8 @@
             this.cbxcOrderType.FormattingEnabled = true;
             this.cbxcOrderType.Items.AddRange(new object[] {
             "领料",
-            "销售"});
+            "销售",
+            "调拨"});
             this.cbxcOrderType.Location = new System.Drawing.Point(435, 30);
             this.cbxcOrderType.Name = "cbxcOrderType";
             this.cbxcOrderType.Size = new System.Drawing.Size(142, 20);

@@ -295,6 +295,17 @@
     <Compile Include="DLL\DllWorkPrintLabel.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DLL\dsRptTemplet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRptTemplet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRptTemplet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRptTemplet.Designer.cs">
+      <DependentUpon>FrmRptTemplet.cs</DependentUpon>
+    </Compile>
     <Compile Include="PdaGetIntQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -492,6 +503,9 @@
     <EmbeddedResource Include="Base_Templet.resx">
       <DependentUpon>Base_Templet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRptTemplet.resx">
+      <DependentUpon>FrmRptTemplet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PdaGetIntQuantity.resx">
       <DependentUpon>PdaGetIntQuantity.cs</DependentUpon>
     </EmbeddedResource>
@@ -653,6 +667,17 @@
     </None>
     <None Include="DLL\DataReport.xss">
       <DependentUpon>DataReport.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\dsRptTemplet.xsc">
+      <DependentUpon>dsRptTemplet.xsd</DependentUpon>
+    </None>
+    <None Include="DLL\dsRptTemplet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRptTemplet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DLL\dsRptTemplet.xss">
+      <DependentUpon>dsRptTemplet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
