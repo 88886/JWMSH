@@ -109,14 +109,23 @@ namespace AutoSync
 
         private void SyncOrder_Load(object sender, EventArgs e)
         {
-            
-            tstxtServer.Text = Properties.Settings.Default.SqlServer;
-            //记录开始的时间
-            dtpStartTime.Value = DateTime.Now;
 
-            timerExec.Interval = (int)nudTimeSpan.Value * 60000;
-            timerExec.Enabled = true;
-            GetSyncTable();
+            try
+            {
+                tstxtServer.Text = Properties.Settings.Default.SqlServer;
+                //记录开始的时间
+                dtpStartTime.Value = DateTime.Now;
+
+                timerExec.Interval = (int)nudTimeSpan.Value * 60000;
+                timerExec.Enabled = true;
+                GetSyncTable();
+            }
+            catch (Exception ex)
+            {
+                VLogError(DateTime.Now + " Start"+ex.Message, "Start Process");
+                return;
+            }
+            
             ExecUpload();
         }
 
@@ -125,14 +134,14 @@ namespace AutoSync
 
         private void ExecUpload()
         {
-
+            
             lblLastTime.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
             var stw = new Stopwatch();
             stw.Start();
 
 
             //如果没有任何未入库的单据,则直接退出
-            if (dsOrder.Wms_M_Order ==null|| dsOrder.Wms_M_Order.Count < 1)
+            if (dsOrder.Wms_M_Order ==null|| dsOrder.Wms_M_Order.Rows.Count < 1)
                 return;
             var iSumSucces = 0;
             var iSumFail = 0;
@@ -200,8 +209,9 @@ namespace AutoSync
                             finterId = (int)cmdMain.Parameters["@FInterID"].Value;
 
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
+                            VLogError(DateTime.Now + " GetICMaxNum", ex.Message);
                             tran.Rollback();
                             return;
                         }
@@ -264,8 +274,9 @@ namespace AutoSync
                             cmdMain.ExecuteNonQuery();
                             fBillNo = cmdMain.Parameters["@FBillNo"].Value.ToString();
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
+                            VLogError(DateTime.Now + "主表", ex.Message);
                             //如果执行失败,回滚
                             tran.Rollback();
                             return;
