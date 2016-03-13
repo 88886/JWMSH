@@ -117,7 +117,7 @@ namespace JWMSH
             biRmTemplet.Caption = _RmcCaption;
             biRmPrinter.Caption = _RmcPrinter;
 
-            shiftDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
+            rm_ProduceDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
             bomDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
         }
 
@@ -207,7 +207,7 @@ namespace JWMSH
             lblTitleMain.lblAutoID.Text = "";
             //清空制单人等信息
             dataInventory.BomDetail.Rows.Clear();
-            dataInventory.ShiftDetail.Rows.Clear();
+            dataInventory.Rm_ProduceDetail.Rows.Clear();
         }
 
         /// <summary>
@@ -359,7 +359,7 @@ namespace JWMSH
                         txtcFullName.Text = dr["cFullName"].ToString();
                         txtcDept.Text = dr["cDeptName"].ToString();
                         txtcMemo.Text = dr["cMemo"].ToString();
-                        shiftDetailTableAdapter.Fill(dataInventory.ShiftDetail, lblTitleMain.lblcSerialNumber.Text);
+                        rm_ProduceDetailTableAdapter.Fill(dataInventory.Rm_ProduceDetail, lblTitleMain.lblcSerialNumber.Text);
                         bomDetailTableAdapter.Fill(dataInventory.BomDetail, bomID);
                     }
                     else
@@ -408,8 +408,8 @@ namespace JWMSH
             {
                 return @"编码不正确,编码";
             }
-            if (dataInventory.ShiftDetail.Rows.Count < 1)
-                return "子件";
+            //if (dataInventory.ShiftDetail.Rows.Count < 1)
+            //    return "子件";
             return uneiQuantity.Value == null || string.IsNullOrEmpty(uneiQuantity.Value.ToString()) ? "数量" : string.Empty;
         }
 
@@ -506,20 +506,19 @@ namespace JWMSH
 
                         uGridRawMaterial.UpdateData();
                         //重新赋值一下行号/单据号给子表
-                        for (var i = 0; i < dataInventory.ShiftDetail.Rows.Count; i++)
-                        {
-                            var dr = dataInventory.ShiftDetail.Rows[i];
-                            if (dr.RowState == DataRowState.Deleted)
-                                continue;
-                            dr["cSerialNumber"] = lblTitleMain.lblcSerialNumber.Text;
+                        //for (var i = 0; i < dataInventory.ShiftDetail.Rows.Count; i++)
+                        //{
+                        //    var dr = dataInventory.ShiftDetail.Rows[i];
+                        //    if (dr.RowState == DataRowState.Deleted)
+                        //        continue;
+                        //    dr["cSerialNumber"] = lblTitleMain.lblcSerialNumber.Text;
 
-                        }
+                        //}
                         //将改变提交到内存表
                         uGridRawMaterial.UpdateData();
                         try
                         {
                             //提交子表
-                            shiftDetailTableAdapter.Update(dataInventory.ShiftDetail);
                             //提交主表
                             tran.Commit();
                             MessageBox.Show(@"保存成功", @"成功", MessageBoxButtons.OK, MessageBoxIcon.Information);

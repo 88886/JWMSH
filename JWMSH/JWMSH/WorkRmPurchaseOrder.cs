@@ -43,11 +43,11 @@ namespace JWMSH
         {
             var cmd =
                 new SqlCommand(
-                    @"select top 100 FInterID,POOrder.FBillNo,FSupplyID,FDate,POOrder.FStatus,FBillerID,FCheckerID,FCheckDate,
+                    @"select top 100 FInterID,POInstock.FBillNo,FSupplyID,FDate,POInstock.FStatus,FBillerID,FCheckerID,FCheckDate,
 t_Supplier.FName,t_User.FName CreateName,temp.FName CheckName
-from POOrder inner join t_Supplier on POOrder.FSupplyID=t_Supplier.FItemID
-inner join t_User on POOrder.FBillerID=t_User.FUserID 
-left join t_User temp on POOrder.FCheckerID=temp.FUserID order by FInterID desc");
+from POInstock inner join t_Supplier on POInstock.FSupplyID=t_Supplier.FItemID
+inner join t_User on POInstock.FBillerID=t_User.FUserID 
+left join t_User temp on POInstock.FCheckerID=temp.FUserID order by FInterID desc");
             var wmf = new WmsFunction(BaseStructure.KisConstring);
             uGridCheck.DataSource = wmf.GetSqlTable(cmd);
         }
@@ -56,11 +56,11 @@ left join t_User temp on POOrder.FCheckerID=temp.FUserID order by FInterID desc"
         {
             var cmd =
                 new SqlCommand(
-                    @"select top 100 FInterID,POOrder.FBillNo,FSupplyID,FDate,POOrder.FStatus,FBillerID,FCheckerID,FCheckDate,
+                    @"select top 100 FInterID,POInstock.FBillNo,FSupplyID,FDate,POInstock.FStatus,FBillerID,FCheckerID,FCheckDate,
 t_Supplier.FName,t_User.FName CreateName,temp.FName CheckName
-from POOrder inner join t_Supplier on POOrder.FSupplyID=t_Supplier.FItemID
-inner join t_User on POOrder.FBillerID=t_User.FUserID 
-left join t_User temp on POOrder.FCheckerID=temp.FUserID where POOrder.FBillNo like '%"+cOrderNumber+"%' order by FInterID desc");
+from POInstock inner join t_Supplier on POInstock.FSupplyID=t_Supplier.FItemID
+inner join t_User on POInstock.FBillerID=t_User.FUserID 
+left join t_User temp on POInstock.FCheckerID=temp.FUserID  where POOrder.FBillNo like '%" + cOrderNumber + "%' order by FInterID desc");
             var wmf = new WmsFunction(BaseStructure.KisConstring);
             uGridCheck.DataSource = wmf.GetSqlTable(cmd);
         }
@@ -75,8 +75,8 @@ left join t_User temp on POOrder.FCheckerID=temp.FUserID where POOrder.FBillNo l
                 return;
             var cmd =
                 new SqlCommand(
-                    @"select POOrderEntry.FItemID,POOrderEntry.FEntryID,FShortNumber,FNumber,FModel,FName,FQty 
-from POOrderEntry inner join t_ICItem on POOrderEntry.FItemID=t_ICItem.FItemID
+                    @"select POInstockEntry.FItemID,POInstockEntry.FEntryID,FShortNumber,FNumber,FModel,FName,FQty 
+from POInstockEntry inner join t_ICItem on POInstockEntry.FItemID=t_ICItem.FItemID
 where FInterID=@FinterID");
             cmd.Parameters.AddWithValue("@FinterID", _FinterID);
             var wmf = new WmsFunction(BaseStructure.KisConstring);

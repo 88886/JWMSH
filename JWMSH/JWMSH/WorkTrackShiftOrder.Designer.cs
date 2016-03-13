@@ -68,27 +68,26 @@
             Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand3 = new Infragistics.Win.UltraWinGrid.UltraGridBand("ShiftDetail", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand3 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Rm_ProduceDetail", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("AutoID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn29 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cSerialNumber");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cGuid");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FItemID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cBarCode");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cCode");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cLotNo");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cInvCode");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cInvName");
             Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cInvStd");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cFullName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("iQuantity");
             Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn30 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FBatchNo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn31 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FStockID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn32 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FStockNumber");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn39 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FStockName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn41 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FStockPlaceNumber");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn42 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FStockPlaceName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FSPNumber");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("dAddTime");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn46 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("dScanTime");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn47 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cBoxNumber");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn48 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cOperator");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cMemo");
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("dAddTime");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cFitemID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FStockPlaceID");
             Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
@@ -123,6 +122,8 @@
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.imageCollection2 = new DevExpress.Utils.ImageCollection(this.components);
             this.ugbxMain = new Infragistics.Win.Misc.UltraGroupBox();
+            this.txtFBatchNo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtcDept = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpdDate = new System.Windows.Forms.DateTimePicker();
@@ -145,10 +146,7 @@
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabMaterial = new System.Windows.Forms.TabPage();
             this.uGridShiftDetail = new Infragistics.Win.UltraWinGrid.UltraGrid();
-            this.shiftDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataInventory = new JWMSH.DLL.DataInventory();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tabBomDetail = new System.Windows.Forms.TabPage();
             this.uGridRawMaterial = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.bomDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -181,10 +179,9 @@
             this.rpgPrinter = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.shiftDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.ShiftDetailTableAdapter();
             this.bomDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.BomDetailTableAdapter();
-            this.txtFBatchNo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.rmProduceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rm_ProduceDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.Rm_ProduceDetailTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugbxMain)).BeginInit();
@@ -196,13 +193,12 @@
             this.tabMain.SuspendLayout();
             this.tabMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGridShiftDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shiftDetailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventory)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.tabBomDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bomDetailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rmProduceDetailBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // imageCollection1
@@ -263,10 +259,29 @@
             this.ugbxMain.Controls.Add(this.label1);
             this.ugbxMain.Controls.Add(this.txtcInvCode);
             this.ugbxMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ugbxMain.Location = new System.Drawing.Point(0, 134);
+            this.ugbxMain.Location = new System.Drawing.Point(0, 133);
             this.ugbxMain.Name = "ugbxMain";
-            this.ugbxMain.Size = new System.Drawing.Size(984, 176);
+            this.ugbxMain.Size = new System.Drawing.Size(984, 162);
             this.ugbxMain.TabIndex = 34;
+            // 
+            // txtFBatchNo
+            // 
+            this.txtFBatchNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtFBatchNo.Enabled = false;
+            this.txtFBatchNo.Location = new System.Drawing.Point(447, 74);
+            this.txtFBatchNo.Name = "txtFBatchNo";
+            this.txtFBatchNo.Size = new System.Drawing.Size(191, 21);
+            this.txtFBatchNo.TabIndex = 79;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(390, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "生产批号";
             // 
             // txtcDept
             // 
@@ -340,7 +355,7 @@
             this.txtcDept.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.txtcDept.DisplayMember = "FName";
             this.txtcDept.Enabled = false;
-            this.txtcDept.Location = new System.Drawing.Point(753, 47);
+            this.txtcDept.Location = new System.Drawing.Point(753, 43);
             this.txtcDept.Name = "txtcDept";
             this.txtcDept.Size = new System.Drawing.Size(149, 22);
             this.txtcDept.TabIndex = 77;
@@ -350,9 +365,9 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(721, 52);
+            this.label7.Location = new System.Drawing.Point(721, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.Size = new System.Drawing.Size(29, 12);
             this.label7.TabIndex = 76;
             this.label7.Text = "部门";
             // 
@@ -361,19 +376,19 @@
             this.dtpdDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpdDate.Checked = false;
             this.dtpdDate.Enabled = false;
-            this.dtpdDate.Location = new System.Drawing.Point(447, 48);
+            this.dtpdDate.Location = new System.Drawing.Point(447, 44);
             this.dtpdDate.Name = "dtpdDate";
             this.dtpdDate.ShowCheckBox = true;
-            this.dtpdDate.Size = new System.Drawing.Size(194, 20);
+            this.dtpdDate.Size = new System.Drawing.Size(194, 21);
             this.dtpdDate.TabIndex = 75;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(390, 52);
+            this.label6.Location = new System.Drawing.Point(390, 48);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 74;
             this.label6.Text = "生产日期";
             // 
@@ -381,9 +396,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(673, 20);
+            this.label3.Location = new System.Drawing.Point(673, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.Size = new System.Drawing.Size(77, 12);
             this.label3.TabIndex = 73;
             this.label3.Text = "班次计划数量";
             // 
@@ -391,16 +406,16 @@
             // 
             this.txtcOrderNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcOrderNumber.Enabled = false;
-            this.txtcOrderNumber.Location = new System.Drawing.Point(447, 15);
+            this.txtcOrderNumber.Location = new System.Drawing.Point(447, 14);
             this.txtcOrderNumber.Name = "txtcOrderNumber";
-            this.txtcOrderNumber.Size = new System.Drawing.Size(191, 20);
+            this.txtcOrderNumber.Size = new System.Drawing.Size(191, 21);
             this.txtcOrderNumber.TabIndex = 72;
             // 
             // uneiQuantity
             // 
             this.uneiQuantity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.uneiQuantity.Enabled = false;
-            this.uneiQuantity.Location = new System.Drawing.Point(753, 15);
+            this.uneiQuantity.Location = new System.Drawing.Point(753, 14);
             this.uneiQuantity.MaskInput = "nnnnnnnnn";
             this.uneiQuantity.MaxValue = 100000000D;
             this.uneiQuantity.MinValue = 0;
@@ -412,9 +427,9 @@
             // 
             this.lblcOrderNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblcOrderNumber.AutoSize = true;
-            this.lblcOrderNumber.Location = new System.Drawing.Point(378, 20);
+            this.lblcOrderNumber.Location = new System.Drawing.Point(378, 18);
             this.lblcOrderNumber.Name = "lblcOrderNumber";
-            this.lblcOrderNumber.Size = new System.Drawing.Size(67, 13);
+            this.lblcOrderNumber.Size = new System.Drawing.Size(65, 12);
             this.lblcOrderNumber.TabIndex = 70;
             this.lblcOrderNumber.Text = "客户订单号";
             // 
@@ -422,18 +437,18 @@
             // 
             this.txtcMemo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcMemo.Enabled = false;
-            this.txtcMemo.Location = new System.Drawing.Point(151, 117);
+            this.txtcMemo.Location = new System.Drawing.Point(151, 108);
             this.txtcMemo.Name = "txtcMemo";
-            this.txtcMemo.Size = new System.Drawing.Size(294, 20);
+            this.txtcMemo.Size = new System.Drawing.Size(294, 21);
             this.txtcMemo.TabIndex = 69;
             // 
             // 备注
             // 
             this.备注.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.备注.AutoSize = true;
-            this.备注.Location = new System.Drawing.Point(118, 121);
+            this.备注.Location = new System.Drawing.Point(118, 112);
             this.备注.Name = "备注";
-            this.备注.Size = new System.Drawing.Size(31, 13);
+            this.备注.Size = new System.Drawing.Size(29, 12);
             this.备注.TabIndex = 68;
             this.备注.Text = "备注";
             // 
@@ -441,19 +456,19 @@
             // 
             this.txtcFullName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcFullName.Enabled = false;
-            this.txtcFullName.Location = new System.Drawing.Point(517, 117);
+            this.txtcFullName.Location = new System.Drawing.Point(517, 108);
             this.txtcFullName.Name = "txtcFullName";
             this.txtcFullName.ReadOnly = true;
-            this.txtcFullName.Size = new System.Drawing.Size(385, 20);
+            this.txtcFullName.Size = new System.Drawing.Size(385, 21);
             this.txtcFullName.TabIndex = 61;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(460, 121);
+            this.label5.Location = new System.Drawing.Point(460, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 60;
             this.label5.Text = "产品全称";
             // 
@@ -464,7 +479,7 @@
             editorButton1.Appearance = appearance13;
             this.utecInvName.ButtonsRight.Add(editorButton1);
             this.utecInvName.Enabled = false;
-            this.utecInvName.Location = new System.Drawing.Point(151, 48);
+            this.utecInvName.Location = new System.Drawing.Point(151, 44);
             this.utecInvName.Name = "utecInvName";
             this.utecInvName.ReadOnly = true;
             this.utecInvName.Size = new System.Drawing.Size(194, 21);
@@ -474,19 +489,19 @@
             // 
             this.txtcInvStd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcInvStd.Enabled = false;
-            this.txtcInvStd.Location = new System.Drawing.Point(151, 80);
+            this.txtcInvStd.Location = new System.Drawing.Point(151, 74);
             this.txtcInvStd.Name = "txtcInvStd";
             this.txtcInvStd.ReadOnly = true;
-            this.txtcInvStd.Size = new System.Drawing.Size(194, 20);
+            this.txtcInvStd.Size = new System.Drawing.Size(194, 21);
             this.txtcInvStd.TabIndex = 49;
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(94, 84);
+            this.label9.Location = new System.Drawing.Point(94, 78);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 48;
             this.label9.Text = "产品规格";
             // 
@@ -494,9 +509,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 52);
+            this.label2.Location = new System.Drawing.Point(94, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 29;
             this.label2.Text = "产品名称";
             // 
@@ -504,9 +519,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 20);
+            this.label1.Location = new System.Drawing.Point(94, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 28;
             this.label1.Text = "产品编码";
             // 
@@ -591,8 +606,8 @@
             this.txtcInvCode.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.txtcInvCode.DisplayMember = "cInvCode";
             this.txtcInvCode.Enabled = false;
-            this.txtcInvCode.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtcInvCode.Location = new System.Drawing.Point(151, 14);
+            this.txtcInvCode.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtcInvCode.Location = new System.Drawing.Point(151, 13);
             this.txtcInvCode.Name = "txtcInvCode";
             this.txtcInvCode.Size = new System.Drawing.Size(194, 22);
             this.txtcInvCode.TabIndex = 53;
@@ -606,9 +621,9 @@
             this.lblTitleMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lblTitleMain.CTitle = "班次制令单";
             this.lblTitleMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitleMain.Location = new System.Drawing.Point(0, 96);
+            this.lblTitleMain.Location = new System.Drawing.Point(0, 98);
             this.lblTitleMain.Name = "lblTitleMain";
-            this.lblTitleMain.Size = new System.Drawing.Size(984, 38);
+            this.lblTitleMain.Size = new System.Drawing.Size(984, 35);
             this.lblTitleMain.TabIndex = 33;
             // 
             // tabMain
@@ -616,114 +631,89 @@
             this.tabMain.Controls.Add(this.tabMaterial);
             this.tabMain.Controls.Add(this.tabBomDetail);
             this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabMain.Location = new System.Drawing.Point(0, 310);
+            this.tabMain.Location = new System.Drawing.Point(0, 295);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(984, 299);
+            this.tabMain.Size = new System.Drawing.Size(984, 267);
             this.tabMain.TabIndex = 35;
             // 
             // tabMaterial
             // 
             this.tabMaterial.Controls.Add(this.uGridShiftDetail);
-            this.tabMaterial.Controls.Add(this.toolStrip1);
             this.tabMaterial.Location = new System.Drawing.Point(4, 22);
             this.tabMaterial.Name = "tabMaterial";
             this.tabMaterial.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMaterial.Size = new System.Drawing.Size(976, 273);
+            this.tabMaterial.Size = new System.Drawing.Size(976, 241);
             this.tabMaterial.TabIndex = 0;
             this.tabMaterial.Text = "实际用料表";
             this.tabMaterial.UseVisualStyleBackColor = true;
             // 
             // uGridShiftDetail
             // 
-            this.uGridShiftDetail.DataSource = this.shiftDetailBindingSource;
+            this.uGridShiftDetail.DataSource = this.rmProduceDetailBindingSource;
             appearance26.BackColor = System.Drawing.Color.White;
             this.uGridShiftDetail.DisplayLayout.Appearance = appearance26;
             ultraGridColumn19.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn19.Header.VisiblePosition = 0;
             ultraGridColumn19.Hidden = true;
-            ultraGridColumn29.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn29.Header.VisiblePosition = 1;
-            ultraGridColumn29.Hidden = true;
+            ultraGridColumn2.Header.VisiblePosition = 1;
+            ultraGridColumn2.Hidden = true;
+            ultraGridColumn12.Header.VisiblePosition = 2;
+            ultraGridColumn12.Hidden = true;
+            ultraGridColumn13.Header.VisiblePosition = 4;
+            ultraGridColumn13.Hidden = true;
+            ultraGridColumn14.Header.VisiblePosition = 6;
+            ultraGridColumn16.Header.VisiblePosition = 8;
+            ultraGridColumn16.Hidden = true;
+            ultraGridColumn20.Header.VisiblePosition = 9;
             ultraGridColumn3.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn3.Header.Caption = "子件编码";
-            ultraGridColumn3.Header.VisiblePosition = 2;
+            ultraGridColumn3.Header.VisiblePosition = 3;
             ultraGridColumn3.Width = 77;
             ultraGridColumn6.ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always;
             ultraGridColumn6.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             appearance27.Image = global::JWMSH.Properties.Resources.keepbusinessrecords;
             ultraGridColumn6.CellButtonAppearance = appearance27;
             ultraGridColumn6.Header.Caption = "子件名称";
-            ultraGridColumn6.Header.VisiblePosition = 3;
+            ultraGridColumn6.Header.VisiblePosition = 5;
             ultraGridColumn6.Width = 132;
-            ultraGridColumn8.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn8.Header.Caption = "子件规格";
-            ultraGridColumn8.Header.VisiblePosition = 12;
-            ultraGridColumn8.Width = 104;
-            ultraGridColumn17.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn17.Header.Caption = "子件全称";
-            ultraGridColumn17.Header.VisiblePosition = 13;
-            ultraGridColumn17.Width = 223;
             ultraGridColumn1.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             appearance28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             ultraGridColumn1.CellAppearance = appearance28;
             ultraGridColumn1.Header.Caption = "数量";
-            ultraGridColumn1.Header.VisiblePosition = 4;
+            ultraGridColumn1.Header.VisiblePosition = 7;
             ultraGridColumn1.MaskInput = "nnnnn.nnnnnnnnnn";
             ultraGridColumn1.Width = 102;
-            ultraGridColumn30.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn30.Header.Caption = "批次";
-            ultraGridColumn30.Header.VisiblePosition = 5;
-            ultraGridColumn31.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn31.Header.Caption = "仓库ID";
-            ultraGridColumn31.Header.VisiblePosition = 6;
-            ultraGridColumn31.Hidden = true;
-            ultraGridColumn32.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn32.Header.Caption = "仓库编码";
-            ultraGridColumn32.Header.VisiblePosition = 7;
-            ultraGridColumn32.Width = 122;
-            ultraGridColumn39.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn39.Header.Caption = "仓库名称";
-            ultraGridColumn39.Header.VisiblePosition = 8;
-            ultraGridColumn39.Width = 140;
-            ultraGridColumn41.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn41.Header.Caption = "仓位编码";
-            ultraGridColumn41.Header.VisiblePosition = 9;
-            ultraGridColumn42.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn42.Header.Caption = "仓位名称";
-            ultraGridColumn42.Header.VisiblePosition = 10;
-            ultraGridColumn42.Width = 173;
+            ultraGridColumn21.Header.VisiblePosition = 10;
+            ultraGridColumn18.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
+            ultraGridColumn18.Header.Caption = "添加时间";
+            ultraGridColumn18.Header.VisiblePosition = 14;
+            ultraGridColumn46.Header.VisiblePosition = 12;
+            ultraGridColumn47.Header.VisiblePosition = 13;
+            ultraGridColumn48.Header.VisiblePosition = 15;
             ultraGridColumn28.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             appearance29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             ultraGridColumn28.CellAppearance = appearance29;
             ultraGridColumn28.Header.Caption = "备注";
             ultraGridColumn28.Header.VisiblePosition = 11;
             ultraGridColumn28.Width = 163;
-            ultraGridColumn18.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
-            ultraGridColumn18.Header.Caption = "添加时间";
-            ultraGridColumn18.Header.VisiblePosition = 14;
-            ultraGridColumn11.Header.VisiblePosition = 15;
-            ultraGridColumn11.Hidden = true;
-            ultraGridColumn7.Header.VisiblePosition = 16;
-            ultraGridColumn7.Hidden = true;
             ultraGridBand3.Columns.AddRange(new object[] {
             ultraGridColumn19,
-            ultraGridColumn29,
+            ultraGridColumn2,
+            ultraGridColumn12,
+            ultraGridColumn13,
+            ultraGridColumn14,
+            ultraGridColumn16,
+            ultraGridColumn20,
             ultraGridColumn3,
             ultraGridColumn6,
-            ultraGridColumn8,
-            ultraGridColumn17,
             ultraGridColumn1,
-            ultraGridColumn30,
-            ultraGridColumn31,
-            ultraGridColumn32,
-            ultraGridColumn39,
-            ultraGridColumn41,
-            ultraGridColumn42,
-            ultraGridColumn28,
+            ultraGridColumn21,
             ultraGridColumn18,
-            ultraGridColumn11,
-            ultraGridColumn7});
+            ultraGridColumn46,
+            ultraGridColumn47,
+            ultraGridColumn48,
+            ultraGridColumn28});
             this.uGridShiftDetail.DisplayLayout.BandsSerializer.Add(ultraGridBand3);
             this.uGridShiftDetail.DisplayLayout.GroupByBox.Prompt = "如需按照某个列进行分类汇总请把列名拖动到此处";
             this.uGridShiftDetail.DisplayLayout.MaxColScrollRegions = 1;
@@ -768,43 +758,18 @@
             this.uGridShiftDetail.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.uGridShiftDetail.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.uGridShiftDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uGridShiftDetail.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uGridShiftDetail.Location = new System.Drawing.Point(3, 28);
+            this.uGridShiftDetail.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uGridShiftDetail.Location = new System.Drawing.Point(3, 3);
             this.uGridShiftDetail.Name = "uGridShiftDetail";
-            this.uGridShiftDetail.Size = new System.Drawing.Size(970, 242);
+            this.uGridShiftDetail.Size = new System.Drawing.Size(970, 235);
             this.uGridShiftDetail.TabIndex = 35;
             this.uGridShiftDetail.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             this.uGridShiftDetail.DoubleClickCell += new Infragistics.Win.UltraWinGrid.DoubleClickCellEventHandler(this.uGridShiftDetail_DoubleClickCell);
-            // 
-            // shiftDetailBindingSource
-            // 
-            this.shiftDetailBindingSource.DataMember = "ShiftDetail";
-            this.shiftDetailBindingSource.DataSource = this.dataInventory;
             // 
             // dataInventory
             // 
             this.dataInventory.DataSetName = "DataInventory";
             this.dataInventory.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackgroundImage = global::JWMSH.Properties.Resources.toolbarBk;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(970, 25);
-            this.toolStrip1.TabIndex = 36;
-            this.toolStrip1.Text = "tsMain";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::JWMSH.Properties.Resources.add_obj;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(51, 22);
-            this.toolStripButton1.Text = "选料";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // tabBomDetail
             // 
@@ -812,7 +777,7 @@
             this.tabBomDetail.Location = new System.Drawing.Point(4, 22);
             this.tabBomDetail.Name = "tabBomDetail";
             this.tabBomDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBomDetail.Size = new System.Drawing.Size(976, 273);
+            this.tabBomDetail.Size = new System.Drawing.Size(976, 241);
             this.tabBomDetail.TabIndex = 1;
             this.tabBomDetail.Text = "Bom明细表";
             this.tabBomDetail.UseVisualStyleBackColor = true;
@@ -928,10 +893,10 @@
             this.uGridRawMaterial.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.uGridRawMaterial.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.uGridRawMaterial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uGridRawMaterial.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uGridRawMaterial.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uGridRawMaterial.Location = new System.Drawing.Point(3, 3);
             this.uGridRawMaterial.Name = "uGridRawMaterial";
-            this.uGridRawMaterial.Size = new System.Drawing.Size(970, 267);
+            this.uGridRawMaterial.Size = new System.Drawing.Size(970, 235);
             this.uGridRawMaterial.TabIndex = 34;
             this.uGridRawMaterial.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             // 
@@ -977,7 +942,7 @@
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowCategoryInCaption = false;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbon.Size = new System.Drawing.Size(984, 96);
+            this.ribbon.Size = new System.Drawing.Size(984, 98);
             this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bsiPrint
@@ -1205,40 +1170,26 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "补打原料打印机";
             // 
-            // shiftDetailTableAdapter
-            // 
-            this.shiftDetailTableAdapter.ClearBeforeFill = true;
-            // 
             // bomDetailTableAdapter
             // 
             this.bomDetailTableAdapter.ClearBeforeFill = true;
             // 
-            // txtFBatchNo
+            // rmProduceDetailBindingSource
             // 
-            this.txtFBatchNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtFBatchNo.Enabled = false;
-            this.txtFBatchNo.Location = new System.Drawing.Point(447, 80);
-            this.txtFBatchNo.Name = "txtFBatchNo";
-            this.txtFBatchNo.Size = new System.Drawing.Size(191, 20);
-            this.txtFBatchNo.TabIndex = 79;
+            this.rmProduceDetailBindingSource.DataMember = "Rm_ProduceDetail";
+            this.rmProduceDetailBindingSource.DataSource = this.dataInventory;
             // 
-            // label4
+            // rm_ProduceDetailTableAdapter
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(390, 84);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 78;
-            this.label4.Text = "生产批号";
+            this.rm_ProduceDetailTableAdapter.ClearBeforeFill = true;
             // 
             // WorkTrackShiftOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(984, 609);
+            this.ClientSize = new System.Drawing.Size(984, 562);
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.ugbxMain);
             this.Controls.Add(this.lblTitleMain);
@@ -1258,16 +1209,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtcInvCode)).EndInit();
             this.tabMain.ResumeLayout(false);
             this.tabMaterial.ResumeLayout(false);
-            this.tabMaterial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGridShiftDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shiftDetailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventory)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.tabBomDetail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bomDetailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rmProduceDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1294,8 +1242,6 @@
         private System.Windows.Forms.TabPage tabBomDetail;
         private Infragistics.Win.UltraWinGrid.UltraGrid uGridShiftDetail;
         private Infragistics.Win.UltraWinGrid.UltraGrid uGridRawMaterial;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Label lblcOrderNumber;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.BarSubItem bsiPrint;
@@ -1327,10 +1273,8 @@
         private System.Windows.Forms.Label label6;
         private Infragistics.Win.UltraWinGrid.UltraCombo txtcDept;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.BindingSource shiftDetailBindingSource;
         private DLL.DataInventory dataInventory;
         private System.Windows.Forms.BindingSource bomDetailBindingSource;
-        private DLL.DataInventoryTableAdapters.ShiftDetailTableAdapter shiftDetailTableAdapter;
         private DLL.DataInventoryTableAdapters.BomDetailTableAdapter bomDetailTableAdapter;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem biRmTemplet;
@@ -1340,5 +1284,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private System.Windows.Forms.TextBox txtFBatchNo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.BindingSource rmProduceDetailBindingSource;
+        private DLL.DataInventoryTableAdapters.Rm_ProduceDetailTableAdapter rm_ProduceDetailTableAdapter;
     }
 }

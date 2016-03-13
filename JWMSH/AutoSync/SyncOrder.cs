@@ -176,7 +176,11 @@ namespace AutoSync
                     billMainCmd = "develop_StockBill_Delivery";
                     billEntrycmd = "develop_StockBillEntry_Delivery";
                 }
-
+                else if (cType.Equals("领料出库"))
+                {
+                    billMainCmd = "develop_StockBill_Produce";
+                    billEntrycmd = "develop_StockBillEntry_Produce";
+                }
 
                 if (string.IsNullOrEmpty(billMainCmd))
                 {
@@ -239,6 +243,7 @@ namespace AutoSync
                             cmdMain.Parameters.AddWithValue("@FItemID", dtDetail.Rows[i]["FitemID"]);
                             cmdMain.Parameters.AddWithValue("@FEntryID", i + 1);
                             cmdMain.Parameters.AddWithValue("@FQty", dtDetail.Rows[i]["iQuantity"]);
+                            cmdMain.Parameters.AddWithValue("@FBatchNo", dtDetail.Rows[i]["cLotNo"]);
                             cmdMain.Parameters.AddWithValue("@Fnote",
                                                               "时间" + DateTime.Now.ToString(CultureInfo.CurrentCulture));
                             cmdMain.Parameters.AddWithValue("@FSPNumber", dtDetail.Rows[i]["FSPNumber"]);
@@ -268,11 +273,17 @@ namespace AutoSync
                         cmdMain.Parameters.AddWithValue("@FInterID", finterId);
                         cmdMain.Parameters.Add(new SqlParameter("@FBillNo", SqlDbType.NVarChar, 255));
                         cmdMain.Parameters["@FBillNo"].Direction = ParameterDirection.Output;
+                        if (cType.Equals("采购入库"))
+                        {
+                            cmdMain.Parameters.AddWithValue("@FPONumber", dtDetail.Rows[0]["cOrderNumber"]);
+                        }
+
 
                         try
                         {
                             cmdMain.ExecuteNonQuery();
                             fBillNo = cmdMain.Parameters["@FBillNo"].Value.ToString();
+                            
                         }
                         catch (Exception ex)
                         {
