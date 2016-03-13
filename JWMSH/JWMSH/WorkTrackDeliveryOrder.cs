@@ -1,4 +1,5 @@
-﻿using Infragistics.Win.UltraWinEditors;
+﻿using DevExpress.XtraReports.UI;
+using Infragistics.Win.UltraWinEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -486,6 +488,62 @@ namespace JWMSH
                     utecDepName.Text = sc.CWhName;
                 }
             }
+        }
+
+        private void biPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            PrintDialog("print");
+        }
+        /// <summary>
+        /// 打印操作
+        /// </summary>
+        /// <param name="p"></param>
+        private void PrintDialog(string p)
+        {
+            var xtreport = new XtraReport();
+            // _btApp = new BarTender.Application();
+            //判断当前打印模版路径是否存在
+            var temPath = Application.StartupPath + @"\Stencil\TrackDeliveryOrder.repx";
+
+            if (!File.Exists(temPath))
+            {
+                MessageBox.Show(@"当前路径下的打印模版文件不存在!", @"异常", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                xtreport.Name = "TrackDeliveryOrder";
+                xtreport.ShowDesigner();
+                return;
+            }
+            xtreport.LoadLayout(temPath);
+            DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "cCode", txtcCode.Text);
+            DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "cOrderType", cbxcOrderType.Text);
+            DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "cCusName", utxtcCusName.Text);
+            DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Text);
+            DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "OrderDate", dtpOrderDate.Text);
+            DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "DeliveryDate", dtpDeliveryDate.Text);
+            DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "cDepName", utecDepName.Text);
+            //模板赋值
+            switch (p)
+            {
+                case "print":
+                    xtreport.Print();
+                    break;
+                case "design":
+                    xtreport.ShowDesigner();
+                    break;
+                case "preview":
+                    xtreport.ShowPreview();
+                    break;
+            }
+        }
+
+
+        private void biPreview_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            PrintDialog("preview");
+        }
+
+        private void biDesign_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            PrintDialog("design");
         }
     }
 }

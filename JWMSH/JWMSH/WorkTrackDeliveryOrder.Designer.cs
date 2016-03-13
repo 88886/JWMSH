@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinEditors.EditorButton editorButton1 = new Infragistics.Win.UltraWinEditors.EditorButton();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinEditors.EditorButton editorButton2 = new Infragistics.Win.UltraWinEditors.EditorButton();
@@ -147,12 +147,12 @@
             // 
             // lblcState
             // 
-            appearance1.BackColor = System.Drawing.Color.Transparent;
-            appearance1.BorderColor = System.Drawing.Color.Red;
-            appearance1.ForeColor = System.Drawing.Color.Red;
-            appearance1.TextHAlignAsString = "Center";
-            appearance1.TextVAlignAsString = "Middle";
-            this.lblcState.Appearance = appearance1;
+            appearance13.BackColor = System.Drawing.Color.Transparent;
+            appearance13.BorderColor = System.Drawing.Color.Red;
+            appearance13.ForeColor = System.Drawing.Color.Red;
+            appearance13.TextHAlignAsString = "Center";
+            appearance13.TextVAlignAsString = "Middle";
+            this.lblcState.Appearance = appearance13;
             this.lblcState.BorderStyleOuter = Infragistics.Win.UIElementBorderStyle.Solid;
             this.lblcState.Location = new System.Drawing.Point(62, 6);
             this.lblcState.Name = "lblcState";
@@ -650,6 +650,7 @@
             this.biPrint.Id = 55;
             this.biPrint.ImageIndex = 2;
             this.biPrint.Name = "biPrint";
+            this.biPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biPrint_ItemClick);
             // 
             // biPreview
             // 
@@ -657,6 +658,7 @@
             this.biPreview.Id = 79;
             this.biPreview.ImageIndex = 1;
             this.biPreview.Name = "biPreview";
+            this.biPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biPreview_ItemClick);
             // 
             // biDesign
             // 
@@ -664,6 +666,7 @@
             this.biDesign.Id = 80;
             this.biDesign.ImageIndex = 0;
             this.biDesign.Name = "biDesign";
+            this.biDesign.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biDesign_ItemClick);
             // 
             // biExport
             // 
