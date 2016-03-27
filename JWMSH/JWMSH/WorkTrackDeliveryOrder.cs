@@ -513,6 +513,7 @@ namespace JWMSH
                 return;
             }
             xtreport.LoadLayout(temPath);
+             xtreport.RequestParameters = false;
             DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "cCode", txtcCode.Text);
             DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "cOrderType", cbxcOrderType.Text);
             DLL.DllWorkPrintLabel.SetParametersValue(xtreport, "cCusName", utxtcCusName.Text);
