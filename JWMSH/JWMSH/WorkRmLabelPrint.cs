@@ -415,11 +415,12 @@ namespace JWMSH
             }
 
 
-            if (!WmsFunction.IsNumAndEnCh(txtcLotNo.Text))
+           /* if (!WmsFunction.IsNumAndEnCh(txtcLotNo.Text))
             {
                 MessageBox.Show(@"请输入正确的批次格式，只允许有数字与字母");
                 return;
             }
+            */
 
             using (var con = new SqlConnection(BaseStructure.WmsCon))
             {

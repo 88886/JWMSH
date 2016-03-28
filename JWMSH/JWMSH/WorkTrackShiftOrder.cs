@@ -555,6 +555,7 @@ namespace JWMSH
             var xtreport = new XtraReport();
             // _btApp = new BarTender.Application();
             //判断当前打印模版路径是否存在
+            var _cTempletFileName = Application.StartupPath + @"\Label\班次制令单.repx";
             var temPath = _cTempletFileName;      //Application.StartupPath + @"\Label\" +  _cTempletFileName;
 
             if (!File.Exists(temPath))
@@ -581,7 +582,7 @@ namespace JWMSH
             DllWorkPrintLabel.SetParametersValue(xtreport, "cDepartment", txtcDept.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value.ToShortDateString());
             DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", txtcMemo.Text);
-            xtreport.DataSource = dataInventory.ShiftDetail;
+            xtreport.DataSource = dataInventory.BomDetail;
             //模板赋值
             switch (operation)
             {
@@ -636,6 +637,7 @@ namespace JWMSH
             var xtreport = new XtraReport();
             // _btApp = new BarTender.Application();
             //判断当前打印模版路径是否存在
+            //var _RmcTempletFileName = Application.StartupPath + @"\Label\班次制令单.repx";
             var temPath = _RmcTempletFileName;     //_cTempletFileName;      //Application.StartupPath + @"\Label\" +   _cTempletFileName;
 
             if (!File.Exists(temPath))
