@@ -509,7 +509,7 @@ namespace JWMSH
 
         private void utecInvName_EditorButtonClick(object sender, Infragistics.Win.UltraWinEditors.EditorButtonEventArgs e)
         {
-            using (var brm = new SelectKisInventory(_dtRawMaterial,txtcInvCode.Text))
+            using (var brm = new SelectKisInventory(_dtRawMaterial,txtcInvCode.Text,false))
             {
                 if (brm.ShowDialog() == DialogResult.Yes)
                 {

@@ -155,6 +155,8 @@
             this.uGridRawMaterial = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.bomDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ugbxMain = new Infragistics.Win.Misc.UltraGroupBox();
+            this.txtFBatchNo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtcDept = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpdDate = new System.Windows.Forms.DateTimePicker();
@@ -182,7 +184,7 @@
             this.biExport = new DevExpress.XtraBars.BarButtonItem();
             this.biAddNew = new DevExpress.XtraBars.BarButtonItem();
             this.biExit = new DevExpress.XtraBars.BarButtonItem();
-            this.biDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.biSave = new DevExpress.XtraBars.BarButtonItem();
             this.biEditTemplet = new DevExpress.XtraBars.BarButtonItem();
             this.bsiTemplet = new DevExpress.XtraBars.BarStaticItem();
             this.bsiPrinter = new DevExpress.XtraBars.BarStaticItem();
@@ -197,8 +199,6 @@
             this.shiftDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.ShiftDetailTableAdapter();
             this.bomDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.BomDetailTableAdapter();
             this.productLabelTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.ProductLabelTableAdapter();
-            this.txtFBatchNo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             this.tabMain.SuspendLayout();
@@ -294,7 +294,6 @@
             ultraGridColumn1.Header.Caption = "条码号";
             ultraGridColumn1.Header.VisiblePosition = 2;
             ultraGridColumn1.Width = 173;
-            ultraGridColumn21.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             appearance2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             ultraGridColumn21.CellAppearance = appearance2;
             ultraGridColumn21.Header.Caption = "包装数量";
@@ -404,7 +403,7 @@
             this.tabMaterial.Location = new System.Drawing.Point(4, 22);
             this.tabMaterial.Name = "tabMaterial";
             this.tabMaterial.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMaterial.Size = new System.Drawing.Size(976, 250);
+            this.tabMaterial.Size = new System.Drawing.Size(976, 241);
             this.tabMaterial.TabIndex = 0;
             this.tabMaterial.Text = "实际用料表";
             this.tabMaterial.UseVisualStyleBackColor = true;
@@ -541,7 +540,7 @@
             this.uGridShiftDetail.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uGridShiftDetail.Location = new System.Drawing.Point(3, 3);
             this.uGridShiftDetail.Name = "uGridShiftDetail";
-            this.uGridShiftDetail.Size = new System.Drawing.Size(970, 244);
+            this.uGridShiftDetail.Size = new System.Drawing.Size(970, 235);
             this.uGridShiftDetail.TabIndex = 35;
             this.uGridShiftDetail.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             // 
@@ -556,7 +555,7 @@
             this.tabBomDetail.Location = new System.Drawing.Point(4, 22);
             this.tabBomDetail.Name = "tabBomDetail";
             this.tabBomDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBomDetail.Size = new System.Drawing.Size(976, 250);
+            this.tabBomDetail.Size = new System.Drawing.Size(976, 241);
             this.tabBomDetail.TabIndex = 1;
             this.tabBomDetail.Text = "Bom明细表";
             this.tabBomDetail.UseVisualStyleBackColor = true;
@@ -675,7 +674,7 @@
             this.uGridRawMaterial.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uGridRawMaterial.Location = new System.Drawing.Point(3, 3);
             this.uGridRawMaterial.Name = "uGridRawMaterial";
-            this.uGridRawMaterial.Size = new System.Drawing.Size(970, 244);
+            this.uGridRawMaterial.Size = new System.Drawing.Size(970, 235);
             this.uGridRawMaterial.TabIndex = 34;
             this.uGridRawMaterial.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             // 
@@ -711,6 +710,25 @@
             this.ugbxMain.Name = "ugbxMain";
             this.ugbxMain.Size = new System.Drawing.Size(984, 162);
             this.ugbxMain.TabIndex = 64;
+            // 
+            // txtFBatchNo
+            // 
+            this.txtFBatchNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtFBatchNo.Enabled = false;
+            this.txtFBatchNo.Location = new System.Drawing.Point(447, 74);
+            this.txtFBatchNo.Name = "txtFBatchNo";
+            this.txtFBatchNo.Size = new System.Drawing.Size(191, 21);
+            this.txtFBatchNo.TabIndex = 81;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(390, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.TabIndex = 80;
+            this.label4.Text = "生产批号";
             // 
             // txtcDept
             // 
@@ -1066,7 +1084,7 @@
             this.biPrint,
             this.biAddNew,
             this.biExit,
-            this.biDelete,
+            this.biSave,
             this.biEditTemplet,
             this.bsiTemplet,
             this.bsiPrinter,
@@ -1148,12 +1166,13 @@
             this.biExit.Name = "biExit";
             this.biExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biExit_ItemClick);
             // 
-            // biDelete
+            // biSave
             // 
-            this.biDelete.Caption = "删除";
-            this.biDelete.Id = 68;
-            this.biDelete.LargeImageIndex = 9;
-            this.biDelete.Name = "biDelete";
+            this.biSave.Caption = "保存";
+            this.biSave.Id = 68;
+            this.biSave.LargeImageIndex = 8;
+            this.biSave.Name = "biSave";
+            this.biSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biSave_ItemClick);
             // 
             // biEditTemplet
             // 
@@ -1222,7 +1241,7 @@
             // rpgNew
             // 
             this.rpgNew.ItemLinks.Add(this.biAddNew);
-            this.rpgNew.ItemLinks.Add(this.biDelete);
+            this.rpgNew.ItemLinks.Add(this.biSave);
             this.rpgNew.Name = "rpgNew";
             this.rpgNew.ShowCaptionButton = false;
             this.rpgNew.Text = "操作";
@@ -1253,25 +1272,6 @@
             // productLabelTableAdapter
             // 
             this.productLabelTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtFBatchNo
-            // 
-            this.txtFBatchNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtFBatchNo.Enabled = false;
-            this.txtFBatchNo.Location = new System.Drawing.Point(447, 74);
-            this.txtFBatchNo.Name = "txtFBatchNo";
-            this.txtFBatchNo.Size = new System.Drawing.Size(191, 21);
-            this.txtFBatchNo.TabIndex = 81;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(390, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 80;
-            this.label4.Text = "生产批号";
             // 
             // WorkTrackProductLabelPrint
             // 
@@ -1349,7 +1349,7 @@
         private DevExpress.XtraBars.BarButtonItem biExport;
         private DevExpress.XtraBars.BarButtonItem biAddNew;
         private DevExpress.XtraBars.BarButtonItem biExit;
-        private DevExpress.XtraBars.BarButtonItem biDelete;
+        private DevExpress.XtraBars.BarButtonItem biSave;
         private DevExpress.XtraBars.BarButtonItem biEditTemplet;
         private DevExpress.XtraBars.BarStaticItem bsiTemplet;
         private DevExpress.XtraBars.BarStaticItem bsiPrinter;

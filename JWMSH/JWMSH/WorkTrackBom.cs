@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Aspose.Cells;
 using Infragistics.Win.Misc;
 using Infragistics.Win.UltraWinEditors;
 using Infragistics.Win.UltraWinGrid;
@@ -142,7 +143,7 @@ namespace JWMSH
         {
             if (string.IsNullOrEmpty(lblTitleMain.lblAutoID.Text))
             {
-                MessageBox.Show(@"未指定单据，请检查后再试!", @"提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"未指定数据，请检查后再试!", @"提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (MessageBox.Show(@"确实要删除吗!", @"提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
@@ -151,7 +152,7 @@ namespace JWMSH
             using (var con = new SqlConnection(BaseStructure.WmsCon))
             {
                 con.Open();
-                using (var cmd = new SqlCommand("DeleteProDelivery") { CommandType = CommandType.StoredProcedure, Connection = con })
+                using (var cmd = new SqlCommand("DeleteForBom") { CommandType = CommandType.StoredProcedure, Connection = con })
                 {
                     cmd.Parameters.AddWithValue("@AutoID", lblTitleMain.lblAutoID.Text);
                     try
@@ -448,7 +449,7 @@ namespace JWMSH
 
         private void utecInvName_EditorButtonClick(object sender, EditorButtonEventArgs e)
         {
-            using (var brm = new SelectKisInventory(_dtRawMaterial, txtcInvCode.Text))
+            using (var brm = new SelectKisInventory(_dtRawMaterial, txtcInvCode.Text,false))
             {
                 if (brm.ShowDialog() == DialogResult.Yes)
                 {
@@ -472,7 +473,7 @@ namespace JWMSH
                 MessageBox.Show(@"请先选择成品", @"失败", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            using (var brm = new SelectKisInventory(_dtRawMaterial, e.Cell.Row.Cells["cInvCode"].Value.ToString()))
+            using (var brm = new SelectKisInventory(_dtRawMaterial, e.Cell.Row.Cells["cInvCode"].Value.ToString(),false))
             {
                 if (brm.ShowDialog() == DialogResult.Yes)
                 {
@@ -508,6 +509,200 @@ namespace JWMSH
         private void biExport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             
+        }
+
+        private void biExcelLoad_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ResetNull();
+            SetControlEnable();
+
+            if (ofdMain.ShowDialog() != DialogResult.OK)
+                return;
+            var strSuccess="";
+            var strFail="";
+
+            var bSkip=false;
+            var cRealSequence="";
+
+            var workbook = new Workbook(ofdMain.FileName);
+            var cells = workbook.Worksheets[0].Cells;
+            if (!cells[2, 0].StringValue.Equals("序号"))
+                MessageBox.Show(@"Excel模板格式不正确");
+
+            for (var i = 3; i < cells.MaxDataRow + 1; i++)
+            {
+                
+                var cSequence = cells[i, 0].StringValue;
+                var cInvCode = cells[i, 1].StringValue;
+
+                if (bSkip && string.IsNullOrEmpty(cSequence))
+                {
+                    continue; 
+                }
+                else
+                {
+                    bSkip = false;
+                }
+                if (!string.IsNullOrEmpty(cSequence) && !string.IsNullOrEmpty(cInvCode))
+                {
+                    if (i != 3)
+                    {
+                        if (SaveWithoutMsg())
+                        {
+                            strSuccess = strSuccess + " 序号：" + cRealSequence + "成功!   ";
+                        }
+                        else
+                        {
+                            strFail = strFail + " 序号：" + cRealSequence + "失败，并跳过;      ";
+                        }
+                        ResetNull();
+                    }
+                    txtcInvCode.Text = cells[i, 1].StringValue;
+                    bSkip = false;
+                    cRealSequence = cSequence;
+
+                }
+
+                if (string.IsNullOrEmpty(cells[i, 0].StringValue) && !string.IsNullOrEmpty(cells[i, 1].StringValue))
+                {
+                    var cItemCode = cells[i, 1].StringValue;
+                    var cQuantity = cells[i, 5].StringValue;
+                    decimal iQuantity;
+                    if (!decimal.TryParse(cQuantity, out iQuantity))
+                    {
+                        //数值转换失败跳过
+                        bSkip = true;
+                        continue;
+                    }
+
+                    if (string.IsNullOrEmpty(txtcInvCode.Text) || string.IsNullOrEmpty(utecInvName.Text))
+                    {
+                        //成品编码问题跳过
+                        bSkip = true;
+                        continue;
+                    }
+                    using (var brm = new SelectKisInventory(_dtRawMaterial, cItemCode, true))
+                    {
+                        if (brm.ShowDialog() == DialogResult.Yes)
+                        {
+                            if (dataInventory.BomDetail.Rows.Cast<DataRow>().Any(iRow => iRow.RowState != DataRowState.Deleted && iRow["cInvCode"].ToString().Equals(brm.InvCode)))
+                            {
+                                continue;
+                            }
+                            if (brm.InvCode.Equals(txtcInvCode.Text))
+                            {
+                                continue;
+                            }
+                            var dr = dataInventory.BomDetail.NewBomDetailRow();
+                            dr.BomID = -1;
+                            dr.cFitemID = brm.FitemId;
+                            dr.cInvCode= brm.InvCode;
+                            dr.cInvName = brm.InvName;
+                            dr.cInvStd = brm.InvStd;
+                            dr.cFullName= brm.FullName;
+                            dr.iQuantity = iQuantity;
+                            dr.cUnitID = brm.FUnitID;
+                            dr.cUnitName= brm.FUnitName;
+                            dr.dAddTime = DateTime.Now;
+                            dataInventory.BomDetail.Rows.Add(dr);
+                        }
+                    }
+                }
+            }
+
+            MessageBox.Show(@"成功 " + strSuccess + @"
+" + @"失败  " + strFail);
+            MessageBox.Show(@"失败  " + strFail);
+
+
+            SetPanelVlaue("", "btnLast");
+        }
+
+        private bool SaveWithoutMsg()
+        {
+            using (var con = new SqlConnection(BaseStructure.WmsCon))
+            {
+                using (var cmd = new SqlCommand { CommandType = CommandType.StoredProcedure, Connection = con })
+                {
+                    if (string.IsNullOrEmpty(lblTitleMain.lblAutoID.Text))
+                    {
+                        cmd.CommandText = "proc_BomInsert";
+                        var idParameter = new SqlParameter("@AutoID", SqlDbType.BigInt)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+
+                        //获取id的返回值和采购订单号的返回值
+                        cmd.Parameters.Add(idParameter);
+                    }
+                    else
+                    {
+                        cmd.CommandText = "proc_BomUpdate";
+                        cmd.Parameters.AddWithValue("@AutoID", lblTitleMain.lblAutoID.Text);
+                    }
+
+                    //赋参数
+                    cmd.Parameters.AddWithValue("@cFitemID", _FitemId);
+                    cmd.Parameters.AddWithValue("@cInvCode", txtcInvCode.Text);
+                    cmd.Parameters.AddWithValue("@cInvName", utecInvName.Text);
+                    cmd.Parameters.AddWithValue("@cInvStd", txtcInvStd.Text);
+                    cmd.Parameters.AddWithValue("@cFullName", txtcFullName.Text);
+                    cmd.Parameters.AddWithValue("@cMemo", txtcMemo.Text);
+                    con.Open();
+                    using (var tran = con.BeginTransaction())
+                    {
+                        int ieffect;
+                        cmd.Transaction = tran;
+                        try
+                        {
+                            ieffect = cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            return false;
+                        }
+                        //判断是否是真的完成了主表的写入
+                        if (ieffect > 0)
+                        {
+                            if (string.IsNullOrEmpty(lblTitleMain.lblAutoID.Text))
+                            {
+                                lblTitleMain.lblAutoID.Text = cmd.Parameters["@AutoID"].Value.ToString();
+                            }
+                        }
+                        else
+                        {
+                            return false;
+                        }
+
+                        uGridRawMaterial.UpdateData();
+                        //重新赋值一下行号/单据号给子表
+                        for (var i = 0; i < dataInventory.BomDetail.Rows.Count; i++)
+                        {
+                            var dr = dataInventory.BomDetail.Rows[i];
+                            if (dr.RowState == DataRowState.Deleted)
+                                continue;
+                            dr["BomID"] = lblTitleMain.lblAutoID.Text;
+
+                        }
+                        //将改变提交到内存表
+                        uGridRawMaterial.UpdateData();
+                        try
+                        {
+                            //提交子表
+                            bomDetailTableAdapter.Update(dataInventory.BomDetail);
+                            //提交主表
+                            tran.Commit();
+                            SetControlDisable();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            tran.Rollback();
+                            return false;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -30,5 +30,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(local);Initial Catalog=AIS20150527083422;Persist Security Info=True;User ID=sa;Password=4000212099</Value>
     </Setting>
+    <Setting Name="localprinter" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

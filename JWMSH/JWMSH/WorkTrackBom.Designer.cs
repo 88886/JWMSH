@@ -106,6 +106,9 @@
             this.bomDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataInventory = new JWMSH.DLL.DataInventory();
             this.bomDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.BomDetailTableAdapter();
+            this.biExcelLoad = new DevExpress.XtraBars.BarButtonItem();
+            this.rpgExcelLoad = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ofdMain = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
@@ -131,10 +134,11 @@
             this.biExit,
             this.biEdit,
             this.biDelete,
-            this.biGiveup});
+            this.biGiveup,
+            this.biExcelLoad});
             this.ribbon.LargeImages = this.imageCollection2;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 81;
+            this.ribbon.MaxItemId = 82;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage});
@@ -247,7 +251,8 @@
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgSystem,
             this.rpgExport,
-            this.rpgNew});
+            this.rpgNew,
+            this.rpgExcelLoad});
             this.ribbonPage.Name = "ribbonPage";
             this.ribbonPage.Text = "菜单选项";
             // 
@@ -624,6 +629,25 @@
             // 
             this.bomDetailTableAdapter.ClearBeforeFill = true;
             // 
+            // biExcelLoad
+            // 
+            this.biExcelLoad.Caption = "Excel导入";
+            this.biExcelLoad.Id = 81;
+            this.biExcelLoad.LargeImageIndex = 1;
+            this.biExcelLoad.Name = "biExcelLoad";
+            this.biExcelLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.biExcelLoad_ItemClick);
+            // 
+            // rpgExcelLoad
+            // 
+            this.rpgExcelLoad.ItemLinks.Add(this.biExcelLoad);
+            this.rpgExcelLoad.Name = "rpgExcelLoad";
+            this.rpgExcelLoad.Text = "批量导入";
+            // 
+            // ofdMain
+            // 
+            this.ofdMain.FileName = "openFileDialog1";
+            this.ofdMain.Filter = " Excel文件|*.xls";
+            // 
             // WorkTrackBom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -685,5 +709,8 @@
         private System.Windows.Forms.BindingSource bomDetailBindingSource;
         private DLL.DataInventory dataInventory;
         private DLL.DataInventoryTableAdapters.BomDetailTableAdapter bomDetailTableAdapter;
+        private DevExpress.XtraBars.BarButtonItem biExcelLoad;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgExcelLoad;
+        private System.Windows.Forms.OpenFileDialog ofdMain;
     }
 }

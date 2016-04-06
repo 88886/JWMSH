@@ -54,13 +54,15 @@ namespace JWMSH
 
         public string FUnitName;
 
+        private bool _bFirst;
 
-        public SelectKisInventory(DataTable dSoure,string cInvCode)
+        public SelectKisInventory(DataTable dSoure,string cInvCode,bool bFirst)
         {
             InitializeComponent();
             uGirdKisInventory.DataSource = dSoure;
             uGirdKisInventory.DisplayLayout.Bands[0].ColumnFilters["FNumber"].FilterConditions.Add(
                 FilterComparisionOperator.Contains, cInvCode);
+            _bFirst = bFirst;
         }
 
         private void SelectKisInventory_Load(object sender, EventArgs e)
@@ -69,6 +71,21 @@ namespace JWMSH
             tsgfMain.FormName = Text;
             tsgfMain.Constr = BaseStructure.WmsCon;
             tsgfMain.GetGridStyle(tsgfMain.FormId);
+
+            if (_bFirst)
+            {
+                var rFilter = uGirdKisInventory.Rows.GetFilteredInNonGroupByRows();
+                if (rFilter.First() == null) return;
+                FitemId = rFilter.First().Cells["FItemID"].Value.ToString();
+                InvCode = rFilter.First().Cells["FNumber"].Value.ToString();
+                InvName = rFilter.First().Cells["FName"].Value.ToString();
+                FullName = rFilter.First().Cells["FFullName"].Value.ToString();
+                DefaultLoc = rFilter.First().Cells["FDefaultLoc"].Value.ToString();
+                DefalutSP = rFilter.First().Cells["FSPID"].Value.ToString();
+                FUnitID = rFilter.First().Cells["FUnitID"].Value.ToString();
+                FUnitName = rFilter.First().Cells["FUnitName"].Value.ToString();
+                DialogResult = DialogResult.Yes;
+            }
         }
 
         private void uGirdKisInventory_DoubleClickCell(object sender, DoubleClickCellEventArgs e)

@@ -90,5 +90,17 @@ namespace JWMSH.Properties {
                 return ((string)(this["KisCon"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string localprinter {
+            get {
+                return ((string)(this["localprinter"]));
+            }
+            set {
+                this["localprinter"] = value;
+            }
+        }
     }
 }

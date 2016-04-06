@@ -86,6 +86,7 @@ namespace JWMSH
             tsgfMain.Constr = BaseStructure.WmsCon;
             tsgfMain.GetGridStyle(tsgfMain.FormId);
 
+            productLabelTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
             shiftDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
             bomDetailTableAdapter.Connection.ConnectionString = Properties.Settings.Default.BCon;
         }
@@ -224,8 +225,8 @@ namespace JWMSH
             {
                 return @"编码不正确,编码";
             }
-            if (dataInventory.ShiftDetail.Rows.Count < 1)
-                return "子件";
+            //if (dataInventory.ShiftDetail.Rows.Count < 1)
+            //    return "子件";
             return uneiQuantity.Value == null || string.IsNullOrEmpty(uneiQuantity.Value.ToString()) ? "数量" : string.Empty;
         }
 
@@ -324,7 +325,8 @@ namespace JWMSH
             var cmd = new SqlCommand("select * from View_ProductLabel where cSerialNumber=@cSerialNumber");
             cmd.Parameters.AddWithValue("@cSerialNumber", lblTitleMain.lblcSerialNumber.Text);
             var wf=new WmsFunction(BaseStructure.WmsCon);
-            return wf.GetSqlTable(cmd);}
+            return wf.GetSqlTable(cmd);
+        }
 
         private void biPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -339,6 +341,14 @@ namespace JWMSH
         private void biDesign_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             PrintDialog("design");
+        }
+
+        private void biSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            uGridLabel.UpdateData();
+            productLabelTableAdapter.Update(dataInventory.ProductLabel);
+            MessageBox.Show(@"保存成功,请及时打印新标签，以免造成标签与系统数量不匹配！");
+
         }
 
     }
