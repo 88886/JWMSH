@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinEditors.EditorButton editorButton1 = new Infragistics.Win.UltraWinEditors.EditorButton();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinEditors.EditorButton editorButton2 = new Infragistics.Win.UltraWinEditors.EditorButton();
@@ -147,12 +147,12 @@
             // 
             // lblcState
             // 
-            appearance13.BackColor = System.Drawing.Color.Transparent;
-            appearance13.BorderColor = System.Drawing.Color.Red;
-            appearance13.ForeColor = System.Drawing.Color.Red;
-            appearance13.TextHAlignAsString = "Center";
-            appearance13.TextVAlignAsString = "Middle";
-            this.lblcState.Appearance = appearance13;
+            appearance1.BackColor = System.Drawing.Color.Transparent;
+            appearance1.BorderColor = System.Drawing.Color.Red;
+            appearance1.ForeColor = System.Drawing.Color.Red;
+            appearance1.TextHAlignAsString = "Center";
+            appearance1.TextVAlignAsString = "Middle";
+            this.lblcState.Appearance = appearance1;
             this.lblcState.BorderStyleOuter = Infragistics.Win.UIElementBorderStyle.Solid;
             this.lblcState.Location = new System.Drawing.Point(62, 6);
             this.lblcState.Name = "lblcState";

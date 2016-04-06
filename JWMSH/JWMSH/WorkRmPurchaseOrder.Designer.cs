@@ -93,20 +93,20 @@
             this.biExit = new DevExpress.XtraBars.BarButtonItem();
             this.biSearch = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.beiOrder = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.barListItem1 = new DevExpress.XtraBars.BarListItem();
             this.ImgCollection32 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgSystem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgExport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgSearch = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.beiOrder = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barListItem1 = new DevExpress.XtraBars.BarListItem();
             ((System.ComponentModel.ISupportInitialize)(this.uGridChecks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uGridCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).BeginInit();
             this.SuspendLayout();
             // 
             // uGridChecks
@@ -446,6 +446,24 @@
             this.bbiRefresh.Name = "bbiRefresh";
             this.bbiRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRefresh_ItemClick);
             // 
+            // beiOrder
+            // 
+            this.beiOrder.Edit = this.repositoryItemTextEdit1;
+            this.beiOrder.Id = 69;
+            this.beiOrder.Name = "beiOrder";
+            this.beiOrder.Width = 150;
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // barListItem1
+            // 
+            this.barListItem1.Caption = "模糊匹配订单号";
+            this.barListItem1.Id = 70;
+            this.barListItem1.Name = "barListItem1";
+            // 
             // ImgCollection32
             // 
             this.ImgCollection32.ImageSize = new System.Drawing.Size(32, 32);
@@ -505,24 +523,6 @@
             this.rpgSearch.Name = "rpgSearch";
             this.rpgSearch.Text = "查询";
             // 
-            // beiOrder
-            // 
-            this.beiOrder.Edit = this.repositoryItemTextEdit1;
-            this.beiOrder.Id = 69;
-            this.beiOrder.Name = "beiOrder";
-            this.beiOrder.Width = 150;
-            // 
-            // repositoryItemTextEdit1
-            // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            // 
-            // barListItem1
-            // 
-            this.barListItem1.Caption = "模糊匹配订单号";
-            this.barListItem1.Id = 70;
-            this.barListItem1.Name = "barListItem1";
-            // 
             // WorkRmPurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -540,8 +540,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.uGridCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).EndInit();
             this.ResumeLayout(false);
 
         }

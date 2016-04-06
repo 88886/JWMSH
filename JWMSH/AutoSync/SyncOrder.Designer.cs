@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SyncOrder));
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("cMStorage", -1);
@@ -57,6 +56,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cType");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cOrderNumber");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("bUpdate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("cTable");
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
@@ -70,9 +70,9 @@
             this.tstxtServer = new System.Windows.Forms.ToolStripTextBox();
             this.tsbtnSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.timerExec = new System.Windows.Forms.Timer(this.components);
-            this.timerSpan = new System.Windows.Forms.Timer(this.components);
-            this.nfiMain = new System.Windows.Forms.NotifyIcon(this.components);
+            this.timerExec = new System.Windows.Forms.Timer();
+            this.timerSpan = new System.Windows.Forms.Timer();
+            this.nfiMain = new System.Windows.Forms.NotifyIcon();
             this.uGroupBox = new Infragistics.Win.Misc.UltraExpandableGroupBox();
             this.uGroupBoxPanelTop = new Infragistics.Win.Misc.UltraExpandableGroupBoxPanel();
             this.lblCostTime = new System.Windows.Forms.Label();
@@ -89,9 +89,9 @@
             this.pbMain = new System.Windows.Forms.ProgressBar();
             this.uGridStore = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.uGridStoreToBill = new Infragistics.Win.UltraWinGrid.UltraGrid();
-            this.wms_M_OrderTableAdapter = new AutoSync.dsOrderTableAdapters.Wms_M_OrderTableAdapter();
+            this.wmsMOrderBindingSource = new System.Windows.Forms.BindingSource();
             this.dsOrder = new AutoSync.dsOrder();
-            this.wmsMOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wms_M_OrderTableAdapter = new AutoSync.dsOrderTableAdapters.Wms_M_OrderTableAdapter();
             this.tsOpeStore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGroupBox)).BeginInit();
             this.uGroupBox.SuspendLayout();
@@ -99,8 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudTimeSpan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uGridStore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uGridStoreToBill)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wmsMOrderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // tsOpeStore
@@ -290,7 +290,7 @@
             0,
             0});
             this.nudTimeSpan.Minimum = new decimal(new int[] {
-            3,
+            1,
             0,
             0,
             0});
@@ -454,29 +454,32 @@
             this.uGridStoreToBill.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
             ultraGridColumn1.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Width = 174;
+            ultraGridColumn1.Width = 153;
             ultraGridColumn2.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn2.Header.Caption = "GUID";
             ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.Width = 219;
+            ultraGridColumn2.Width = 195;
             ultraGridColumn3.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn3.Header.Caption = "类型";
             ultraGridColumn3.Header.VisiblePosition = 2;
-            ultraGridColumn3.Width = 219;
+            ultraGridColumn3.Width = 195;
             ultraGridColumn4.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn4.Header.Caption = "订单号";
             ultraGridColumn4.Header.VisiblePosition = 3;
-            ultraGridColumn4.Width = 219;
+            ultraGridColumn4.Width = 195;
             ultraGridColumn5.CellActivation = Infragistics.Win.UltraWinGrid.Activation.ActivateOnly;
             ultraGridColumn5.Header.Caption = "更新";
             ultraGridColumn5.Header.VisiblePosition = 4;
-            ultraGridColumn5.Width = 111;
+            ultraGridColumn5.Width = 99;
+            ultraGridColumn6.Header.VisiblePosition = 5;
+            ultraGridColumn6.Width = 105;
             ultraGridBand2.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
             ultraGridColumn3,
             ultraGridColumn4,
-            ultraGridColumn5});
+            ultraGridColumn5,
+            ultraGridColumn6});
             ultraGridBand2.SummaryFooterCaption = "当前合计如下";
             this.uGridStoreToBill.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.uGridStoreToBill.DisplayLayout.ColumnChooserEnabled = Infragistics.Win.DefaultableBoolean.False;
@@ -532,19 +535,19 @@
             this.uGridStoreToBill.Text = "计划生成入库单汇总";
             this.uGridStoreToBill.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             // 
-            // wms_M_OrderTableAdapter
+            // wmsMOrderBindingSource
             // 
-            this.wms_M_OrderTableAdapter.ClearBeforeFill = true;
+            this.wmsMOrderBindingSource.DataMember = "Wms_M_Order";
+            this.wmsMOrderBindingSource.DataSource = this.dsOrder;
             // 
             // dsOrder
             // 
             this.dsOrder.DataSetName = "dsOrder";
             this.dsOrder.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // wmsMOrderBindingSource
+            // wms_M_OrderTableAdapter
             // 
-            this.wmsMOrderBindingSource.DataMember = "Wms_M_Order";
-            this.wmsMOrderBindingSource.DataSource = this.dsOrder;
+            this.wms_M_OrderTableAdapter.ClearBeforeFill = true;
             // 
             // SyncOrder
             // 
@@ -570,8 +573,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudTimeSpan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uGridStore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uGridStoreToBill)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wmsMOrderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

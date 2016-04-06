@@ -279,6 +279,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataInventory.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DLL\DataKis.cs">
+      <DependentUpon>DataKis.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DLL\DataKis.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -386,6 +390,7 @@
     <Compile Include="SelectWarehouse.Designer.cs">
       <DependentUpon>SelectWarehouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="sqlconnction.cs" />
     <Compile Include="UpjdControl\lblTitle.cs">
       <SubType>UserControl</SubType>
     </Compile>

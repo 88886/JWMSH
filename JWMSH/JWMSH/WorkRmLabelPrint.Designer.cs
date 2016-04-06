@@ -30,6 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkRmLabelPrint));
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn33 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FBatchNo");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn34 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FQty");
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FNumber");
@@ -96,21 +111,6 @@
             Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn33 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FBatchNo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn34 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FQty");
-            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             this.ImgCollection16 = new DevExpress.Utils.ImageCollection(this.components);
             this.ImgCollection32 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -141,6 +141,11 @@
             this.rpgPrinter = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.lblTitleMain = new JWMSH.UpjdControl.lblTitle();
             this.ugbxMain = new Infragistics.Win.Misc.UltraGroupBox();
+            this.txtcLotNo = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.dtpcDefine2 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtcDefine1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtcVendor = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.txtcMemo = new System.Windows.Forms.TextBox();
             this.备注 = new System.Windows.Forms.Label();
@@ -161,11 +166,6 @@
             this.uGridRawMaterial = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.pageChange = new UpjdControlBox.PageChange();
             this.tsgfMain = new UpjdControlBox.ToolStripGridFunction();
-            this.txtcDefine1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dtpcDefine2 = new System.Windows.Forms.DateTimePicker();
-            this.txtcLotNo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCollection32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -174,12 +174,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugbxMain)).BeginInit();
             this.ugbxMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcLotNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcVendor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uneiQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utecInvName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcInvCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtcLotNo)).BeginInit();
             this.SuspendLayout();
             // 
             // ImgCollection16
@@ -226,7 +226,7 @@
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowCategoryInCaption = false;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbon.Size = new System.Drawing.Size(984, 96);
+            this.ribbon.Size = new System.Drawing.Size(984, 98);
             this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // imageCollection1
@@ -467,10 +467,11 @@
             this.lblTitleMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lblTitleMain.CTitle = "原料标签打印";
             this.lblTitleMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitleMain.Location = new System.Drawing.Point(0, 96);
+            this.lblTitleMain.Location = new System.Drawing.Point(0, 98);
             this.lblTitleMain.Name = "lblTitleMain";
-            this.lblTitleMain.Size = new System.Drawing.Size(984, 38);
+            this.lblTitleMain.Size = new System.Drawing.Size(984, 35);
             this.lblTitleMain.TabIndex = 29;
+            this.lblTitleMain.Click += new System.EventHandler(this.lblTitleMain_Click);
             // 
             // ugbxMain
             // 
@@ -497,10 +498,126 @@
             this.ugbxMain.Controls.Add(this.label2);
             this.ugbxMain.Controls.Add(this.label1);
             this.ugbxMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ugbxMain.Location = new System.Drawing.Point(0, 134);
+            this.ugbxMain.Location = new System.Drawing.Point(0, 133);
             this.ugbxMain.Name = "ugbxMain";
-            this.ugbxMain.Size = new System.Drawing.Size(984, 173);
+            this.ugbxMain.Size = new System.Drawing.Size(984, 160);
             this.ugbxMain.TabIndex = 30;
+            // 
+            // txtcLotNo
+            // 
+            this.txtcLotNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtcLotNo.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
+            this.txtcLotNo.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.Contains;
+            appearance1.BackColor = System.Drawing.SystemColors.Window;
+            appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtcLotNo.DisplayLayout.Appearance = appearance1;
+            ultraGridColumn33.Header.Caption = "批号";
+            ultraGridColumn33.Header.VisiblePosition = 0;
+            ultraGridColumn34.Header.Caption = "数量";
+            ultraGridColumn34.Header.VisiblePosition = 1;
+            ultraGridBand1.Columns.AddRange(new object[] {
+            ultraGridColumn33,
+            ultraGridColumn34});
+            this.txtcLotNo.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
+            this.txtcLotNo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            this.txtcLotNo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
+            appearance2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance2.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance2.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance2.BorderColor = System.Drawing.SystemColors.Window;
+            this.txtcLotNo.DisplayLayout.GroupByBox.Appearance = appearance2;
+            appearance3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtcLotNo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance3;
+            this.txtcLotNo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            appearance4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance4.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance4.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtcLotNo.DisplayLayout.GroupByBox.PromptAppearance = appearance4;
+            this.txtcLotNo.DisplayLayout.MaxColScrollRegions = 1;
+            this.txtcLotNo.DisplayLayout.MaxRowScrollRegions = 1;
+            appearance5.BackColor = System.Drawing.SystemColors.Window;
+            appearance5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtcLotNo.DisplayLayout.Override.ActiveCellAppearance = appearance5;
+            appearance6.BackColor = System.Drawing.SystemColors.Highlight;
+            appearance6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtcLotNo.DisplayLayout.Override.ActiveRowAppearance = appearance6;
+            this.txtcLotNo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
+            this.txtcLotNo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
+            appearance7.BackColor = System.Drawing.SystemColors.Window;
+            this.txtcLotNo.DisplayLayout.Override.CardAreaAppearance = appearance7;
+            appearance8.BorderColor = System.Drawing.Color.Silver;
+            appearance8.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.txtcLotNo.DisplayLayout.Override.CellAppearance = appearance8;
+            this.txtcLotNo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
+            this.txtcLotNo.DisplayLayout.Override.CellPadding = 0;
+            appearance9.BackColor = System.Drawing.SystemColors.Control;
+            appearance9.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance9.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance9.BorderColor = System.Drawing.SystemColors.Window;
+            this.txtcLotNo.DisplayLayout.Override.GroupByRowAppearance = appearance9;
+            appearance10.TextHAlignAsString = "Left";
+            this.txtcLotNo.DisplayLayout.Override.HeaderAppearance = appearance10;
+            this.txtcLotNo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
+            this.txtcLotNo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
+            appearance11.BackColor = System.Drawing.SystemColors.Window;
+            appearance11.BorderColor = System.Drawing.Color.Silver;
+            this.txtcLotNo.DisplayLayout.Override.RowAppearance = appearance11;
+            this.txtcLotNo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
+            appearance12.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtcLotNo.DisplayLayout.Override.TemplateAddRowAppearance = appearance12;
+            this.txtcLotNo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
+            this.txtcLotNo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
+            this.txtcLotNo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
+            this.txtcLotNo.DisplayMember = "FBatchNo";
+            this.txtcLotNo.Enabled = false;
+            this.txtcLotNo.Location = new System.Drawing.Point(705, 14);
+            this.txtcLotNo.Name = "txtcLotNo";
+            this.txtcLotNo.Size = new System.Drawing.Size(194, 22);
+            this.txtcLotNo.TabIndex = 77;
+            this.txtcLotNo.ValueMember = "FBatchNo";
+            this.txtcLotNo.RowSelected += new Infragistics.Win.UltraWinGrid.RowSelectedEventHandler(this.txtcLotNo_RowSelected);
+            // 
+            // dtpcDefine2
+            // 
+            this.dtpcDefine2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpcDefine2.Checked = false;
+            this.dtpcDefine2.Enabled = false;
+            this.dtpcDefine2.Location = new System.Drawing.Point(437, 101);
+            this.dtpcDefine2.Name = "dtpcDefine2";
+            this.dtpcDefine2.ShowCheckBox = true;
+            this.dtpcDefine2.Size = new System.Drawing.Size(194, 21);
+            this.dtpcDefine2.TabIndex = 76;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(333, 104);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(101, 12);
+            this.label11.TabIndex = 75;
+            this.label11.Text = "供应商生产日期：";
+            // 
+            // txtcDefine1
+            // 
+            this.txtcDefine1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtcDefine1.Enabled = false;
+            this.txtcDefine1.Location = new System.Drawing.Point(151, 101);
+            this.txtcDefine1.Name = "txtcDefine1";
+            this.txtcDefine1.Size = new System.Drawing.Size(178, 21);
+            this.txtcDefine1.TabIndex = 74;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(71, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 12);
+            this.label10.TabIndex = 73;
+            this.label10.Text = "供应商批次：";
             // 
             // txtcVendor
             // 
@@ -574,7 +691,7 @@
             this.txtcVendor.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.txtcVendor.DisplayMember = "FName";
             this.txtcVendor.Enabled = false;
-            this.txtcVendor.Location = new System.Drawing.Point(705, 47);
+            this.txtcVendor.Location = new System.Drawing.Point(705, 43);
             this.txtcVendor.Name = "txtcVendor";
             this.txtcVendor.Size = new System.Drawing.Size(194, 22);
             this.txtcVendor.TabIndex = 70;
@@ -584,18 +701,18 @@
             // 
             this.txtcMemo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcMemo.Enabled = false;
-            this.txtcMemo.Location = new System.Drawing.Point(151, 138);
+            this.txtcMemo.Location = new System.Drawing.Point(151, 127);
             this.txtcMemo.Name = "txtcMemo";
-            this.txtcMemo.Size = new System.Drawing.Size(751, 20);
+            this.txtcMemo.Size = new System.Drawing.Size(751, 21);
             this.txtcMemo.TabIndex = 69;
             // 
             // 备注
             // 
             this.备注.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.备注.AutoSize = true;
-            this.备注.Location = new System.Drawing.Point(107, 142);
+            this.备注.Location = new System.Drawing.Point(107, 131);
             this.备注.Name = "备注";
-            this.备注.Size = new System.Drawing.Size(43, 13);
+            this.备注.Size = new System.Drawing.Size(41, 12);
             this.备注.TabIndex = 68;
             this.备注.Text = "备注：";
             // 
@@ -603,9 +720,9 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(649, 52);
+            this.label7.Location = new System.Drawing.Point(649, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.Size = new System.Drawing.Size(53, 12);
             this.label7.TabIndex = 62;
             this.label7.Text = "供应商：";
             // 
@@ -613,19 +730,19 @@
             // 
             this.txtcFullName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcFullName.Enabled = false;
-            this.txtcFullName.Location = new System.Drawing.Point(437, 80);
+            this.txtcFullName.Location = new System.Drawing.Point(437, 74);
             this.txtcFullName.Name = "txtcFullName";
             this.txtcFullName.ReadOnly = true;
-            this.txtcFullName.Size = new System.Drawing.Size(462, 20);
+            this.txtcFullName.Size = new System.Drawing.Size(462, 21);
             this.txtcFullName.TabIndex = 61;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(369, 85);
+            this.label5.Location = new System.Drawing.Point(369, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 60;
             this.label5.Text = "物料全称：";
             // 
@@ -633,7 +750,7 @@
             // 
             this.uneiQuantity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.uneiQuantity.Enabled = false;
-            this.uneiQuantity.Location = new System.Drawing.Point(437, 48);
+            this.uneiQuantity.Location = new System.Drawing.Point(437, 44);
             this.uneiQuantity.MaskInput = "nnnnnnn.nnnnnnnnnn";
             this.uneiQuantity.MaxValue = 100000000D;
             this.uneiQuantity.MinValue = 0;
@@ -646,9 +763,9 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(393, 52);
+            this.label4.Location = new System.Drawing.Point(393, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 58;
             this.label4.Text = "数量：";
             // 
@@ -656,9 +773,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(661, 20);
+            this.label3.Location = new System.Drawing.Point(661, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 56;
             this.label3.Text = "批号：";
             // 
@@ -669,7 +786,7 @@
             editorButton1.Appearance = appearance25;
             this.utecInvName.ButtonsRight.Add(editorButton1);
             this.utecInvName.Enabled = false;
-            this.utecInvName.Location = new System.Drawing.Point(151, 48);
+            this.utecInvName.Location = new System.Drawing.Point(151, 44);
             this.utecInvName.Name = "utecInvName";
             this.utecInvName.ReadOnly = true;
             this.utecInvName.Size = new System.Drawing.Size(194, 21);
@@ -766,7 +883,7 @@
             this.txtcInvCode.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.txtcInvCode.DisplayMember = "FNumber";
             this.txtcInvCode.Enabled = false;
-            this.txtcInvCode.Location = new System.Drawing.Point(151, 14);
+            this.txtcInvCode.Location = new System.Drawing.Point(151, 13);
             this.txtcInvCode.Name = "txtcInvCode";
             this.txtcInvCode.Size = new System.Drawing.Size(194, 22);
             this.txtcInvCode.TabIndex = 53;
@@ -777,18 +894,18 @@
             // 
             this.txtcInvStd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcInvStd.Enabled = false;
-            this.txtcInvStd.Location = new System.Drawing.Point(151, 80);
+            this.txtcInvStd.Location = new System.Drawing.Point(151, 74);
             this.txtcInvStd.Name = "txtcInvStd";
-            this.txtcInvStd.Size = new System.Drawing.Size(194, 20);
+            this.txtcInvStd.Size = new System.Drawing.Size(194, 21);
             this.txtcInvStd.TabIndex = 49;
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(83, 85);
+            this.label9.Location = new System.Drawing.Point(83, 78);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 13);
+            this.label9.Size = new System.Drawing.Size(65, 12);
             this.label9.TabIndex = 48;
             this.label9.Text = "产品规格：";
             // 
@@ -797,19 +914,19 @@
             this.dtpdDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpdDate.Checked = false;
             this.dtpdDate.Enabled = false;
-            this.dtpdDate.Location = new System.Drawing.Point(437, 15);
+            this.dtpdDate.Location = new System.Drawing.Point(437, 14);
             this.dtpdDate.Name = "dtpdDate";
             this.dtpdDate.ShowCheckBox = true;
-            this.dtpdDate.Size = new System.Drawing.Size(194, 20);
+            this.dtpdDate.Size = new System.Drawing.Size(194, 21);
             this.dtpdDate.TabIndex = 40;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(369, 20);
+            this.label6.Location = new System.Drawing.Point(369, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.Size = new System.Drawing.Size(65, 12);
             this.label6.TabIndex = 39;
             this.label6.Text = "入库日期：";
             // 
@@ -817,9 +934,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 52);
+            this.label2.Location = new System.Drawing.Point(83, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 29;
             this.label2.Text = "物料名称：";
             // 
@@ -827,9 +944,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 20);
+            this.label1.Location = new System.Drawing.Point(83, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 28;
             this.label1.Text = "物料编码：";
             // 
@@ -954,10 +1071,10 @@
             this.uGridRawMaterial.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.uGridRawMaterial.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.uGridRawMaterial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uGridRawMaterial.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uGridRawMaterial.Location = new System.Drawing.Point(0, 334);
+            this.uGridRawMaterial.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uGridRawMaterial.Location = new System.Drawing.Point(0, 318);
             this.uGridRawMaterial.Name = "uGridRawMaterial";
-            this.uGridRawMaterial.Size = new System.Drawing.Size(984, 246);
+            this.uGridRawMaterial.Size = new System.Drawing.Size(984, 217);
             this.uGridRawMaterial.TabIndex = 32;
             this.uGridRawMaterial.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             this.uGridRawMaterial.ClickCell += new Infragistics.Win.UltraWinGrid.ClickCellEventHandler(this.uGridRawMaterial_ClickCell);
@@ -968,12 +1085,12 @@
             this.pageChange.CountPage = 0;
             this.pageChange.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pageChange.FlName = "AutoID";
-            this.pageChange.Location = new System.Drawing.Point(0, 580);
+            this.pageChange.Location = new System.Drawing.Point(0, 535);
             this.pageChange.Name = "pageChange";
             this.pageChange.PageIndex = 1;
             this.pageChange.PageSize = 100;
             this.pageChange.RecordCount = 0;
-            this.pageChange.Size = new System.Drawing.Size(984, 29);
+            this.pageChange.Size = new System.Drawing.Size(984, 27);
             this.pageChange.TabIndex = 31;
             this.pageChange.TableRecord = "RmLabel";
             this.pageChange.UGrid = this.uGridRawMaterial;
@@ -985,133 +1102,17 @@
             this.tsgfMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.tsgfMain.FormId = null;
             this.tsgfMain.FormName = null;
-            this.tsgfMain.Location = new System.Drawing.Point(0, 307);
+            this.tsgfMain.Location = new System.Drawing.Point(0, 293);
             this.tsgfMain.Name = "tsgfMain";
-            this.tsgfMain.Size = new System.Drawing.Size(984, 27);
+            this.tsgfMain.Size = new System.Drawing.Size(984, 25);
             this.tsgfMain.TabIndex = 57;
             this.tsgfMain.UGrid = this.uGridRawMaterial;
             // 
-            // txtcDefine1
-            // 
-            this.txtcDefine1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtcDefine1.Enabled = false;
-            this.txtcDefine1.Location = new System.Drawing.Point(151, 109);
-            this.txtcDefine1.Name = "txtcDefine1";
-            this.txtcDefine1.Size = new System.Drawing.Size(178, 20);
-            this.txtcDefine1.TabIndex = 74;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(71, 113);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 13);
-            this.label10.TabIndex = 73;
-            this.label10.Text = "供应商批次：";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(333, 113);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 13);
-            this.label11.TabIndex = 75;
-            this.label11.Text = "供应商生产日期：";
-            // 
-            // dtpcDefine2
-            // 
-            this.dtpcDefine2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpcDefine2.Checked = false;
-            this.dtpcDefine2.Enabled = false;
-            this.dtpcDefine2.Location = new System.Drawing.Point(437, 109);
-            this.dtpcDefine2.Name = "dtpcDefine2";
-            this.dtpcDefine2.ShowCheckBox = true;
-            this.dtpcDefine2.Size = new System.Drawing.Size(194, 20);
-            this.dtpcDefine2.TabIndex = 76;
-            // 
-            // txtcLotNo
-            // 
-            this.txtcLotNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtcLotNo.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
-            this.txtcLotNo.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.Contains;
-            appearance1.BackColor = System.Drawing.SystemColors.Window;
-            appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtcLotNo.DisplayLayout.Appearance = appearance1;
-            ultraGridColumn33.Header.Caption = "批号";
-            ultraGridColumn33.Header.VisiblePosition = 0;
-            ultraGridColumn34.Header.Caption = "数量";
-            ultraGridColumn34.Header.VisiblePosition = 1;
-            ultraGridBand1.Columns.AddRange(new object[] {
-            ultraGridColumn33,
-            ultraGridColumn34});
-            this.txtcLotNo.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
-            this.txtcLotNo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.txtcLotNo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance2.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance2.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance2.BorderColor = System.Drawing.SystemColors.Window;
-            this.txtcLotNo.DisplayLayout.GroupByBox.Appearance = appearance2;
-            appearance3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtcLotNo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance3;
-            this.txtcLotNo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            appearance4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance4.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtcLotNo.DisplayLayout.GroupByBox.PromptAppearance = appearance4;
-            this.txtcLotNo.DisplayLayout.MaxColScrollRegions = 1;
-            this.txtcLotNo.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance5.BackColor = System.Drawing.SystemColors.Window;
-            appearance5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtcLotNo.DisplayLayout.Override.ActiveCellAppearance = appearance5;
-            appearance6.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtcLotNo.DisplayLayout.Override.ActiveRowAppearance = appearance6;
-            this.txtcLotNo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.txtcLotNo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance7.BackColor = System.Drawing.SystemColors.Window;
-            this.txtcLotNo.DisplayLayout.Override.CardAreaAppearance = appearance7;
-            appearance8.BorderColor = System.Drawing.Color.Silver;
-            appearance8.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.txtcLotNo.DisplayLayout.Override.CellAppearance = appearance8;
-            this.txtcLotNo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.txtcLotNo.DisplayLayout.Override.CellPadding = 0;
-            appearance9.BackColor = System.Drawing.SystemColors.Control;
-            appearance9.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance9.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance9.BorderColor = System.Drawing.SystemColors.Window;
-            this.txtcLotNo.DisplayLayout.Override.GroupByRowAppearance = appearance9;
-            appearance10.TextHAlignAsString = "Left";
-            this.txtcLotNo.DisplayLayout.Override.HeaderAppearance = appearance10;
-            this.txtcLotNo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-            this.txtcLotNo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-            appearance11.BackColor = System.Drawing.SystemColors.Window;
-            appearance11.BorderColor = System.Drawing.Color.Silver;
-            this.txtcLotNo.DisplayLayout.Override.RowAppearance = appearance11;
-            this.txtcLotNo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance12.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtcLotNo.DisplayLayout.Override.TemplateAddRowAppearance = appearance12;
-            this.txtcLotNo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
-            this.txtcLotNo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.txtcLotNo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.txtcLotNo.DisplayMember = "FBatchNo";
-            this.txtcLotNo.Enabled = false;
-            this.txtcLotNo.Location = new System.Drawing.Point(705, 15);
-            this.txtcLotNo.Name = "txtcLotNo";
-            this.txtcLotNo.Size = new System.Drawing.Size(194, 22);
-            this.txtcLotNo.TabIndex = 77;
-            this.txtcLotNo.ValueMember = "FBatchNo";
-            this.txtcLotNo.RowSelected += new Infragistics.Win.UltraWinGrid.RowSelectedEventHandler(this.txtcLotNo_RowSelected);
-            // 
             // WorkRmLabelPrint
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 609);
+            this.ClientSize = new System.Drawing.Size(984, 562);
             this.Controls.Add(this.uGridRawMaterial);
             this.Controls.Add(this.tsgfMain);
             this.Controls.Add(this.pageChange);
@@ -1131,12 +1132,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ugbxMain)).EndInit();
             this.ugbxMain.ResumeLayout(false);
             this.ugbxMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcLotNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcVendor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uneiQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.utecInvName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcInvCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtcLotNo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -90,7 +90,11 @@ namespace AutoSync
                 nfiMain.Visible = true;
             }
         }
-
+        /// <summary>
+        /// 显示设置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nfiMain_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             //判断是否已经最小化于托盘 
@@ -106,7 +110,11 @@ namespace AutoSync
                 nfiMain.Visible = false;
             }
         }
-
+        /// <summary>
+        /// 加载时取中间表数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SyncOrder_Load(object sender, EventArgs e)
         {
 
@@ -125,13 +133,15 @@ namespace AutoSync
                 VLogError(DateTime.Now + " Start"+ex.Message, "Start Process");
                 return;
             }
-            
+            //执行下载
             ExecUpload();
         }
 
 
 
-
+        /// <summary>
+        /// 执行下载
+        /// </summary>
         private void ExecUpload()
         {
             
@@ -201,6 +211,7 @@ namespace AutoSync
                         //如果主表写入成功,则返回FBillNo和FinterID
                         int finterId;
                         //先获取最大ID号
+
                         cmdMain.CommandText = "GetICMaxNum";
                         cmdMain.Parameters.AddWithValue("@TableName", "ICStockBill");
                         cmdMain.Parameters.Add(new SqlParameter("@FInterID", SqlDbType.Int, 32));
@@ -253,6 +264,7 @@ namespace AutoSync
                                 cmdMain.Parameters.AddWithValue("@FSourceEntryID", dtDetail.Rows[i]["FEntryID"]);
                                 cmdMain.Parameters.AddWithValue("@cOrderNumber", dtDetail.Rows[i]["cOrderNumber"]);
                             }
+
                             try
                             {
                                 cmdMain.ExecuteNonQuery();
@@ -278,6 +290,17 @@ namespace AutoSync
                             cmdMain.Parameters.AddWithValue("@FPONumber", dtDetail.Rows[0]["cOrderNumber"]);
                         }
 
+                        if (cType.Equals("领料出库"))
+                        {
+                            cmdMain.Parameters.AddWithValue("@cCode", dtDetail.Rows[0]["cCode"]);
+                            
+                        }
+
+                        if (cType.Equals("销售出库"))
+                        {
+                            cmdMain.Parameters.AddWithValue("@cCode", dtDetail.Rows[0]["cCode"]);
+
+                        }
 
                         try
                         {

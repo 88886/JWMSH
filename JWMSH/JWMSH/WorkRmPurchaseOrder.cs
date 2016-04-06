@@ -43,11 +43,13 @@ namespace JWMSH
         {
             var cmd =
                 new SqlCommand(
-                    @"select top 100 FInterID,POInstock.FBillNo,FSupplyID,FDate,POInstock.FStatus,FBillerID,FCheckerID,FCheckDate,
+                    @"select FInterID,POInstock.FBillNo,FSupplyID,FDate,POInstock.FStatus,FBillerID,FCheckerID,FCheckDate,
 t_Supplier.FName,t_User.FName CreateName,temp.FName CheckName
 from POInstock inner join t_Supplier on POInstock.FSupplyID=t_Supplier.FItemID
-inner join t_User on POInstock.FBillerID=t_User.FUserID 
-left join t_User temp on POInstock.FCheckerID=temp.FUserID order by FInterID desc");
+inner join t_User on POInstock.FBillerID=t_User.FUserID
+left join t_User temp on POInstock.FCheckerID=temp.FUserID  
+where POInstock.FStatus in (1,2) and POInstock.FInterID in 
+(select distinct FInterID from POInStockEntry where FAuxConCommitQty = 0) order by FInterID desc");
             var wmf = new WmsFunction(BaseStructure.KisConstring);
             uGridCheck.DataSource = wmf.GetSqlTable(cmd);
         }
@@ -60,7 +62,8 @@ left join t_User temp on POInstock.FCheckerID=temp.FUserID order by FInterID des
 t_Supplier.FName,t_User.FName CreateName,temp.FName CheckName
 from POInstock inner join t_Supplier on POInstock.FSupplyID=t_Supplier.FItemID
 inner join t_User on POInstock.FBillerID=t_User.FUserID 
-left join t_User temp on POInstock.FCheckerID=temp.FUserID  where POOrder.FBillNo like '%" + cOrderNumber + "%' order by FInterID desc");
+left join t_User temp on POInstock.FCheckerID=temp.FUserID  where  POInstock.FStatus in (1,2) and POInstock.FInterID in 
+(select distinct FInterID from POInStockEntry where FAuxConCommitQty = 0) and POOrder.FBillNo like '%" + cOrderNumber + "%' order by FInterID desc");
             var wmf = new WmsFunction(BaseStructure.KisConstring);
             uGridCheck.DataSource = wmf.GetSqlTable(cmd);
         }
@@ -77,7 +80,7 @@ left join t_User temp on POInstock.FCheckerID=temp.FUserID  where POOrder.FBillN
                 new SqlCommand(
                     @"select POInstockEntry.FItemID,POInstockEntry.FEntryID,FShortNumber,FNumber,FModel,FName,FQty 
 from POInstockEntry inner join t_ICItem on POInstockEntry.FItemID=t_ICItem.FItemID
-where FInterID=@FinterID");
+where FInterID=@FinterID and FAuxConCommitQty = 0");
             cmd.Parameters.AddWithValue("@FinterID", _FinterID);
             var wmf = new WmsFunction(BaseStructure.KisConstring);
             uGridChecks.DataSource = wmf.GetSqlTable(cmd);
@@ -162,6 +165,8 @@ where FInterID=@FinterID");
         {
             if (beiOrder.EditValue == null || string.IsNullOrEmpty(beiOrder.EditValue.ToString()))
                 return;RefreshData(beiOrder.EditValue.ToString());
+
+            
         }
     }
 }

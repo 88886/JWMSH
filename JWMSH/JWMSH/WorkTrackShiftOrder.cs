@@ -474,6 +474,7 @@ namespace JWMSH
                     cmd.Parameters.AddWithValue("@iQuantity", GetProductQuantity());
                     cmd.Parameters.AddWithValue("@dDate", dtpdDate.Value.Date);
                     cmd.Parameters.AddWithValue("@cDeptName", txtcDept.Text);
+                    
                     cmd.Parameters.AddWithValue("@cMemo", txtcMemo.Text);
                     con.Open();
                     using (var tran = con.BeginTransaction())

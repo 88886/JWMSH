@@ -76,7 +76,7 @@ namespace JWMSH
             lblTitleMain.btnLast.Click += btnFirst_Click;
 
             DllWorkPrintLabel.GetTemplet("产成品标签", ref _cCaption, ref _cPrinter, ref _cTempletFileName);
-
+            _cPrinter = Properties.Settings.Default.localprinter;
             biEditPrinter.Caption = _cPrinter;
             biEditTemplet.Caption = _cCaption;
 
@@ -267,6 +267,7 @@ namespace JWMSH
                     _cTempletFileName = st.URow.Cells["cTempletPath"].Value.ToString();
                     biEditPrinter.Caption = st.URow.Cells["cPrinter"].Value.ToString();
                     _cPrinter = st.URow.Cells["cPrinter"].Value.ToString();
+                    _cPrinter = Properties.Settings.Default.localprinter;
                 }
             }
         }

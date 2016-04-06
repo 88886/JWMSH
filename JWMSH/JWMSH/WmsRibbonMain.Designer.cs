@@ -369,6 +369,7 @@
             appearance8.Image = "item.gif";
             ultraExplorerBarItem79.Settings.AppearancesSmall.Appearance = appearance8;
             ultraExplorerBarItem79.Text = "产成品拆箱";
+            ultraExplorerBarItem79.Visible = false;
             ultraExplorerBarItem42.Key = "产成品出库指令单";
             appearance9.Image = "item.gif";
             ultraExplorerBarItem42.Settings.AppearancesSmall.Appearance = appearance9;
@@ -377,10 +378,12 @@
             appearance10.Image = "item.gif";
             ultraExplorerBarItem43.Settings.AppearancesSmall.Appearance = appearance10;
             ultraExplorerBarItem43.Text = "打印调拨单";
+            ultraExplorerBarItem43.Visible = false;
             ultraExplorerBarItem44.Key = "打印盘点单";
             appearance11.Image = "item.gif";
             ultraExplorerBarItem44.Settings.AppearancesSmall.Appearance = appearance11;
             ultraExplorerBarItem44.Text = "打印盘点单";
+            ultraExplorerBarItem44.Visible = false;
             ultraExplorerBarGroup12.Items.AddRange(new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem[] {
             ultraExplorerBarItem73,
             ultraExplorerBarItem74,
