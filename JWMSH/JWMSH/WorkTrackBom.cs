@@ -529,7 +529,7 @@ namespace JWMSH
             if (!cells[2, 0].StringValue.Equals("序号"))
                 MessageBox.Show(@"Excel模板格式不正确");
 
-            for (var i = 3; i < cells.MaxDataRow + 1; i++)
+            for (var i = 3; i <= cells.MaxDataRow + 1; i++)
             {
                 
                 var cSequence = cells[i, 0].StringValue;
@@ -561,6 +561,20 @@ namespace JWMSH
                     bSkip = false;
                     cRealSequence = cSequence;
 
+                }
+
+                if (i == cells.MaxDataRow+1)
+                {
+                    if (SaveWithoutMsg())
+                    {
+                        strSuccess = strSuccess + " 序号：" + cRealSequence + "成功!   ";
+                    }
+                    else
+                    {
+                        strFail = strFail + " 序号：" + cRealSequence + "失败，并跳过;      ";
+                    }
+                    ResetNull();
+                    break;
                 }
 
                 if (string.IsNullOrEmpty(cells[i, 0].StringValue) && !string.IsNullOrEmpty(cells[i, 1].StringValue))
