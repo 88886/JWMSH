@@ -146,6 +146,7 @@
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabMaterial = new System.Windows.Forms.TabPage();
             this.uGridShiftDetail = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.rmProduceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataInventory = new JWMSH.DLL.DataInventory();
             this.tabBomDetail = new System.Windows.Forms.TabPage();
             this.uGridRawMaterial = new Infragistics.Win.UltraWinGrid.UltraGrid();
@@ -180,7 +181,6 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.bomDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.BomDetailTableAdapter();
-            this.rmProduceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rm_ProduceDetailTableAdapter = new JWMSH.DLL.DataInventoryTableAdapters.Rm_ProduceDetailTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
@@ -193,12 +193,12 @@
             this.tabMain.SuspendLayout();
             this.tabMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGridShiftDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rmProduceDetailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventory)).BeginInit();
             this.tabBomDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bomDetailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rmProduceDetailBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // imageCollection1
@@ -766,6 +766,11 @@
             this.uGridShiftDetail.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus;
             this.uGridShiftDetail.DoubleClickCell += new Infragistics.Win.UltraWinGrid.DoubleClickCellEventHandler(this.uGridShiftDetail_DoubleClickCell);
             // 
+            // rmProduceDetailBindingSource
+            // 
+            this.rmProduceDetailBindingSource.DataMember = "Rm_ProduceDetail";
+            this.rmProduceDetailBindingSource.DataSource = this.dataInventory;
+            // 
             // dataInventory
             // 
             this.dataInventory.DataSetName = "DataInventory";
@@ -1174,11 +1179,6 @@
             // 
             this.bomDetailTableAdapter.ClearBeforeFill = true;
             // 
-            // rmProduceDetailBindingSource
-            // 
-            this.rmProduceDetailBindingSource.DataMember = "Rm_ProduceDetail";
-            this.rmProduceDetailBindingSource.DataSource = this.dataInventory;
-            // 
             // rm_ProduceDetailTableAdapter
             // 
             this.rm_ProduceDetailTableAdapter.ClearBeforeFill = true;
@@ -1210,12 +1210,12 @@
             this.tabMain.ResumeLayout(false);
             this.tabMaterial.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uGridShiftDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rmProduceDetailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventory)).EndInit();
             this.tabBomDetail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uGridRawMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bomDetailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rmProduceDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

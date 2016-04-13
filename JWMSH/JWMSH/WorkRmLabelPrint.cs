@@ -214,6 +214,12 @@ namespace JWMSH
         /// <param name="operation"></param>
         public void PrintDialog(string operation)
         {
+            //当修改原数据是要进行保存后才能去打印
+            if (biSave.Enabled == true)
+            {
+                MessageBox.Show("在原数据上进行修改时请先保存后再进行打印！！！");
+            }
+            
             var xtreport = new XtraReport();
             // _btApp = new BarTender.Application();
             //判断当前打印模版路径是否存在

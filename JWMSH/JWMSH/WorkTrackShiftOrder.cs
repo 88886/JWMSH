@@ -394,8 +394,8 @@ namespace JWMSH
         {
             if (string.IsNullOrEmpty(txtcInvCode.Text))
                 return "编码";
-            if (string.IsNullOrEmpty(txtcOrderNumber.Text))
-                return "客户订单号";
+            //if (string.IsNullOrEmpty(txtcOrderNumber.Text))
+            //    return "客户订单号";
             if(string.IsNullOrEmpty(txtFBatchNo.Text))
             {
                 return "生产批号";
@@ -583,7 +583,77 @@ namespace JWMSH
             DllWorkPrintLabel.SetParametersValue(xtreport, "cDepartment", txtcDept.Text);
             DllWorkPrintLabel.SetParametersValue(xtreport, "dDate", dtpdDate.Value.ToShortDateString());
             DllWorkPrintLabel.SetParametersValue(xtreport, "cMemo", txtcMemo.Text);
-            xtreport.DataSource = dataInventory.BomDetail;
+            DllWorkPrintLabel.SetParametersValue(xtreport, "批次", txtcMemo.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "库位", txtcMemo.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "库存", txtcMemo.Text);
+            DllWorkPrintLabel.SetParametersValue(xtreport, "发货数", txtcMemo.Text);
+
+            //xtreport.DataSource = dataInventory.BomDetail;
+            DataSet ds = new DataSet();
+            using (var con = new SqlConnection(BaseStructure.WmsCon))
+            {
+                using (var cmd = new SqlCommand { CommandType = CommandType.StoredProcedure, Connection = con })
+                {
+                    cmd.CommandText = "proc_Bomdetail";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@BomID", bomID);
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd))
+                    {
+                        dataAdapter.Fill(ds);
+                    }
+                    cmd.Parameters.Clear();
+                }
+            }
+
+            int count = 0;
+            if(!int.TryParse(uneiQuantity.Value.ToString(), out count))
+            {
+                count = 0;
+            }
+
+            DataTable dt = null;
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                dt = ds.Tables[0].Clone();
+                dt.Columns.Add("发货数", typeof(int));
+                //DataTable dt = ds.Tables[0];
+                var dtE = ds.Tables[0].AsEnumerable();
+                foreach (DataRow dr in GetBomDetail())
+                {
+                    var iquantity = Convert.ToDecimal(dr["iQuantity"]) * count;
+                    var drs = dtE.Where(w => w.Field<string>("cInvCode") == dr["cInvCode"].ToString()).OrderBy(o => o.Field<string>("批次")).ToList();
+                    //DataRow[] drs = dtE.Select(" cInvCode = '"+dr["cInvCode"].ToString()+"'").OrderBy("");
+                    foreach (DataRow dr1 in drs)
+                    {
+                        if (iquantity >= 0)
+                        {
+                            var kc = Convert.ToDecimal(dr1["库存"]);
+                            var fhs = kc > iquantity ? iquantity : kc;
+                            //假如库存大于发货数，直接当前库位发货，如果小于发货数，当前库位发完当前数，并到下一个库位发剩余数量
+                            iquantity = kc >= iquantity ? -1 : iquantity - kc;
+                            DataRow drNew = dt.NewRow();
+                            drNew["AutoID"] = dr1["AutoID"];
+                            drNew["BomID"] = dr1["BomID"];
+                            drNew["cInvCode"] = dr1["cInvCode"];
+                            drNew["cInvName"] = dr1["cInvName"];
+                            drNew["iQuantity"] = dr1["iQuantity"];
+                            drNew["cUnitID"] = dr1["cUnitID"];
+                            drNew["cUnitName"] = dr1["cUnitName"];
+                            drNew["cInvStd"] = dr1["cInvStd"];
+                            drNew["cFullName"] = dr1["cFullName"];
+                            drNew["cMemo"] = dr1["cMemo"];
+                            drNew["dAddTime"] = dr1["dAddTime"];
+                            drNew["cFitemID"] = dr1["cFitemID"];
+                            drNew["批次"] = dr1["批次"];
+                            drNew["库位"] = dr1["库位"];
+                            drNew["库存"] = dr1["库存"];
+                            drNew["发货数"] = fhs;
+                            dt.Rows.Add(drNew);
+                        }
+                    }
+                }
+            }
+            xtreport.DataSource = dt;
             //模板赋值
             switch (operation)
             {
